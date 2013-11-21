@@ -43,7 +43,7 @@ public class FileEnvironment {
      * Absolute path inside the KeYTestGen root folder to the repository of test
      * models.
      */
-    protected final static String targetModelsPath = "test/targetmodels/";
+    protected final static String targetModelsPath = "src/test/java/com/csvanefalk/keytestgen/targetmodels/";
 
     /**
      * Relative OS path to the KeYTestGen folder.

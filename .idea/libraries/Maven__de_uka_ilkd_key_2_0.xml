@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/de/uka/ilkd/key/2.0/key-2.0-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../key/system/src" />
     </SOURCES>
   </library>
 </component>
