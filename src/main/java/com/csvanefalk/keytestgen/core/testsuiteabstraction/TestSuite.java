@@ -1,36 +1,32 @@
 package com.csvanefalk.keytestgen.core.testsuiteabstraction;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.core.CoreException;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClass;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Instances of this class represent a Test Suite, that is, a set of
  * {@link TestCase} instances for a given {@link KeYJavaMethod}.
- * 
+ *
  * @author christopher
- * 
  */
 public class TestSuite {
 
     /**
      * Factory method for creating a {@link TestSuite} instance.
-     * 
-     * @param javaClass
-     *            the class containing the method associated with the test
-     *            suite.
-     * @param method
-     *            the method associated with the test suite.
-     * @param testCases
-     *            the {@link TestCase} instances associated with the test suite.
+     *
+     * @param javaClass the class containing the method associated with the test
+     *                  suite.
+     * @param method    the method associated with the test suite.
+     * @param testCases the {@link TestCase} instances associated with the test suite.
      * @return the test suite.
      * @throws CoreException
      */
     public static TestSuite constructTestSuite(final KeYJavaClass javaClass,
-            final KeYJavaMethod method, final List<TestCase> testCases)
+                                               final KeYJavaMethod method, final List<TestCase> testCases)
             throws CoreException {
 
         /*
@@ -66,7 +62,7 @@ public class TestSuite {
     private final List<TestCase> testCases = new LinkedList<TestCase>();
 
     private TestSuite(final KeYJavaClass javaClass, final KeYJavaMethod method,
-            final List<TestCase> testCases) {
+                      final List<TestCase> testCases) {
 
         this.javaClass = javaClass;
         this.method = method;

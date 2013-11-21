@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.core.classabstraction;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import de.uka.ilkd.key.java.abstraction.KeYJavaType;
 import de.uka.ilkd.key.java.declaration.ParameterDeclaration;
 import de.uka.ilkd.key.logic.Term;
@@ -14,11 +11,14 @@ import de.uka.ilkd.key.speclang.FunctionalOperationContract;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Encapsulates information regarding a single Java method. The information
  * contained in an instance of this class is sufficient to facilitate symbolic
  * execution of the method.
- * 
+ *
  * @author christopher
  */
 public class KeYJavaMethod {
@@ -43,9 +43,9 @@ public class KeYJavaMethod {
     private final IProgramMethod programMethod;
 
     KeYJavaMethod(final KeYJavaClass declaringClass,
-            final IProgramMethod programMethod,
-            final KeYEnvironment<CustomConsoleUserInterface> environment,
-            final ContractWrapper functionalContract) {
+                  final IProgramMethod programMethod,
+                  final KeYEnvironment<CustomConsoleUserInterface> environment,
+                  final ContractWrapper functionalContract) {
 
         this.declaringClass = declaringClass;
         this.programMethod = programMethod;
@@ -62,7 +62,7 @@ public class KeYJavaMethod {
 
     /**
      * Return the {@link InitConfig} instance for this method.
-     * 
+     *
      * @return the initConfig
      */
     public final InitConfig getInitConfig() {
@@ -72,7 +72,7 @@ public class KeYJavaMethod {
 
     /**
      * Get the parameters for this method.
-     * 
+     *
      * @return
      */
     public List<IProgramVariable> getParameters() {
@@ -90,7 +90,7 @@ public class KeYJavaMethod {
 
     /**
      * Retrieve the postconditions for the method.
-     * 
+     *
      * @return the postconditions
      */
     public List<Term> getPostconditions() {
@@ -101,7 +101,7 @@ public class KeYJavaMethod {
 
     /**
      * Retrieve the preconditions for the method.
-     * 
+     *
      * @return the preconditions
      */
     public List<Term> getPreconditions() {
@@ -111,7 +111,7 @@ public class KeYJavaMethod {
 
     /**
      * Retrieve the {@link IProgramMethod} instance for this method.
-     * 
+     *
      * @return the programMethod
      */
     public IProgramMethod getProgramMethod() {
@@ -132,7 +132,6 @@ public class KeYJavaMethod {
     }
 
     /**
-     * 
      * @return the name of the method
      */
     public String getName() {

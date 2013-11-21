@@ -6,11 +6,10 @@ import de.uka.ilkd.key.logic.op.TermTransformer;
 /**
  * Implementors of this interface represent objects which are capable of
  * transforming the structure of {@link Term}s.
- * <p>
+ * <p/>
  * Not to be confused with {@link TermTransformer}.
- * 
+ *
  * @author christopher
- * 
  */
 public interface ITermTransformer {
 

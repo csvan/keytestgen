@@ -8,9 +8,8 @@ import de.uka.ilkd.key.logic.Term;
 /**
  * This visitor is used in order to extract metadata about the poststate of a
  * program, as represented by its postcondition.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleMetaExtractor extends KeYTestGenTermVisitor {
 

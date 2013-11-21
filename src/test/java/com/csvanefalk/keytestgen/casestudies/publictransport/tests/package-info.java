@@ -1,8 +1,8 @@
 /**
- * 
+ *
  */
 /**
  * @author christopher
  *
  */
-package casestudies.publictransport.tests;
+package com.csvanefalk.keytestgen.casestudies.publictransport.tests;

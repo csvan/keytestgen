@@ -1,13 +1,11 @@
 package com.csvanefalk.keytestgen.keystone.expression;
 
-import junit.framework.Assert;
-
-import org.apache.commons.math3.fraction.Fraction;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.keystone.equations.IExpression;
 import com.csvanefalk.keytestgen.keystone.equations.expression.Multiplication;
 import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
+import junit.framework.Assert;
+import org.apache.commons.math3.fraction.Fraction;
+import org.junit.Test;
 
 public class MultiplicationTest {
 

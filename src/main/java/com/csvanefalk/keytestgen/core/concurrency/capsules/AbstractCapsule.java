@@ -1,17 +1,16 @@
 package com.csvanefalk.keytestgen.core.concurrency.capsules;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.core.concurrency.monitor.ICapsuleMonitor;
 import com.csvanefalk.keytestgen.core.concurrency.monitor.IMonitorEvent;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Capsules represent autonomous units of functionality within the KeYTestGen2
  * core, meant to make it easy for the system as a whole to run concurrently.
- * 
+ *
  * @author christopher
- * 
  */
 public abstract class AbstractCapsule implements ICapsule {
 
@@ -89,8 +88,7 @@ public abstract class AbstractCapsule implements ICapsule {
     }
 
     /**
-     * @param thrownException
-     *            the thrownException to set
+     * @param thrownException the thrownException to set
      */
     protected void setThrownException(final Throwable thrownException) {
         this.thrownException = thrownException;

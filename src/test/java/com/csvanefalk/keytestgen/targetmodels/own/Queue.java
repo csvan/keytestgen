@@ -13,17 +13,17 @@ public class Queue {
     /*@ spec_public @*/ int next;
 
     Queue(int max) {
-	arr   = new Object[max + 1];
-	first = 0;
-	next  = 0;
+        arr = new Object[max + 1];
+        first = 0;
+        next = 0;
     }
 
     /*@ public normal_behavior
       @ ensures \result == size;
       @*/
     public /*@ pure @*/ int size() {
-	
-        return size; 
+
+        return size;
     }
 
     /*@ public normal_behavior
@@ -33,7 +33,7 @@ public class Queue {
       @ ensures size == (\old(size) + 1);
       @ assignable next, arr[*], size;
       @*/
-    public void enqueue( Object x ) {
+    public void enqueue(Object x) {
         arr[next++] = x;
         next = next % arr.length;
         size++;
@@ -50,7 +50,7 @@ public class Queue {
         Object toReturn = arr[first++];
         first = first % arr.length;
         size--;
-        
+
         return toReturn;
     }
 }

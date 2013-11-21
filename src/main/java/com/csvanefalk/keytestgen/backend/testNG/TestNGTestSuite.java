@@ -5,7 +5,6 @@ import com.csvanefalk.keytestgen.backend.ITestSuite;
 public class TestNGTestSuite implements ITestSuite {
 
 
-
     @Override
     public String getTestSuiteBody() {
         // TODO Auto-generated method stub

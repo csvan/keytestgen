@@ -1,33 +1,26 @@
 package com.csvanefalk.keytestgen.backend.junit;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.backend.AbstractJavaSourceGenerator;
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClass;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
 import com.csvanefalk.keytestgen.core.model.implementation.ModelInstance;
 import com.csvanefalk.keytestgen.core.model.implementation.ModelVariable;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleAssertion;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleComparator;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleConstraint;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleExpression;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleLiteral;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleMethodInvocation;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleOperator;
+import com.csvanefalk.keytestgen.core.oracle.abstraction.*;
 import com.csvanefalk.keytestgen.core.testsuiteabstraction.TestCase;
 import com.csvanefalk.keytestgen.core.testsuiteabstraction.TestSuite;
 import de.uka.ilkd.key.logic.op.IProgramVariable;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * This singleton provides the functionality needed to produce test suites for
  * the JUnit framework.
- * 
+ *
  * @author christopher
- * 
  */
 public class JUnitConverter extends AbstractJavaSourceGenerator implements
         IFrameworkConverter {
@@ -35,9 +28,8 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
     /**
      * Worker which services invocations of
      * {@link JUnitConverter#convertToJUnit(List)}.
-     * 
+     *
      * @author christopher
-     * 
      */
     private static class JUnitGeneratorWorker extends
             AbstractJavaSourceGenerator {
@@ -76,9 +68,8 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
          * Given a set of {@link TestCase} instances, this method will extract
          * put all {@link ModelInstance} declared in the model of each testcase
          * into a single list.
-         * 
-         * @param testCases
-         *            the test cases
+         *
+         * @param testCases the test cases
          * @return a list of all instances declared in all test cases models
          */
         private List<ModelInstance> collectInstances(
@@ -97,9 +88,8 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
          * Sets up the fixture repository for a given test class. This
          * repository will contain the object instances needed for the test
          * cases to run.
-         * 
-         * @param testCases
-         *            the test cases for the test class.
+         *
+         * @param testCases the test cases for the test class.
          */
         private void createFixtureRepository(final List<TestCase> testCases) {
 
@@ -140,7 +130,7 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
         /**
          * Given a {@link Model}, this method will extract all instances of
          * {@link ModelInstance} from it.
-         * 
+         *
          * @param model
          * @return
          */
@@ -198,12 +188,9 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
 
         /**
          * Services invocations of
-         * {@link JUnitConverter#generateJUnitSources(KeYJavaClass, List)}
-         * 
-         * @param klass
-         *            the class for which we are generating test cases
-         * @param testCases
-         *            the test cases to generate
+         *
+         * @param klass     the class for which we are generating test cases
+         * @param testCases the test cases to generate
          * @return a JUnit source file in String format
          * @throws JUnitConverterException
          */
@@ -277,12 +264,12 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
         private void writeGetFieldMethod() {
 
             writeComment("Gets the field of a given object", true);
-            writeMethodHeader(null, "private", new String[] { "<T>" }, "T",
-                    "getFieldValue", new String[] { "Object instance",
-                            "String fieldName" }, new String[] {
-                            "NoSuchFieldException", "SecurityException",
-                            "IllegalArgumentException",
-                            "IllegalAccessException" });
+            writeMethodHeader(null, "private", new String[]{"<T>"}, "T",
+                    "getFieldValue", new String[]{"Object instance",
+                    "String fieldName"}, new String[]{
+                    "NoSuchFieldException", "SecurityException",
+                    "IllegalArgumentException",
+                    "IllegalAccessException"});
 
             writeIndentedLine("Field field = instance.getClass().getDeclaredField(fieldName);");
             writeNewLine();
@@ -300,7 +287,7 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
          * Writes the logic needed to invoke the method under test (MUT) for a
          * given testcase. If the MUT is of non-void type, this logic will
          * include a temporary variable for storing the result.
-         * 
+         *
          * @param testCase
          */
         private void writeMethodInvocation(final TestCase testCase) {
@@ -331,7 +318,7 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
 
         /**
          * Writes the test oracle for a given method.
-         * 
+         *
          * @param testCase
          */
         private void writeOracle(final TestCase testCase) {
@@ -391,19 +378,13 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
             if (expression instanceof OracleComparator) {
                 final OracleComparator comparator = (OracleComparator) expression;
                 writeOracleComparator(comparator);
-            }
-
-            else if (expression instanceof OracleOperator) {
+            } else if (expression instanceof OracleOperator) {
                 final OracleOperator operator = (OracleOperator) expression;
                 writeOracleOperator(operator);
-            }
-
-            else if (expression instanceof OracleLiteral) {
+            } else if (expression instanceof OracleLiteral) {
                 final OracleLiteral literal = (OracleLiteral) expression;
                 writeOracleLiteral(literal);
-            }
-
-            else if (expression instanceof OracleMethodInvocation) {
+            } else if (expression instanceof OracleMethodInvocation) {
                 final OracleMethodInvocation methodInvocation = (OracleMethodInvocation) expression;
                 writeOracleMethodInvocation(methodInvocation);
             } else if (expression == null) {
@@ -433,11 +414,11 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
 
             writeComment("Sets a field of some object to a given value", true);
             writeMethodHeader(null, "private", null, "void", "setFieldValue",
-                    new String[] { "Object instance", "String fieldName",
-                            "Object value" }, new String[] {
-                            "NoSuchFieldException", "SecurityException",
-                            "IllegalArgumentException",
-                            "IllegalAccessException" });
+                    new String[]{"Object instance", "String fieldName",
+                            "Object value"}, new String[]{
+                    "NoSuchFieldException", "SecurityException",
+                    "IllegalArgumentException",
+                    "IllegalAccessException"});
 
             writeIndentedLine("Field field = instance.getClass().getDeclaredField(fieldName);");
             writeNewLine();
@@ -455,9 +436,8 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
          * Writes the fixture portion of a JUnit test method. Primarily, this
          * involves declaring and instantiating variables and parameter values.
          * Only variables declared on the top level are considered here.
-         * 
-         * @param model
-         *            {@link Model} instance representing the fixture
+         *
+         * @param model {@link Model} instance representing the fixture
          */
         private void writeTestFixture(final TestCase testCase) {
 
@@ -580,7 +560,7 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
          * of a JUnit sourcefile. This is the root method for creating actual
          * test methods (as one testcase in JUnit will essentially correspond to
          * a single test method).
-         * 
+         *
          * @param testCase
          * @throws JUnitConverterException
          */
@@ -594,11 +574,11 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
              */
             final String methodName = "test"
                     + testCase.getMethod().getProgramMethod().getName();
-            writeMethodHeader(new String[] { "@Test" }, "public", null, "void",
-                    methodName + ID++, null, new String[] {
-                            "NoSuchFieldException", "SecurityException",
-                            "IllegalArgumentException",
-                            "IllegalAccessException" });
+            writeMethodHeader(new String[]{"@Test"}, "public", null, "void",
+                    methodName + ID++, null, new String[]{
+                    "NoSuchFieldException", "SecurityException",
+                    "IllegalArgumentException",
+                    "IllegalAccessException"});
 
             /*
              * Write the test fixture.
@@ -635,9 +615,8 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
 
     /**
      * Convert an abstract test suite into a JUnit test suite.
-     * 
-     * @param the
-     *            test suite to convert
+     *
+     * @param the test suite to convert
      * @return the resulting JUnit test suite
      */
     @Override
@@ -646,7 +625,7 @@ public class JUnitConverter extends AbstractJavaSourceGenerator implements
 
         return new JUnitGeneratorWorker().serviceConvert(testSuite);
     }
-    
+
     public void __DEBUG_DISPOSE() {
         instance = null;
     }

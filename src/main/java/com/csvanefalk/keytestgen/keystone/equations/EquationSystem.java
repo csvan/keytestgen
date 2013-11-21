@@ -1,19 +1,5 @@
 package com.csvanefalk.keytestgen.keystone.equations;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.naming.OperationNotSupportedException;
-
-import org.apache.commons.math3.fraction.Fraction;
-
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;
 import com.csvanefalk.keytestgen.keystone.equations.expression.DummyVariable;
 import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
@@ -21,12 +7,15 @@ import com.csvanefalk.keytestgen.keystone.equations.expression.Variable;
 import com.csvanefalk.keytestgen.keystone.equations.restriction.IRestriction;
 import com.csvanefalk.keytestgen.keystone.simplex.Simplex;
 import de.uka.ilkd.key.logic.Term;
+import org.apache.commons.math3.fraction.Fraction;
+
+import javax.naming.OperationNotSupportedException;
+import java.util.*;
 
 /**
  * Instances of this class represent a system of equations.
- * 
+ *
  * @author christopher
- * 
  */
 public class EquationSystem {
 
@@ -34,7 +23,7 @@ public class EquationSystem {
      * Constructs a system of equations from a set of term representing either
      * equations or inequalities. All inequalities are converted by introducing
      * slack/surplus variables.
-     * 
+     *
      * @param terms
      * @return
      * @throws KeYStoneException
@@ -88,7 +77,7 @@ public class EquationSystem {
     Map<String, Variable> variableIndex = null;
 
     private EquationSystem(final List<Equation> equations,
-            final Map<String, Variable> variableIndex2) {
+                           final Map<String, Variable> variableIndex2) {
         super();
         this.equations = equations;
         variableIndex = variableIndex2;
@@ -117,12 +106,12 @@ public class EquationSystem {
 
     /**
      * @param equation
-     * @param variablesToSolve
+     * @param variableToSolve
      * @return true if the equation contains the variable, false otherwise.
      *         Reference based comparisons are enforced.
      */
     private boolean constainsVariable(final Equation equation,
-            final Variable variableToSolve) {
+                                      final Variable variableToSolve) {
 
         for (final Variable variable : equation.getVariables().values()) {
             if (variable == variableToSolve) {
@@ -134,7 +123,7 @@ public class EquationSystem {
 
     /**
      * Prototype solver method.
-     * 
+     *
      * @return
      */
     public Map<String, Integer> experimentalSolve() {
@@ -250,7 +239,7 @@ public class EquationSystem {
     }
 
     private void substituteVariable(final Variable variableToSolve,
-            final IExpression solution) {
+                                    final IExpression solution) {
 
         assert variableIndex.values().contains(variableToSolve);
 

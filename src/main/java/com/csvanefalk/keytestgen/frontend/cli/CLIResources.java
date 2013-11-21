@@ -1,14 +1,14 @@
 package com.csvanefalk.keytestgen.frontend.cli;
 
-import java.util.HashMap;
-
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.backend.junit.JUnitConverter;
 import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
 
+import java.util.HashMap;
+
 /**
  * Shared resources for the KeyTestGen CLI.
- * 
+ *
  * @author christopher
  */
 public class CLIResources {

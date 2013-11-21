@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.keystone.expression;
 
-import org.apache.commons.math3.fraction.Fraction;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;
 import com.csvanefalk.keytestgen.keystone.equations.Equation;
 import com.csvanefalk.keytestgen.keystone.equations.IComparator;
@@ -12,6 +9,8 @@ import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
 import com.csvanefalk.keytestgen.keystone.equations.expression.Multiplication;
 import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
 import com.csvanefalk.keytestgen.keystone.equations.expression.Variable;
+import org.apache.commons.math3.fraction.Fraction;
+import org.junit.Test;
 
 public class EquationTest {
 

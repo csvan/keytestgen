@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Contains various constants and utility methods related to handling and
  * generating XML in KeYTestGen2.
- * 
+ *
  * @author christopher
  */
 public abstract class XMLHandler {

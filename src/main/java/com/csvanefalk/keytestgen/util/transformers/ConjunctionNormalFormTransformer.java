@@ -6,17 +6,17 @@ import de.uka.ilkd.key.logic.op.Junctor;
 
 /**
  * This parser is used in order to put a Term into Conjunctive Normal Form.
- * <p>
+ * <p/>
  * Assume that a Literal <i>L</i> is either an atom p or the negation of an atom
  * !p. A Term <i>T</i> is in CNF if it is a conjunction of clauses, where each
  * clause <i>D</i> is a disjunction of literals:
- * 
+ * <p/>
  * <pre>
  * L ::= p | !p
  * D ::= L | L OR D
  * C ::= D | D AND T
  * </pre>
- * 
+ *
  * @author christopher
  */
 public class ConjunctionNormalFormTransformer extends AbstractTermTransformer {
@@ -46,12 +46,12 @@ public class ConjunctionNormalFormTransformer extends AbstractTermTransformer {
     /**
      * Implements the DISTR routine of the CNF algorithm. It is defined as
      * follows:
-     * 
+     * <p/>
      * <pre>
-     * 
+     *
      * Pre: n1 and n2 are in CNF
      * Post: DISTR(n1,n2) computes a CNF for n1 OR n2
-     * 
+     *
      * function DISTR(n1, n2):
      * begin function
      *     case
@@ -60,13 +60,11 @@ public class ConjunctionNormalFormTransformer extends AbstractTermTransformer {
      *         otherwise : return n1 OR n2
      *     end case
      * end function
-     * 
+     *
      * </pre>
-     * 
-     * @param firstTerm
-     *            n1
-     * @param secondTerm
-     *            n2
+     *
+     * @param firstTerm  n1
+     * @param secondTerm n2
      * @return the distributed term
      */
     private Term distribute(final Term firstTerm, final Term secondTerm) {
@@ -99,7 +97,7 @@ public class ConjunctionNormalFormTransformer extends AbstractTermTransformer {
 
     /**
      * Puts a Term into Conjunctive Normal Form, using the following algorithm:
-     * 
+     * <p/>
      * <pre>
      * Pre: x is implication free and in Negation Normal Form
      * Post: CNF(x) computes and equivalent CNF for(x)
@@ -112,14 +110,13 @@ public class ConjunctionNormalFormTransformer extends AbstractTermTransformer {
      *     end case
      * end function
      * </pre>
-     * 
+     * <p/>
      * The algorithm was taken from:
-     * <p>
+     * <p/>
      * (Huth and Ryan, <i>Logic in Computer Science</i>, pages 60-61, 2nd Ed.
      * Cambridge University press, 2008)
-     * 
-     * @param term
-     *            the term to transform
+     *
+     * @param term the term to transform
      * @return the transformed term
      */
     @Override

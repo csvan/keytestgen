@@ -6,9 +6,8 @@ import java.util.Set;
 /**
  * An OracleAssertion is a set of {@link OracleExpression} instances. On a FOL
  * level, it represents a set of formulas joined by disjunctions.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleAssertion {
 

@@ -49,7 +49,7 @@ public class IntegerClass {
             return b;
         }
     }
-    
+
     /*
      *@ public normal_behavior
      *@ requires c == 10;

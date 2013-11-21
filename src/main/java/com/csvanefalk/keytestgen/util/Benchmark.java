@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  * Benchmarking utilities
- * 
+ *
  * @author christopher
  */
 public class Benchmark {
@@ -21,8 +21,8 @@ public class Benchmark {
     /**
      * Registers the clockValue it took to move from the last clock reading to
      * this event.
-     * 
-     * @param item
+     *
+     * @param event
      */
     public static void finishBenchmarking(final String event) {
         if (Benchmark.toggleBenchmark) {

@@ -1,13 +1,13 @@
 package com.csvanefalk.keytestgen.frontend.cli;
 
-import java.io.File;
-
 import com.beust.jcommander.IParameterValidator;
 import com.beust.jcommander.ParameterException;
 
+import java.io.File;
+
 /**
  * Instances of this class are used in order to validate Java files.
- * 
+ *
  * @author christopher
  */
 public class JavaFileValidator implements IParameterValidator {

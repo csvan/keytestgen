@@ -1,16 +1,5 @@
 package com.csvanefalk.keytestgen;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.PriorityQueue;
-
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.backend.ITestSuite;
 import com.csvanefalk.keytestgen.backend.TestGenerator;
@@ -23,6 +12,16 @@ import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
 import com.csvanefalk.keytestgen.util.Benchmark;
 import de.uka.ilkd.key.proof.init.ProofInputException;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
 
 public class TestJUnitTestCaseGenerator {
 

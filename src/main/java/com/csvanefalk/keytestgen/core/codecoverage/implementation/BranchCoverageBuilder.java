@@ -1,16 +1,10 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionBranch;
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPathContext;
+
+import java.util.*;
 
 public class BranchCoverageBuilder implements ICoverageBuilder {
 
@@ -111,7 +105,7 @@ public class BranchCoverageBuilder implements ICoverageBuilder {
     }
 
     private boolean subsumes(final List<ExecutionBranch> first,
-            final List<ExecutionBranch> second) {
+                             final List<ExecutionBranch> second) {
 
         if (second.size() > first.size()) {
             return false;

@@ -1,13 +1,12 @@
 package com.csvanefalk.keytestgen.qantifiers;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.KeYTestGenTest;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
+import org.junit.Test;
+
+import java.io.IOException;
 
 public class QuantifierTest extends KeYTestGenTest {
 

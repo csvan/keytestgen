@@ -1,37 +1,20 @@
 package com.csvanefalk.keytestgen.util.parsers;
 
-import java.util.LinkedList;
-
-import org.apache.commons.math3.fraction.Fraction;
-
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
 import com.csvanefalk.keytestgen.core.model.implementation.ModelVariable;
-import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
 import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
 import de.uka.ilkd.key.logic.Term;
-import de.uka.ilkd.key.logic.op.Equality;
-import de.uka.ilkd.key.logic.op.Function;
-import de.uka.ilkd.key.logic.op.IfExThenElse;
-import de.uka.ilkd.key.logic.op.IfThenElse;
-import de.uka.ilkd.key.logic.op.Junctor;
-import de.uka.ilkd.key.logic.op.LocationVariable;
-import de.uka.ilkd.key.logic.op.LogicVariable;
-import de.uka.ilkd.key.logic.op.ObserverFunction;
-import de.uka.ilkd.key.logic.op.Operator;
-import de.uka.ilkd.key.logic.op.ProgramMethod;
-import de.uka.ilkd.key.logic.op.ProgramVariable;
-import de.uka.ilkd.key.logic.op.Quantifier;
-import de.uka.ilkd.key.logic.op.SortDependingFunction;
-import de.uka.ilkd.key.logic.op.SortedOperator;
+import de.uka.ilkd.key.logic.op.*;
 import de.uka.ilkd.key.logic.sort.ArraySort;
 import de.uka.ilkd.key.logic.sort.NullSort;
-import de.uka.ilkd.key.logic.sort.Sort;
+
+import java.util.LinkedList;
 
 /**
  * This class contains utility methods for parsers which can be used to in
  * various ways process {@link Term}s in the process of test case generation.
- * 
+ *
  * @author christopher
  */
 public final class TermParserTools {
@@ -79,7 +62,7 @@ public final class TermParserTools {
     private static final LinkedList<String> unaryFunctions;
 
     /**
-     *   
+     *
      */
     private static final LinkedList<String> builtinFunctions;
 
@@ -138,8 +121,8 @@ public final class TermParserTools {
     /**
      * Extracts the name of a field, given a representation on the form:
      * <code>[package].[class]::$[field]</code>
-     * 
-     * @param string
+     *
+     * @param term
      * @return
      */
     public static String extractName(final Term term) {
@@ -158,15 +141,14 @@ public final class TermParserTools {
     /**
      * Retrieves the short-hand name of the variable a given Term represents.
      * For example, in the Term
-     * 
+     * <p/>
      * <pre>
      * com.example.MyClass::$myVariable,
      * </pre>
-     * 
+     * <p/>
      * the returned shorthand is <i>myVariable</i>.
-     * 
-     * @param term
-     *            the Term to process
+     *
+     * @param term the Term to process
      * @return the short-hand name of the variable represented by the Term. If
      *         the Term does not represent a variable, the regular toString
      *         output of the Terms {@link Operator} instance is returned.
@@ -181,8 +163,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the Term to check
+     * @param term the Term to check
      * @return true if the term has children, false otherwise.
      */
     public static boolean hasChildren(final Term term) {
@@ -191,9 +172,7 @@ public final class TermParserTools {
     }
 
     /**
-     * 
-     * @param term
-     *            the term
+     * @param term the term
      * @return if the term represents addition
      */
     public static boolean isAddition(final Term term) {
@@ -201,8 +180,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an AND junctor
      */
     public static boolean isAnd(final Term term) {
@@ -211,8 +189,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an arithmetic comparator, i.e. GEQ,
      *         GREATER_THAN, LEQ, or LESS_THAN.
      */
@@ -235,7 +212,7 @@ public final class TermParserTools {
     /**
      * Check if the given Term represents a binary function, such as any of the
      * {@link Junctor} instances.
-     * 
+     *
      * @param term
      * @return
      */
@@ -255,8 +232,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term is of boolean type, false otherwise.
      */
     public static boolean isBoolean(final Term term) {
@@ -264,8 +240,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a boolean constant, false
      *         otherwise.
      */
@@ -276,8 +251,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents the boolean constant FALSE, false
      *         otherwise.
      */
@@ -292,8 +266,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents the boolean constant TRUE, false
      *         otherwise.
      */
@@ -308,9 +281,7 @@ public final class TermParserTools {
     }
 
     /**
-     * 
-     * @param term
-     *            the term
+     * @param term the term
      * @return if the term represents division
      */
     public static boolean isDivision(final Term term) {
@@ -318,8 +289,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an EQUALS junctor
      */
     public static boolean isEquals(final Term term) {
@@ -328,8 +298,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a Java Exception
      */
     public static boolean isExceptionSort(final Term term) {
@@ -338,8 +307,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents the EXISTS quantifier, false
      *         otherwise.
      */
@@ -349,8 +317,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents the FOR-ALL quantifier, false
      *         otherwise.
      */
@@ -360,8 +327,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a Formula, false otherwise.
      */
     public static boolean isFormula(final Term term) {
@@ -372,8 +338,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a {@link Function}
      */
     public static boolean isFunction(final Term term) {
@@ -382,8 +347,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a GEQ operator
      */
     public static boolean isGreaterOrEquals(final Term term) {
@@ -393,8 +357,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a GREATER_THAN operator
      */
     public static boolean isGreaterThan(final Term term) {
@@ -403,8 +366,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an {@link IfExThenElse} statement.
      */
     public static boolean isIfExThenElse(final Term term) {
@@ -413,8 +375,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an {@link IfThenElse} statement.
      */
     public static boolean isIfThenElse(final Term term) {
@@ -428,8 +389,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a negative number, i.e. the Z
      *         function, false otherwise.
      */
@@ -441,8 +401,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a negative number, i.e. the Z
      *         function, false otherwise.
      */
@@ -459,8 +418,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a {@link Junctor}
      */
     public static boolean isJunctor(final Term term) {
@@ -469,8 +427,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a LEQ operator
      */
     public static boolean isLessOrEquals(final Term term) {
@@ -480,8 +437,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a LESS_THAN operator
      */
     public static boolean isLessThan(final Term term) {
@@ -497,8 +453,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a {@link LocationVariable}.
      */
     public static boolean isLocationVariable(final Term term) {
@@ -512,9 +467,7 @@ public final class TermParserTools {
     }
 
     /**
-     * 
-     * @param term
-     *            the term
+     * @param term the term
      * @return if the term represents multiplication
      */
     public static boolean isMultiplication(final Term term) {
@@ -522,8 +475,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a NOT junctor
      */
     public static boolean isNot(final Term term) {
@@ -532,8 +484,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents the {@link NullSort}
      */
     public static boolean isNullSort(final Term term) {
@@ -542,8 +493,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an {@link ObserverFunction}
      *         construct.
      */
@@ -553,8 +503,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an or junctor
      */
     public static boolean isOr(final Term term) {
@@ -570,8 +519,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term is of a primitive type, false otherwise.
      */
     public static boolean isPrimitiveType(final String type) {
@@ -582,9 +530,8 @@ public final class TermParserTools {
      * Check if the given term represents a program construct with a supported
      * primitive type as its base type, such as a method or local variable
      * declaration.
-     * 
-     * @param term
-     *            the term to check
+     *
+     * @param term the term to check
      * @return true if the Term represents an integer program construct, false
      *         otherwise
      */
@@ -596,8 +543,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents aa {@link ProgramMethod}.
      */
     public static boolean isProgramMethod(final Term term) {
@@ -606,8 +552,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a {@link ProgramVariable}.
      */
     public static boolean isProgramVariable(final Term term) {
@@ -621,8 +566,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents the RESULT constant
      */
     public static boolean isResult(final Term term) {
@@ -631,8 +575,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a {@link SortDependingFunction}
      */
     public static boolean isSortDependingFunction(final Term term) {
@@ -641,8 +584,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a {@link SortedOperator}, which is
      *         one of the two fundamental base sorts for Terms in KeY.
      */
@@ -652,9 +594,7 @@ public final class TermParserTools {
     }
 
     /**
-     * 
-     * @param term
-     *            the term
+     * @param term the term
      * @return if the term represents subtraction
      */
     public static boolean isSubtraction(final Term term) {
@@ -662,8 +602,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a unary function, false otherwise.
      */
     public static boolean isUnaryFunction(final Term term) {
@@ -674,8 +613,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a variable, false otherwise.
      */
     public static boolean isVariable(final Term term) {
@@ -687,8 +625,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents an array, false otherwise.
      */
     public static boolean isArray(final Term term) {
@@ -697,8 +634,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            the term
+     * @param term the term
      * @return true iff. the term represents a built-in function, false
      *         otherwise.
      */
@@ -713,18 +649,17 @@ public final class TermParserTools {
     /**
      * Generate an identifier String for a variable. Such an identifier is used
      * in order to uniquely distinguish an instance of a {@link ModelVariable}.
-     * <p>
+     * <p/>
      * If the variable is defined by a {@link SortDependingFunction}, the
      * identifier will be generated by recursively exploring the nesting
      * hierarchy this variable is a part of.
-     * 
-     * @param term
-     *            the {@link Term} representing the variable
+     *
+     * @param term the {@link Term} representing the variable
      * @return the identifier String.
      * @see Model
      */
     public static String resolveIdentifierString(final Term term,
-            final String separator) {
+                                                 final String separator) {
 
         final Operator operator = term.op();
 
@@ -787,8 +722,7 @@ public final class TermParserTools {
     }
 
     /**
-     * @param term
-     *            a term of boolean type
+     * @param term a term of boolean type
      * @return a boolean value corresponding to the value of the term.
      */
     public static boolean translateToJavaBoolean(final Term term)

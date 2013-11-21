@@ -1,8 +1,8 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.Comparator;
-
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
+
+import java.util.Comparator;
 
 public class DescendingExecutionPathComparator implements
         Comparator<ExecutionPath> {

@@ -1,7 +1,8 @@
 package com.csvanefalk.keytestgen.targetmodels.methods;
+
 public class StaticMethodCall {
-	/* Start
-	 * main() @ StaticMethodCall
+    /* Start
+     * main() @ StaticMethodCall
 	 * doSomething();
 	 * doSomething @ StaticMethodCall
 	 * return @ return of doSomething
@@ -22,24 +23,24 @@ public class StaticMethodCall {
 	 * return 8 @ return of main()
 	 * <endNode>
 	 */
-	
-	/*@ requires true;
-	  @ ensures true;
-	  @*/	
-	public static int main() {
-		doSomething();
-		int x = sub() + sub();
-		return x;
-	}
-	
-	public static void doSomething() {
-	}
-	
-	public static int sub() {
-		return subSub() + 2;
-	}
-	
-	public static int subSub() {
-		return 2;
-	}
+
+    /*@ requires true;
+      @ ensures true;
+      @*/
+    public static int main() {
+        doSomething();
+        int x = sub() + sub();
+        return x;
+    }
+
+    public static void doSomething() {
+    }
+
+    public static int sub() {
+        return subSub() + 2;
+    }
+
+    public static int subSub() {
+        return 2;
+    }
 }

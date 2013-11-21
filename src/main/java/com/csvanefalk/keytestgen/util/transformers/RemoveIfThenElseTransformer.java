@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.util.transformers;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import com.csvanefalk.keytestgen.util.parsers.TermParserException;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import de.uka.ilkd.key.logic.Term;
@@ -10,12 +7,14 @@ import de.uka.ilkd.key.logic.op.Equality;
 import de.uka.ilkd.key.logic.op.IfThenElse;
 import de.uka.ilkd.key.logic.op.Junctor;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * A Transformer which removes {@link IfThenElse} assertions from a Term,
  * replacing them with a semantically equivalent conjunction of conditions.
- * 
+ *
  * @author christopher
- * 
  */
 public class RemoveIfThenElseTransformer extends AbstractTermTransformer {
 
@@ -53,7 +52,7 @@ public class RemoveIfThenElseTransformer extends AbstractTermTransformer {
     }
 
     private void resolveIfThenElse(final Term term,
-            final boolean expectedOutcome, final Queue<Term> conditions)
+                                   final boolean expectedOutcome, final Queue<Term> conditions)
             throws TermTransformerException {
 
         try {
@@ -124,7 +123,7 @@ public class RemoveIfThenElseTransformer extends AbstractTermTransformer {
      * Removes all instances of {@link IfThenElse} from a pathcondition, instead
      * replacing them with a conjunction of conditions extracted from the
      * if-then-else statement.
-     * <p>
+     * <p/>
      * Primarily meant to simplify path conditions, may well have other uses.
      */
     @Override

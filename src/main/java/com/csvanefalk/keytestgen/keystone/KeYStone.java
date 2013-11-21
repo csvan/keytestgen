@@ -1,10 +1,10 @@
 package com.csvanefalk.keytestgen.keystone;
 
-import java.util.Map;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.keystone.equations.EquationSystem;
 import de.uka.ilkd.key.logic.Term;
+
+import java.util.Map;
+import java.util.Set;
 
 public class KeYStone {
 
@@ -34,7 +34,7 @@ public class KeYStone {
 
         return result;
     }
-    
+
     public void __DEBUG_DISPOSE() {
         instance = null;
     }

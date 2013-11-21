@@ -1,34 +1,20 @@
 package com.csvanefalk.keytestgen.keystone.equations;
 
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-
-import javax.naming.OperationNotSupportedException;
-
-import org.apache.commons.math3.fraction.Fraction;
-
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;
 import com.csvanefalk.keytestgen.keystone.equations.comparator.Equals;
 import com.csvanefalk.keytestgen.keystone.equations.comparator.GreaterOrEquals;
 import com.csvanefalk.keytestgen.keystone.equations.comparator.LessOrEquals;
-import com.csvanefalk.keytestgen.keystone.equations.expression.AbstractBinaryExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.AbstractUnaryExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Division;
-import com.csvanefalk.keytestgen.keystone.equations.expression.DummyVariable;
-import com.csvanefalk.keytestgen.keystone.equations.expression.ExpressionUtils;
-import com.csvanefalk.keytestgen.keystone.equations.expression.ITreeNode;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Multiplication;
-import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Variable;
+import com.csvanefalk.keytestgen.keystone.equations.expression.*;
+import org.apache.commons.math3.fraction.Fraction;
+
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Instances of this class represent equations.
- * 
+ *
  * @author christopher
- * 
  */
 public class Equation extends Equals {
 
@@ -71,7 +57,7 @@ public class Equation extends Equals {
 
     /**
      * Creates an Equation from a tree representation.
-     * 
+     *
      * @param root
      * @return
      * @throws KeYStoneException
@@ -99,7 +85,7 @@ public class Equation extends Equals {
 
     /**
      * Creates a set of all variables in the equation.
-     * 
+     *
      * @param root
      * @return
      */
@@ -115,12 +101,12 @@ public class Equation extends Equals {
 
     /**
      * Helper for {@link #extractVariables(Equals)}.
-     * 
+     *
      * @param expression
      * @param variables2
      */
     private static void extractVariables_helper(final IExpression expression,
-            final Map<String, Variable> variables2) {
+                                                final Map<String, Variable> variables2) {
 
         if (expression instanceof Variable) {
             final Variable variable = (Variable) expression;
@@ -143,7 +129,7 @@ public class Equation extends Equals {
 
     /**
      * Creates a new Equation from an expression tree and a set of variables.
-     * 
+     *
      * @param root
      * @param variables
      */
@@ -171,9 +157,9 @@ public class Equation extends Equals {
 
     /**
      * Solves this equation in order to get a binding for the target variable.
-     * <p>
+     * <p/>
      * This does not affect the structure of the equation.
-     * 
+     *
      * @param variables
      * @throws KeYStoneException
      */

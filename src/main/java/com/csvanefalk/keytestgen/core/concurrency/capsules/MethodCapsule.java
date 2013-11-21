@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.core.concurrency.capsules;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
 import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
 import com.csvanefalk.keytestgen.core.concurrency.monitor.CaughtException;
@@ -17,12 +14,14 @@ import com.csvanefalk.keytestgen.util.Benchmark;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Instances of this capsule enables KeYTestGen2 to concurrently generate test
  * suites for multiple Java methods.
- * 
+ *
  * @author christopher
- * 
  */
 public class MethodCapsule extends AbstractCapsule implements ICapsuleMonitor {
 
@@ -48,7 +47,7 @@ public class MethodCapsule extends AbstractCapsule implements ICapsuleMonitor {
     private TestSuite testSuite = null;
 
     public MethodCapsule(final ICodeCoverageParser codeCoverageParser,
-            final KeYJavaMethod targetMethod) {
+                         final KeYJavaMethod targetMethod) {
         super();
         this.codeCoverageParser = codeCoverageParser;
         this.targetMethod = targetMethod;

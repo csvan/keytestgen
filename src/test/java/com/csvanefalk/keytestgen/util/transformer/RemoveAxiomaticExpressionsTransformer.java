@@ -10,31 +10,31 @@ import de.uka.ilkd.key.logic.Term;
  * This transformer simplifies a {@link Term} by removing from it expressions
  * which, in the context of Java, may be considered axiomatic. An example of
  * such a Term is the following (prettyprinted):
- * 
+ * <p/>
  * <pre>
  * arr.length >= 0 -> arr[i] == 10
- * 
+ *
  * (arr being an int[] instance, i being an integer)
  * </pre>
- * 
+ * <p/>
  * While KeY does generate such expressions, it is evident that truth of the
  * sub-expression
- * 
+ * <p/>
  * <pre>
  * arr.length &gt;= 0
  * </pre>
- * 
+ * <p/>
  * is for all intents and purposes self-evident, since no Java array may have a
  * negative size. We can thus replace the expression as a whole with simply
- * 
+ * <p/>
  * <pre>
  * arr[i] == 10
  * </pre>
- * 
+ * <p/>
  * TODO: This is really an elaborate hack, and it should be investigated if we
  * cannot simply make KeY simplify such expressions for us before they even make
  * it into KeYTestGen2.
- * 
+ *
  * @author christopher
  */
 public class RemoveAxiomaticExpressionsTransformer extends

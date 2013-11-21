@@ -2,11 +2,7 @@ package com.csvanefalk.keytestgen.core.model.implementation;
 
 import com.csvanefalk.keytestgen.core.model.tools.EliminateConjunctionsTransformer;
 import com.csvanefalk.keytestgen.util.transformers.NegationNormalFormTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveIfThenElseTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveImplicationsTransformer;
 import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
-import de.uka.ilkd.key.java.JavaInfo;
-import de.uka.ilkd.key.java.Services;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
@@ -18,13 +14,7 @@ public class ModelBuilder {
      * will be parsed, and all representations of program variables (along with
      * their relationships to one another) will be used to construct a
      * "skeletal" Model instance (i.e. no concrete primitive values).
-     * 
-     * @param term
-     *            the Term to process
-     * @param services
-     *            {@link Services} associated with the Term
-     * @param mediator
-     *            session mediator
+     *
      * @return the Model instance built from the Term
      * @throws TermTransformerException
      * @throws ProofInputException

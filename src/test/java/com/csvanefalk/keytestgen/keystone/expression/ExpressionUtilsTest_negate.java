@@ -1,16 +1,10 @@
 package com.csvanefalk.keytestgen.keystone.expression;
 
+import com.csvanefalk.keytestgen.keystone.equations.IExpression;
+import com.csvanefalk.keytestgen.keystone.equations.expression.*;
 import junit.framework.Assert;
-
 import org.apache.commons.math3.fraction.Fraction;
 import org.junit.Test;
-
-import com.csvanefalk.keytestgen.keystone.equations.IExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Division;
-import com.csvanefalk.keytestgen.keystone.equations.expression.ExpressionUtils;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Multiplication;
-import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
 
 public class ExpressionUtilsTest_negate {
 
@@ -258,8 +252,8 @@ public class ExpressionUtilsTest_negate {
         IExpression expression = new Addition(new NumericConstant(5),
                 new Addition(new NumericConstant(15), new Multiplication(
                         new NumericConstant(-10), new Division(
-                                new NumericConstant(15),
-                                new NumericConstant(25)))));
+                        new NumericConstant(15),
+                        new NumericConstant(25)))));
 
         ExpressionUtils.negate(expression);
 
@@ -276,8 +270,8 @@ public class ExpressionUtilsTest_negate {
         IExpression expression = new Addition(new NumericConstant(5),
                 new Addition(new NumericConstant(-15), new Multiplication(
                         new NumericConstant(10), new Division(
-                                new NumericConstant(15),
-                                new NumericConstant(25)))));
+                        new NumericConstant(15),
+                        new NumericConstant(25)))));
 
         ExpressionUtils.negate(expression);
         Fraction negatedValue = expression.evaluate();

@@ -1,11 +1,5 @@
 package com.csvanefalk.keytestgen.core.keyinterface;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.locks.ReentrantLock;
-
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
 import de.uka.ilkd.key.gui.KeYMediator;
 import de.uka.ilkd.key.logic.op.IProgramMethod;
@@ -23,16 +17,22 @@ import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionEnvironment;
 import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionUtil;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * This singleton provides services on behalf of a single KeY runtime instance
  * to the rest of KeYTestGen. No part of KeYTestGen apart from this class should
  * ever be allowed to in any way manipulate the KeY internals, or otherwise
  * interact directly with the KeY runtime.
- * <p>
+ * <p/>
  * Use of this singleton is synchronized in order to make sure that no thread is
  * able to request services of the KeY runtime until another one has completely
  * finished doing so, due to concerns about the thread safety of KeY itself.
- * 
+ *
  * @author christopher
  */
 public class KeYInterface {
@@ -52,16 +52,13 @@ public class KeYInterface {
     /**
      * Assert that a given object is not null, and generate an exception if it
      * is.
-     * 
-     * @param object
-     *            the object to check
-     * @param failureMessage
-     *            message to pass in the event that the object is null
-     * @throws KeYInterfaceException
-     *             the generated exception if the object is null
+     *
+     * @param object         the object to check
+     * @param failureMessage message to pass in the event that the object is null
+     * @throws KeYInterfaceException the generated exception if the object is null
      */
     private static void assertNotNull(final Object object,
-            final String failureMessage) throws KeYInterfaceException {
+                                      final String failureMessage) throws KeYInterfaceException {
 
         if (object == null) {
             throw new KeYInterfaceException(failureMessage);
@@ -84,17 +81,12 @@ public class KeYInterface {
 
     /**
      * Create a {@link Proof} for a given method.
-     * 
-     * @param initConfig
-     *            the {@link InitConfig} instance for the Java file which the
-     *            method is part of.
-     * @param method
-     *            the method to generate the proof for
-     * @param precondition
-     *            an optional precondition for the method
+     *
+     * @param environment
+     * @param method       the method to generate the proof for
+     * @param precondition an optional precondition for the method
      * @return the proof
-     * @throws ProofInputException
-     *             in the event that the proof cannot be created
+     * @throws ProofInputException in the event that the proof cannot be created
      */
     private Proof getProof(
             final KeYEnvironment<CustomConsoleUserInterface> environment,
@@ -126,13 +118,11 @@ public class KeYInterface {
     /**
      * Symbolically execute a given method, and return the resulting symbolic
      * execution tree.
-     * 
-     * @param method
-     *            the method
+     *
+     * @param method the method
      * @return the symbolic execution tree
-     * @throws KeYInterfaceException
-     *             in the event that a symbolic execution tree cannot be
-     *             generated.
+     * @throws KeYInterfaceException in the event that a symbolic execution tree cannot be
+     *                               generated.
      */
     public IExecutionStart getSymbolicExecutionTree(final KeYJavaMethod method)
             throws KeYInterfaceException {
@@ -194,15 +184,12 @@ public class KeYInterface {
     /**
      * Load a given file into the KeY system, and return the {@link InitConfig}
      * instance for it.
-     * 
-     * @param javaFile
-     *            the file to load
+     *
+     * @param javaFile the file to load
      * @return the {@link InitConfig} instance for the file
      * @throws KeYInterfaceException
-     * @throws ProofInputException
-     *             in case the proof could not be initiated
-     * @throws IOException
-     *             in case the File could not be found, or is not accessible
+     * @throws ProofInputException   in case the proof could not be initiated
+     * @throws IOException           in case the File could not be found, or is not accessible
      */
     public KeYEnvironment<CustomConsoleUserInterface> loadJavaFile(
             final File javaFile) throws KeYInterfaceException {
@@ -215,7 +202,7 @@ public class KeYInterface {
              * Manually load the classpath relevant for 
              */
             List<File> classpath = new ArrayList<>();
-            for(String path : System.getProperty("java.class.path").split(":")) {
+            for (String path : System.getProperty("java.class.path").split(":")) {
                 classpath.add(new File(path));
             }
 

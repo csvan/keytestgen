@@ -1,11 +1,5 @@
 package com.csvanefalk.keytestgen.util.transformer;
 
-import java.io.IOException;
-
-import junit.framework.Assert;
-
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.util.TermEquivalenceChecker;
 import com.csvanefalk.keytestgen.util.UtilTest;
@@ -16,6 +10,10 @@ import de.uka.ilkd.key.logic.TermFactory;
 import de.uka.ilkd.key.logic.op.Junctor;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
+import junit.framework.Assert;
+import org.junit.Test;
+
+import java.io.IOException;
 
 public class TransformerTest extends UtilTest {
 

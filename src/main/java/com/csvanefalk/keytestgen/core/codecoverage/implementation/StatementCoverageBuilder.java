@@ -1,19 +1,18 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
+import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
+import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPathContext;
+import de.uka.ilkd.key.java.SourceElement;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
-import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
-import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPathContext;
-import de.uka.ilkd.key.java.SourceElement;
-
 /**
  * Extracts the execution paths needed in order to provide Statement Coverage.
- * 
+ *
  * @author christopher
- * 
  */
 public class StatementCoverageBuilder implements ICoverageBuilder {
 
@@ -24,7 +23,7 @@ public class StatementCoverageBuilder implements ICoverageBuilder {
 
     /**
      * Gets a singleton instance for this class.
-     * 
+     *
      * @return the instance
      */
     public static StatementCoverageBuilder getInstance() {
@@ -42,14 +41,12 @@ public class StatementCoverageBuilder implements ICoverageBuilder {
     }
 
     /**
-     * @param first
-     *            the first set
-     * @param second
-     *            the second set
+     * @param first  the first set
+     * @param second the second set
      * @return true if the first set is a subset of the second, false otherwise.
      */
     private boolean isSubsetOf(final Set<SourceElement> first,
-            final Set<SourceElement> second) {
+                               final Set<SourceElement> second) {
         if (first.size() > second.size()) {
             return false;
         }
@@ -106,7 +103,7 @@ public class StatementCoverageBuilder implements ICoverageBuilder {
     }
 
     private boolean subsumes(final ExecutionPath firstPath,
-            final ExecutionPath secondPath) {
+                             final ExecutionPath secondPath) {
         return isSubsetOf(secondPath.getCoveredNodes(),
                 firstPath.getCoveredNodes());
     }

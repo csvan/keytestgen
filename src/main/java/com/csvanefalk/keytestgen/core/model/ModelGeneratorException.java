@@ -4,9 +4,8 @@ import com.csvanefalk.keytestgen.KeYTestGenException;
 
 /**
  * Base class for all exceptions thrown by the model generation subsystem.
- * 
+ *
  * @author christopher
- * 
  */
 public class ModelGeneratorException extends KeYTestGenException {
 

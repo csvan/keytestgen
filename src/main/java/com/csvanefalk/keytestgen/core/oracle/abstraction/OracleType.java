@@ -2,9 +2,8 @@ package com.csvanefalk.keytestgen.core.oracle.abstraction;
 
 /**
  * Represents the types of elements in an Oracle.
- * 
+ *
  * @author christopher
- * 
  */
 public final class OracleType {
 
@@ -26,11 +25,9 @@ public final class OracleType {
 
     /**
      * Construct a new type.
-     * 
-     * @param name
-     *            the name of the type
-     * @param fullName
-     *            the name of the type, including its package declaration
+     *
+     * @param name     the name of the type
+     * @param fullName the name of the type, including its package declaration
      */
     public OracleType(final String name, final String fullName) {
         this.name = name;

@@ -19,8 +19,7 @@ public abstract class AbstractUnaryExpression extends AbstractExpression {
     }
 
     /**
-     * @param operand
-     *            the operand to set
+     * @param operand the operand to set
      */
     public void setOperand(final IExpression operand) {
         this.operand = operand;

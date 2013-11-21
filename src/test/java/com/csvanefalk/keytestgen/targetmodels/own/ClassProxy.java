@@ -17,8 +17,7 @@ public class ClassProxy {
     }
 
     /**
-     * @param staticInt
-     *            the staticInt to set
+     * @param staticInt the staticInt to set
      */
     public static final void setStaticInt(final int staticInt) {
 
@@ -50,8 +49,7 @@ public class ClassProxy {
     }
 
     /**
-     * @param instanceInt
-     *            the instanceInt to set
+     * @param instanceInt the instanceInt to set
      */
     public final void setInstanceInt(final int instanceInt) {
 
@@ -59,8 +57,7 @@ public class ClassProxy {
     }
 
     /**
-     * @param nestedProxy
-     *            the nestedProxy to set
+     * @param nestedProxy the nestedProxy to set
      */
     public final void setNestedProxy(final ClassProxy nestedProxy) {
 

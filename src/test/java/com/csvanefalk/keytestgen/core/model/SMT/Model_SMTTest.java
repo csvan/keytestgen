@@ -1,13 +1,5 @@
 package com.csvanefalk.keytestgen.core.model.SMT;
 
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.backend.TestGenerator;
 import com.csvanefalk.keytestgen.backend.TestGeneratorException;
@@ -19,9 +11,15 @@ import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Model_SMTTest {
-    
-    public  int counter = 0;
+
+    public int counter = 0;
 
     //@Test
     public void test() throws IOException, ProofInputException,
@@ -48,7 +46,7 @@ public class Model_SMTTest {
             PaperTest.addResult("TOTAL",
                     Calendar.getInstance().getTimeInMillis() - time);
         }
-        
+
         PaperTest.printResults();
         
         /*
@@ -88,5 +86,5 @@ public class Model_SMTTest {
          */
 
     }
-    
+
 }

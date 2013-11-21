@@ -1,13 +1,13 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import de.uka.ilkd.key.java.Expression;
 import de.uka.ilkd.key.java.ProgramElement;
 import de.uka.ilkd.key.java.expression.Operator;
 import de.uka.ilkd.key.java.expression.operator.ComparativeOperator;
 import de.uka.ilkd.key.logic.op.ProgramVariable;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class LogicConditionExtractor {
 
@@ -32,7 +32,7 @@ public class LogicConditionExtractor {
     }
 
     private void getConditionsHelper(final ProgramElement element,
-            final Set<ProgramElement> returnSet) {
+                                     final Set<ProgramElement> returnSet) {
 
         if (element instanceof Operator) {
 

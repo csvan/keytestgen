@@ -5,15 +5,14 @@ import com.csvanefalk.keytestgen.StringConstants;
 /**
  * Represents a quantifier in an oracle expression, semantically equivalent to
  * the same construct in a FOL formula.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleQuantifier extends OracleExpression {
 
     /**
      * The possible types of quantifiers.
-     * 
+     *
      * @author christopher
      */
     public enum QuantifierType {
@@ -61,17 +60,14 @@ public class OracleQuantifier extends OracleExpression {
 
     /**
      * Constructs a new quantifier.
-     * 
-     * @param type
-     *            the type of this quantifier
-     * @param quantifiableVariable
-     *            the quantified variable of this quantifier
-     * @param boundExpression
-     *            the expression bound to this quantifier
+     *
+     * @param type                 the type of this quantifier
+     * @param quantifiableVariable the quantified variable of this quantifier
+     * @param boundExpression      the expression bound to this quantifier
      */
     public OracleQuantifier(final QuantifierType type,
-            final OracleLiteral quantifiableVariable,
-            final OracleConstraint boundExpression) {
+                            final OracleLiteral quantifiableVariable,
+                            final OracleConstraint boundExpression) {
         super(OracleType.BOOLEAN);
 
         this.boundExpression = boundExpression;

@@ -15,7 +15,7 @@ import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 /**
  * Provides various methods for processing the pathconditions for
  * {@link IExecutionNode} instances.
- * 
+ *
  * @author christopher
  */
 public class ModelGenerationTools {
@@ -27,7 +27,7 @@ public class ModelGenerationTools {
          * Given an initial {@link Term}, constructs a simpler Term which
          * "localizes" all occurences of primitive datatypes, by transforming
          * the instances of {@link SortDependingFunction} which contain them.
-         * <p>
+         * <p/>
          * As an example of how this works, consider the case where we have an
          * instace of some class <code>Base</code> named "base", which as a
          * field has an instance of some other class <code>Inner</code> named
@@ -36,22 +36,21 @@ public class ModelGenerationTools {
          * such a construct to an SMT-LIB formula would result in a needlesly
          * complex expression and model, which is a waste of both resources and
          * time invested in developing additional parsers to understand it.
-         * <p>
+         * <p/>
          * What we do instead is to simply transform the construct into a local
          * variable of our base class, giving it a name corresponding to its
          * nesting order. In our case, such a name migh be
          * "base$nested$localInt". When all variables have been processed like
          * this, we end up with a greatly simplified term which can easily be
          * expressed as an SMT-LIB construct.
-         * <p>
+         * <p/>
          * This process will also remove all implied properties of internal
          * objects, such as not-null requirements, since these are not needed in
          * the simplified formula, and would only further pollute the SMT-LIB
          * expression. Further, it will simplify the formula by removing
          * unnecessary conjuntions.
-         * 
-         * @param term
-         *            the term to process
+         *
+         * @param term the term to process
          * @return the simplified term
          * @throws ModelGeneratorException
          */
@@ -67,7 +66,7 @@ public class ModelGenerationTools {
          * second operand. If both are simplified to null, the entire
          * conjunction can be removed (hence this method will return null as
          * well).
-         * 
+         *
          * @param term
          * @throws ModelGeneratorException
          */
@@ -100,7 +99,7 @@ public class ModelGenerationTools {
          * boolean values as well as numeric ones. Thus, it is treated
          * differently in the sense that we simplify it the same way that we
          * simplify junctors.
-         * 
+         *
          * @param term
          * @return
          * @throws ModelGeneratorException
@@ -145,9 +144,8 @@ public class ModelGenerationTools {
          * Simplify a negation. If the child is simplified to null, simply
          * return null. Otherwise, create a new negation of the simplification
          * of the child.
-         * 
-         * @param term
-         *            the term (logical negator) to simplify
+         *
+         * @param term the term (logical negator) to simplify
          * @return the simplified negation
          * @throws TermTransformerException
          * @throws ModelGeneratorException
@@ -180,7 +178,7 @@ public class ModelGenerationTools {
          * second operand. If both are simplified to null, the entire
          * conjunction can be removed (hence this method will return null as
          * well).
-         * 
+         *
          * @param term
          * @throws ModelGeneratorException
          */
@@ -216,9 +214,8 @@ public class ModelGenerationTools {
          * main.nested.other.yetanother.x will be renamed
          * "main$nested$other$yetanother$x", and treated simply as a local
          * variable in the object main.
-         * 
-         * @param term
-         *            the term to process
+         *
+         * @param term the term to process
          * @return a Term representing the nested variable as a local variable
          */
         @Override
@@ -272,7 +269,7 @@ public class ModelGenerationTools {
      * Given an initial {@link Term}, constructs a simpler Term which
      * "localizes" all occurences of primitive datatypes, by transforming the
      * instances of {@link SortDependingFunction} which contain them.
-     * <p>
+     * <p/>
      * As an example of how this works, consider the case where we have an
      * instace of some class <code>Base</code> named "base", which as a field
      * has an instance of some other class <code>Inner</code> named "inner",
@@ -281,21 +278,20 @@ public class ModelGenerationTools {
      * formula would result in a needlesly complex expression and model, which
      * is a waste of both resources and time invested in developing additional
      * parsers to understand it.
-     * <p>
+     * <p/>
      * What we do instead is to simply transform the construct into a local
      * variable of our base class, giving it a name corresponding to its nesting
      * order. In our case, such a name migh be "base$nested$localInt". When all
      * variables have been processed like this, we end up with a greatly
      * simplified term which can easily be expressed as an SMT-LIB construct.
-     * <p>
+     * <p/>
      * This process will also remove all implied properties of internal objects,
      * such as not-null requirements, since these are not needed in the
      * simplified formula, and would only further pollute the SMT-LIB
      * expression. Further, it will simplify the formula by removing unnecessary
      * conjuntions.
-     * 
-     * @param term
-     *            the term to process
+     *
+     * @param term the term to process
      * @return the simplified term
      * @throws TermTransformerException
      * @throws ModelGeneratorException
@@ -305,6 +301,7 @@ public class ModelGenerationTools {
 
         return ModelGenerationTools.termSimplificationTransformer.transform(targetNodeCondition);
     }
+
     private ModelGenerationTools() {
 
     }

@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.core;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.backend.FrameworkConverterException;
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.backend.ITestSuite;
@@ -22,10 +19,13 @@ import com.csvanefalk.keytestgen.util.Benchmark;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionMethodCall;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Encapsulates logic needed to construct Test Suites directly from individual
  * {@link IExecutionNode} instances.
- * 
+ *
  * @author christopher
  */
 public class NodeTestGenerator {
@@ -48,7 +48,7 @@ public class NodeTestGenerator {
     }
 
     public ITestSuite constructTestSuiteFromNode(final IExecutionNode node,
-            final IFrameworkConverter frameworkConverter)
+                                                 final IFrameworkConverter frameworkConverter)
             throws TestGeneratorException {
 
         try {
@@ -122,9 +122,8 @@ public class NodeTestGenerator {
      * Given an {@link IExecutionNode} somewhere in a symbolic execution tree
      * and below the method call node, backtracks until the method call node is
      * found.
-     * 
-     * @param node
-     *            the node
+     *
+     * @param node the node
      * @return
      */
     private IExecutionMethodCall getMethodCallNode(final IExecutionNode node) {
@@ -135,7 +134,7 @@ public class NodeTestGenerator {
             return getMethodCallNode(node.getParent());
         }
     }
-    
+
     public void __DEBUG_DISPOSE() {
         instance = null;
     }

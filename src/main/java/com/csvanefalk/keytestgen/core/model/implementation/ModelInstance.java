@@ -1,10 +1,10 @@
 package com.csvanefalk.keytestgen.core.model.implementation;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import de.uka.ilkd.key.java.abstraction.KeYJavaType;
 import de.uka.ilkd.key.logic.sort.ArraySort;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Instances of this class represent concrete Java objects on the heap. Such
@@ -12,7 +12,7 @@ import de.uka.ilkd.key.logic.sort.ArraySort;
  * information about the state of the object. Importantly, it stores the
  * concrete values of any fields its class may have, as well as information
  * about the {@link ModelVariable} instances referring to it.
- * 
+ *
  * @author christopher
  */
 public class ModelInstance {
@@ -24,10 +24,9 @@ public class ModelInstance {
 
     /**
      * Factory method for creating a new {@link ModelInstance} instance.
-     * 
-     * @param keYJavaType
-     *            the {@link KeYJavaType} instance associated with the created
-     *            instance.
+     *
+     * @param keYJavaType the {@link KeYJavaType} instance associated with the created
+     *                    instance.
      * @return the created instance.
      */
     public static ModelInstance constructModelInstance(

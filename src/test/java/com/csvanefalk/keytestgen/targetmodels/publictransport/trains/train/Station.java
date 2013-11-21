@@ -13,8 +13,7 @@ public class Station {
     private String name;
 
     /**
-     * @param str
-     *            name of the station
+     * @param str name of the station
      * @return the a new station
      */
     public Station(String str) {

@@ -1,11 +1,10 @@
 package com.csvanefalk.keytestgen.oraclegeneration;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.KeYTestGenTest;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
+import org.junit.Test;
+
+import java.io.IOException;
 
 public class OracleGeneratorTest extends KeYTestGenTest {
 

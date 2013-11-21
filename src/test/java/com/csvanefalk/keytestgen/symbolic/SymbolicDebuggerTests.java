@@ -1,18 +1,17 @@
 package com.csvanefalk.keytestgen.symbolic;
 
-import java.io.File;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.backend.ITestSuite;
 import com.csvanefalk.keytestgen.backend.TestGenerator;
 import com.csvanefalk.keytestgen.backend.TestGeneratorException;
 import com.csvanefalk.keytestgen.backend.junit.JUnitConverter;
 import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
 
 public class SymbolicDebuggerTests {
 
@@ -360,7 +359,7 @@ public class SymbolicDebuggerTests {
 
     /**
      * Helper for loading files
-     * 
+     *
      * @param example
      * @return
      */

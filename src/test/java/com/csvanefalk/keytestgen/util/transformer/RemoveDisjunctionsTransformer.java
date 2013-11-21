@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.util.transformer;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.keystone.util.Tuple;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import com.csvanefalk.keytestgen.util.transformers.AbstractTermTransformer;
@@ -11,16 +8,18 @@ import de.uka.ilkd.key.logic.DefaultVisitor;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.ProgramVariable;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * This transformer eliminates all disjunctions from a Term.
- * <p>
+ * <p/>
  * Each disjunctive statement is analyzed in order to choose the "simplest" of
  * its operands, which is then used to replace the disjunction as a whole. As
  * such, the transformer also performs some rudimentary optimization, turning
  * the Term into an equivalent form which is easier to solve.
- * 
+ *
  * @author christopher
- * 
  */
 public class RemoveDisjunctionsTransformer extends AbstractTermTransformer {
 
@@ -47,7 +46,7 @@ public class RemoveDisjunctionsTransformer extends AbstractTermTransformer {
     /**
      * If a disjunction is encountered, return the sub-tree with the smaller
      * price.
-     * 
+     *
      * @see RemoveDisjunctionsTransformer#price(Term)
      */
     @Override
@@ -69,11 +68,10 @@ public class RemoveDisjunctionsTransformer extends AbstractTermTransformer {
     /**
      * Prices a given term. The "price" of the term is a function of the number
      * of unique variables and number of logical operations occuring in it.
-     * 
+     * <p/>
      * TODO: This algorithm is very primitive, and could be improved.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the price of the term
      */
     private int price(final Term term) {
@@ -86,9 +84,8 @@ public class RemoveDisjunctionsTransformer extends AbstractTermTransformer {
      * Gathers metadata for the purpose of pricing a given term. Such metadata
      * includes the number of unique variables occuring in the term, as well as
      * the number of individual operations occuring in it.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the pricing metadata
      */
     private Tuple<Integer, Set<ProgramVariable>> priceGather(final Term term) {
@@ -134,9 +131,8 @@ public class RemoveDisjunctionsTransformer extends AbstractTermTransformer {
 
     /**
      * Collects all the variables present in a {@link Term} instance.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the set of variables in the term
      */
     private Set<ProgramVariable> collectVariables(final Term term) {

@@ -3,7 +3,7 @@ package com.csvanefalk.keytestgen;
 /**
  * Default supertype for all exceptions that can be thrown from any module in
  * KeYTestGen.
- * 
+ *
  * @author christopher
  */
 public class KeYTestGenException extends Exception {

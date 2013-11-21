@@ -1,9 +1,9 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPathContext;
+
+import java.util.Set;
 
 public class ConditionCoverageBuilder implements ICoverageBuilder {
 

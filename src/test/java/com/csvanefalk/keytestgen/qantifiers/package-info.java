@@ -1,8 +1,8 @@
 /**
- * 
+ *
  */
 /**
  * @author christopher
  *
  */
-package qantifiers;
+package com.csvanefalk.keytestgen.qantifiers;

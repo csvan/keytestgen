@@ -1,35 +1,35 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.List;
-
 import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
 
+import java.util.List;
+
 public class ConditionCoverageParser implements ICodeCoverageParser {
 
     /**
-     * <p>
+     * <p/>
      * Returns a set of {@link IExecutionNode} instances, s.t. generating a test
      * case covering each of these nodes will satisfy Condition Coverage for
      * this symbolic execution tree.
-     * <p>
+     * <p/>
      * Condition Coverage for a test suite T over a program P is satisfied iff.
      * the execution of each test case t in T will cause each boolean atom of
      * each branching statement in the code to evaluate at least once to true,
      * and at least once to false.
-     * <p>
+     * <p/>
      * To illustrate this, consider the following:
-     * <p>
+     * <p/>
      * <code>
      * public boolean isOrdered(int a, int b, int c, int d) {
-     * <br>if(a < b && b < c && c < d) 
-     * <br>return a; 
-     * <br>else 
+     * <br>if(a < b && b < c && c < d)
+     * <br>return a;
+     * <br>else
      * <br>return b;
      * <br>}
      * </code>
-     * <p>
+     * <p/>
      * In the above, we have a single branching condition, which is the
      * if-statement. The conditions in this code is the set of atomic boolean
      * sub-expressions inside this branching condition, such that there exist no
@@ -40,15 +40,14 @@ public class ConditionCoverageParser implements ICodeCoverageParser {
      * these conditions evaluate at least once to true, and at least one to
      * false. need to provide testcases s.t. this will once evaluate to true
      * (i.e. a >= b) and at least once to false (i.e. a < b).
-     * <p>
+     * <p/>
      * NOTE: It should be remembered that, for larger programs, combinatorial
      * explosion can easily occur when Condition Coverage is pursued. Even in
      * our simple example above, assuming a worst-case scenario, we would need
      * 2^3 test cases in order to satsify Condition Coverage. This number can of
      * course grow rapidly with more complex methods.
-     * 
-     * @param root
-     *            the root of the symbolic execution tree
+     *
+     * @param root the root of the symbolic execution tree
      * @return
      */
     @Override

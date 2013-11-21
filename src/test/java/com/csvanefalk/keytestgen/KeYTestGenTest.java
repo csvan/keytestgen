@@ -1,15 +1,7 @@
 package com.csvanefalk.keytestgen;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.junit.Assert;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
-import testutils.TestEnvironment;
+import com.csvanefalk.keytestgen.testutils.TestEnvironment;
 import de.uka.ilkd.key.gui.configuration.PathConfig;
 import de.uka.ilkd.key.gui.smt.ProofDependentSMTSettings;
 import de.uka.ilkd.key.java.JavaInfo;
@@ -23,23 +15,23 @@ import de.uka.ilkd.key.logic.op.QuantifiableVariable;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.rule.Taclet;
 import de.uka.ilkd.key.symbolic_execution.ExecutionNodePreorderIterator;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionBranchStatement;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionMethodCall;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionStateNode;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionStatement;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionValue;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionVariable;
+import de.uka.ilkd.key.symbolic_execution.model.*;
 import de.uka.ilkd.key.symbolic_execution.model.impl.ExecutionMethodReturn;
 import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionEnvironment;
 import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionUtil;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
+import org.junit.Assert;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * This class provides the basic functionality needed in order to construct test
  * cases for KeYTestGen.
- * 
+ *
  * @author Christopher Svanefalk
  */
 public abstract class KeYTestGenTest {
@@ -58,7 +50,7 @@ public abstract class KeYTestGenTest {
     }
 
     protected IExecutionNode getFirstSymbolicNodeForStatement(String method,
-            String statement) throws ProofInputException {
+                                                              String statement) throws ProofInputException {
 
         IExecutionStart symbolicTree = getSymbolicTreeForMethod(method);
         Assert.assertTrue(symbolicTree != null);
@@ -75,7 +67,7 @@ public abstract class KeYTestGenTest {
     }
 
     protected List<IExecutionNode> getSymbolicNodesForStatement(String method,
-            String statement) throws ProofInputException {
+                                                                String statement) throws ProofInputException {
 
         IExecutionStart symbolicTree = getSymbolicTreeForMethod(method);
         Assert.assertTrue(symbolicTree != null);
@@ -375,7 +367,7 @@ public abstract class KeYTestGenTest {
                         + stateNode.getPathCondition()
                         + "\nHuman readable: "
                         + stateNode.getFormatedPathCondition().replaceAll(
-                                "\n|\t", "") + "\n");
+                        "\n|\t", "") + "\n");
             }
         }
     }
@@ -415,11 +407,9 @@ public abstract class KeYTestGenTest {
 
     /**
      * Retrieve all nodes corresponding to a given program statement.
-     * 
-     * @param rootNode
-     *            starting node for the symbolic execution tree
-     * @param statement
-     *            the statement to search for
+     *
+     * @param rootNode  starting node for the symbolic execution tree
+     * @param statement the statement to search for
      * @return
      * @throws ProofInputException
      */

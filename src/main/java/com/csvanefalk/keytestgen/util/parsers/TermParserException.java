@@ -4,9 +4,8 @@ import com.csvanefalk.keytestgen.KeYTestGenException;
 
 /**
  * Base class for all exceptions thrown by the various KeYTestGen2 term parsers.
- * 
+ *
  * @author christopher
- * 
  */
 public class TermParserException extends KeYTestGenException {
 

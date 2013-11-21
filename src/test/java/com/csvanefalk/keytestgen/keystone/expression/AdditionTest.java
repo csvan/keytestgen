@@ -1,13 +1,11 @@
 package com.csvanefalk.keytestgen.keystone.expression;
 
+import com.csvanefalk.keytestgen.keystone.equations.IExpression;
+import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
+import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
 import junit.framework.Assert;
-
 import org.apache.commons.math3.fraction.Fraction;
 import org.junit.Test;
-
-import com.csvanefalk.keytestgen.keystone.equations.IExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
 
 public class AdditionTest {
 

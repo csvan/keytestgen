@@ -6,9 +6,8 @@ package com.csvanefalk.keytestgen.core.oracle.abstraction;
  * nothing more is defined than the precise paramaters provided for this
  * particular invocation, the returntype of the method itself, as well as the
  * object instance which the invocation is being made from.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleMethodInvocation extends OracleExpression {
 
@@ -29,19 +28,15 @@ public class OracleMethodInvocation extends OracleExpression {
 
     /**
      * Create a new method invocation.
-     * 
-     * @param returnType
-     *            returntype of the method
-     * @param identifier
-     *            identifier of the method
-     * @param parentObject
-     *            object from which the method is being invoked
-     * @param arguments
-     *            arguments passed to the invocation
+     *
+     * @param returnType   returntype of the method
+     * @param identifier   identifier of the method
+     * @param parentObject object from which the method is being invoked
+     * @param arguments    arguments passed to the invocation
      */
     public OracleMethodInvocation(final OracleType returnType,
-            final String identifier, final OracleLiteral parentObject,
-            final OracleExpression[] arguments) {
+                                  final String identifier, final OracleLiteral parentObject,
+                                  final OracleExpression[] arguments) {
         super(returnType);
 
         this.parentObject = parentObject;

@@ -1,13 +1,4 @@
-package testutils;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
-import org.junit.Assert;
+package com.csvanefalk.keytestgen.testutils;
 
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClass;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClassFactory;
@@ -15,6 +6,14 @@ import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterface;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
+import org.junit.Assert;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class TestEnvironment {
 
@@ -86,7 +85,7 @@ public class TestEnvironment {
 
     /**
      * Getsthe symbolic execution tree for a given method.
-     * 
+     *
      * @param identifier
      * @return
      */
@@ -97,9 +96,8 @@ public class TestEnvironment {
     /**
      * Load a set of corresponding {@link KeYJavaClass} instances for a set of
      * legitimate Java files.
-     * 
-     * @param javaFiles
-     *            the java files
+     *
+     * @param javaFiles the java files
      * @return the KeY abstractions
      * @throws KeYInterfaceException
      * @throws IOException

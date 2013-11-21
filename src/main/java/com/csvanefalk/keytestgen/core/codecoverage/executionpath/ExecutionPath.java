@@ -1,13 +1,13 @@
 package com.csvanefalk.keytestgen.core.codecoverage.executionpath;
 
+import de.uka.ilkd.key.java.SourceElement;
+import de.uka.ilkd.key.symbolic_execution.model.IExecutionBranchCondition;
+import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import de.uka.ilkd.key.java.SourceElement;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionBranchCondition;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 
 public class ExecutionPath {
 
@@ -21,7 +21,7 @@ public class ExecutionPath {
     }
 
     public ExecutionPath(final Set<SourceElement> coveredNodes,
-            final IExecutionNode terminatingNode) {
+                         final IExecutionNode terminatingNode) {
         super();
         this.coveredNodes = coveredNodes;
         this.terminatingNode = terminatingNode;
@@ -49,8 +49,7 @@ public class ExecutionPath {
     }
 
     /**
-     * @param branchConditionMappings
-     *            the branchConditionMappings to set
+     * @param branchConditionMappings the branchConditionMappings to set
      */
     void setBranchConditionMappings(
             final Map<SourceElement, List<IExecutionBranchCondition>> branchConditionMappings) {
@@ -58,16 +57,14 @@ public class ExecutionPath {
     }
 
     /**
-     * @param coveredNodes
-     *            the coveredNodes to set
+     * @param coveredNodes the coveredNodes to set
      */
     public void setCoveredNodes(final Set<SourceElement> coveredNodes) {
         this.coveredNodes = coveredNodes;
     }
 
     /**
-     * @param terminatingNode
-     *            the terminatingNode to set
+     * @param terminatingNode the terminatingNode to set
      */
     public void setTerminatingNode(final IExecutionNode terminatingNode) {
         this.terminatingNode = terminatingNode;

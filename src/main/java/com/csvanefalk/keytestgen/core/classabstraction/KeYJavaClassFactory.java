@@ -1,12 +1,5 @@
 package com.csvanefalk.keytestgen.core.classabstraction;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterface;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.oracle.OracleGeneratorException;
@@ -22,9 +15,14 @@ import de.uka.ilkd.key.symbolic_execution.model.IExecutionMethodCall;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Produces instances of {@link KeYJavaClass}.
- * 
+ *
  * @author christopher
  */
 public class KeYJavaClassFactory {
@@ -48,7 +46,7 @@ public class KeYJavaClassFactory {
     }
 
     private KeYJavaClass constructClass(final KeYJavaType parent,
-            final KeYEnvironment<CustomConsoleUserInterface> environment) {
+                                        final KeYEnvironment<CustomConsoleUserInterface> environment) {
 
         final Services services = environment.getServices();
         final JavaInfo javaInfo = services.getJavaInfo();
@@ -99,12 +97,10 @@ public class KeYJavaClassFactory {
 
     /**
      * Manufactures an instance of {@link KeYJavaClass}.
-     * 
-     * @param absolutePath
-     *            path to the corresponding .java file on the local file system
+     *
+     * @param javaFile path to the corresponding .java file on the local file system
      * @return the {@link KeYJavaClass} instance
-     * @throws IOException
-     *             if the file could not be found or read
+     * @throws IOException           if the file could not be found or read
      * @throws KeYInterfaceException
      */
     public KeYJavaClass createKeYJavaClass(final File javaFile)
@@ -146,16 +142,14 @@ public class KeYJavaClassFactory {
      * method. Such contracts represent the concrete specifications for the
      * method, i.e. a mapping between a precondition (initial heapstate) and
      * postcondition (postcondition).
-     * 
-     * @param methodCallNode
-     *            the symbolic execution node corresponding to the method call
+     *
+     * @param methodCallNode the symbolic execution node corresponding to the method call
      * @return the contract for the method
-     * @throws OracleGeneratorException
-     *             failure to find a contract for the method is always
-     *             exceptional
+     * @throws OracleGeneratorException failure to find a contract for the method is always
+     *                                  exceptional
      */
     private List<ContractWrapper> getContracts(final IProgramMethod method,
-            final Services services) {
+                                               final Services services) {
 
         final SpecificationRepository specificationRepository = services.getSpecificationRepository();
 
@@ -178,9 +172,8 @@ public class KeYJavaClassFactory {
 
     /**
      * Strips the file extension from a file name
-     * 
-     * @param file
-     *            the file to process
+     *
+     * @param file the file to process
      * @return the name of the file
      */
     private String getFileName(final File file) {
@@ -189,8 +182,8 @@ public class KeYJavaClassFactory {
         final int delimiter = name.indexOf('.');
         return name.substring(0, delimiter);
     }
-    
-    public static  void __DEBUG_DISPOSE() {
+
+    public static void __DEBUG_DISPOSE() {
         instance = null;
         KeYInterface.__DEBUG_DISPOSE();
     }

@@ -9,9 +9,8 @@ import com.csvanefalk.keytestgen.core.oracle.abstraction.Oracle;
 /**
  * Instances of this capsule enables KeYTestGen2 to to concurrently generate
  * oracles for multiple methods.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleCapsule extends AbstractCapsule {
 
@@ -33,7 +32,7 @@ public class OracleCapsule extends AbstractCapsule {
 
     /**
      * Initiate the AbstractCapsule for a given method.
-     * 
+     *
      * @param method
      */
     public OracleCapsule(final KeYJavaMethod method) {

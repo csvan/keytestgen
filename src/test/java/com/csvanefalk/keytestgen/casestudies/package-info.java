@@ -1,8 +1,8 @@
 /**
- * 
+ *
  */
 /**
  * @author christopher
  *
  */
-package casestudies;
+package com.csvanefalk.keytestgen.casestudies;

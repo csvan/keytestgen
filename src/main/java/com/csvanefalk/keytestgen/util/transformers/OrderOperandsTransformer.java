@@ -1,22 +1,17 @@
 package com.csvanefalk.keytestgen.util.transformers;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.Junctor;
 import de.uka.ilkd.key.logic.op.Operator;
 
+import java.util.*;
+
 /**
  * Transformer which rebuilds a Term in such a way that all Junctors having the
  * same operands, also have them in the same order.
- * 
+ *
  * @author christopher
- * 
  */
 public class OrderOperandsTransformer extends AbstractTermTransformer {
 
@@ -33,7 +28,7 @@ public class OrderOperandsTransformer extends AbstractTermTransformer {
     }
 
     private void collectLiteralsFromTree(final Term term,
-            final Operator operator, final List<Term> literals) {
+                                         final Operator operator, final List<Term> literals) {
 
         if (representsOperator(term, operator)) {
             collectLiteralsFromTree(term.sub(0), operator, literals);
@@ -44,7 +39,7 @@ public class OrderOperandsTransformer extends AbstractTermTransformer {
     }
 
     private Term constructTree(final PriorityQueue<String> sortedIdentifiers,
-            final Map<String, Term> mappings, final Operator operator) {
+                               final Map<String, Term> mappings, final Operator operator) {
 
         if (sortedIdentifiers.size() == 0) {
             return null;

@@ -5,19 +5,18 @@ package com.csvanefalk.keytestgen.core.oracle.abstraction;
  * from an {@link OracleComparator} only in the sense that it can have a
  * different type than just boolean, and is hence used to represent, for
  * instance, arithmetic operations.
- * <p>
+ * <p/>
  * Like {@link OracleComparator} instances, operators are not type safe, but
  * rely on KeY to make sure that the underlying formulas are already in such a
  * state.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleOperator extends OracleExpression {
 
     /**
      * The type of the operators in oracles.
-     * 
+     *
      * @author christopher
      */
     public enum OperatorType {
@@ -54,9 +53,8 @@ public class OracleOperator extends OracleExpression {
 
         /**
          * Constructs a new operator type.
-         * 
-         * @param identifier
-         *            the identifier for the operator
+         *
+         * @param identifier the identifier for the operator
          */
         private OperatorType(final String identifier) {
             this.identifier = identifier;
@@ -85,19 +83,15 @@ public class OracleOperator extends OracleExpression {
 
     /**
      * Constructs a new operator.
-     * 
-     * @param comparatorType
-     *            the type of the operator
-     * @param firstOperand
-     *            the first operand of the operator
-     * @param secondOperand
-     *            the second operand of the operator
-     * @param type
-     *            the resulting type of the operation itself
+     *
+     * @param comparatorType the type of the operator
+     * @param firstOperand   the first operand of the operator
+     * @param secondOperand  the second operand of the operator
+     * @param type           the resulting type of the operation itself
      */
     public OracleOperator(final OperatorType comparatorType,
-            final OracleExpression firstOperand,
-            final OracleExpression secondOperand, final OracleType type) {
+                          final OracleExpression firstOperand,
+                          final OracleExpression secondOperand, final OracleType type) {
         super(type);
 
         operatorType = comparatorType;

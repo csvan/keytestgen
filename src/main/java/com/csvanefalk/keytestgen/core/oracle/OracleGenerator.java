@@ -1,43 +1,31 @@
 package com.csvanefalk.keytestgen.core.oracle;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.Oracle;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleAssertion;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleComparator;
+import com.csvanefalk.keytestgen.core.oracle.abstraction.*;
 import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleComparator.ComparatorType;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleConstraint;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleExpression;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleLiteral;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleMetaExtractor;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleMethodInvocation;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleQuantifier;
 import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleQuantifier.QuantifierType;
-import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleType;
 import com.csvanefalk.keytestgen.util.parsers.TermParserException;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
 import de.uka.ilkd.key.logic.Term;
-import de.uka.ilkd.key.logic.op.IfExThenElse;
-import de.uka.ilkd.key.logic.op.LocationVariable;
-import de.uka.ilkd.key.logic.op.Operator;
-import de.uka.ilkd.key.logic.op.QuantifiableVariable;
-import de.uka.ilkd.key.logic.op.SortedOperator;
+import de.uka.ilkd.key.logic.op.*;
 import de.uka.ilkd.key.speclang.FunctionalOperationContract;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This singleton provides an API for turning the postconditions of Java
  * methods, represented by KeY {@link Term} instances, into test oracles
  * represented by {@link Oracle} instances.
- * 
+ *
  * @author christopher
  */
 public enum OracleGenerator {
     INSTANCE;
 
     private static final Oracle EMPTY_ORACLE;
+
     static {
         final Set<OracleAssertion> assertions = new HashSet<OracleAssertion>();
         final OracleConstraint constraints = new OracleConstraint(assertions);
@@ -52,15 +40,13 @@ public enum OracleGenerator {
 
     /**
      * Constructs a set of {@link OracleAssertion} instances from a {@link Term}
-     * 
-     * @param term
-     *            the term
-     * @param clauses
-     *            buffer for the generated assertions
+     *
+     * @param term    the term
+     * @param clauses buffer for the generated assertions
      * @throws OracleGeneratorException
      */
     private void constructAssertions(final Term term,
-            final Set<OracleAssertion> clauses) throws OracleGeneratorException {
+                                     final Set<OracleAssertion> clauses) throws OracleGeneratorException {
 
         /*
          * The clause to be constructed.
@@ -125,11 +111,9 @@ public enum OracleGenerator {
      * the binary functions, including EQUALS (although this is not strictly in
      * agreement with the semantics of JavaDL, it makes sense in the concept of
      * plain Java, which is what we are targeting here).
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
@@ -153,7 +137,7 @@ public enum OracleGenerator {
     }
 
     private OracleExpression constructExpressionFromFormula(final Term term,
-            final boolean negate) {
+                                                            final boolean negate) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -163,16 +147,14 @@ public enum OracleGenerator {
      * Function. A Function in KeY is a rather broad concept encapsulating a
      * wide range of different classes of objects, so we process selectively
      * depending on the sort of this particular instance.
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
     private OracleExpression constructExpressionFromFunction(final Term term,
-            final boolean negate) throws OracleGeneratorException {
+                                                             final boolean negate) throws OracleGeneratorException {
 
         try {
 
@@ -218,9 +200,8 @@ public enum OracleGenerator {
     /**
      * Transforms a {@link Term} which represents an {@link IfExThenElse}
      * structure (i.e. its {@link Operator} is of this type).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the constructExpressionFromed term
      */
     private OracleExpression constructExpressionFromIfExThenElse(
@@ -233,16 +214,14 @@ public enum OracleGenerator {
      * Constructs an {@link OracleExpression} from a Term representing a
      * Junctor. In our case, since AND and OR are already taken care of, we only
      * deal with EQUALS and NOT here.
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
     private OracleExpression constructExpressionFromJunctor(final Term term,
-            final boolean negate) throws OracleGeneratorException,
+                                                            final boolean negate) throws OracleGeneratorException,
             OracleGeneratorException {
 
         if (TermParserTools.isNot(term)) {
@@ -256,11 +235,9 @@ public enum OracleGenerator {
     /**
      * Constructs an {@link OracleExpression} from a Term representing a
      * ProgramMethod, that is, a method invocation of some sort.
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
@@ -312,16 +289,14 @@ public enum OracleGenerator {
      * quantifier will be simplified to an additional constraint, which makes
      * things more convenient and does not change the semantics of the formula
      * itself.
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
     private OracleExpression constructExpressionFromQuantifier(final Term term,
-            final boolean negate) throws OracleGeneratorException {
+                                                               final boolean negate) throws OracleGeneratorException {
 
         /*
          * Resolve the type of the quantifier
@@ -349,9 +324,8 @@ public enum OracleGenerator {
     /**
      * Transforms a {@link Term} which represents some kind of
      * {@link SortedOperator}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the constructExpressionFromed term
      */
     private OracleExpression constructExpressionFromSortedOperator(
@@ -389,16 +363,14 @@ public enum OracleGenerator {
     /**
      * Top level function for constructiong an {@link OracleExpression} from any
      * term.
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
     private OracleExpression constructExpressionFromTerm(final Term term,
-            final boolean negate) throws OracleGeneratorException {
+                                                         final boolean negate) throws OracleGeneratorException {
 
         if (TermParserTools.isSortedOperator(term)) {
             return constructExpressionFromSortedOperator(term, negate);
@@ -416,11 +388,9 @@ public enum OracleGenerator {
      * Constructs an {@link OracleExpression} from a Term representing a unary
      * function. In our case, these will almost exclusively be such functions
      * which represent numeric values.
-     * 
-     * @param term
-     *            the term
-     * @param negate
-     *            flag whether or not the operation should be negated
+     *
+     * @param term   the term
+     * @param negate flag whether or not the operation should be negated
      * @return the generated OracleExpression
      * @throws OracleGeneratorException
      */
@@ -439,9 +409,8 @@ public enum OracleGenerator {
 
     /**
      * Constructs an {@link OracleLiteral} from a {@link LocationVariable}.
-     * 
-     * @param term
-     *            the term representing the variable
+     *
+     * @param term the term representing the variable
      * @return the literal
      */
     private OracleExpression constructExpressionFromVariable(final Term term) {
@@ -456,13 +425,13 @@ public enum OracleGenerator {
      * Given a set of {@link Term} instances joined together with 0 or more
      * OR-junctors, this function will resolve this chain into a corresponding
      * set of {@link OracleExpression} instances.
-     * 
+     *
      * @param term
      * @param expressions
      * @throws OracleGeneratorException
      */
     private void constructExpressions(final Term term,
-            final Set<OracleExpression> expressions)
+                                      final Set<OracleExpression> expressions)
             throws OracleGeneratorException {
 
         /*
@@ -483,9 +452,8 @@ public enum OracleGenerator {
      * Constructs an {@link Oracle} instance from a Term. The Term is
      * recursively resolved in order to translate each subnode into a
      * corresponding Oracle abstraction.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the oracle
      * @throws OracleGeneratorException
      */
@@ -506,9 +474,8 @@ public enum OracleGenerator {
      * generated based on the {@link FunctionalOperationContract} present for
      * the method, if any. If no such contract exists, a trivial
      * OracleConstraint is generated with no inherent semantic value.
-     * 
-     * @param method
-     *            the method
+     *
+     * @param method the method
      * @return an OracleConstraint for the method
      * @throws OracleGeneratorException
      */
@@ -566,9 +533,8 @@ public enum OracleGenerator {
     /**
      * Resolves a {@link Term} representing a numeric constant function into a
      * corresponding String numeral. For example, Z(0(1(#))) becomes -10.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the string numeral
      */
     private String resolveNumbers(final Term term) {

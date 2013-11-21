@@ -1,13 +1,11 @@
 package com.csvanefalk.keytestgen.keystone.expression;
 
-import junit.framework.Assert;
-
-import org.apache.commons.math3.fraction.Fraction;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.keystone.equations.IExpression;
 import com.csvanefalk.keytestgen.keystone.equations.expression.Division;
 import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
+import junit.framework.Assert;
+import org.apache.commons.math3.fraction.Fraction;
+import org.junit.Test;
 
 public class DivisionTest {
 
@@ -55,7 +53,7 @@ public class DivisionTest {
                 new Division(new NumericConstant(-5), new NumericConstant(-15)));
 
         Fraction expected = new Fraction(-30);
-        Fraction actual = expression.evaluate();        
+        Fraction actual = expression.evaluate();
         Assert.assertEquals(expected, actual);
     }
 

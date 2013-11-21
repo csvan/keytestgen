@@ -1,9 +1,9 @@
 package com.csvanefalk.keytestgen.util.transformer;
 
-import java.io.IOException;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.util.transformers.SimplifyDisjunctionTransformer;
+
+import java.io.IOException;
 
 public class SimplifyDisjunctionTransformerTest extends TransformerTest {
 

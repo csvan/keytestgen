@@ -1,8 +1,7 @@
 package com.csvanefalk.keytestgen.keystone.equations.expression;
 
-import org.apache.commons.math3.fraction.Fraction;
-
 import com.csvanefalk.keytestgen.keystone.equations.IExpression;
+import org.apache.commons.math3.fraction.Fraction;
 
 public class Variable extends AbstractExpression {
 

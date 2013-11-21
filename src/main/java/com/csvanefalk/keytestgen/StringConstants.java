@@ -3,9 +3,8 @@ package com.csvanefalk.keytestgen;
 /**
  * Contains symbolic labels which need to be used in a uniform manner in all
  * subsystems of KeYTestGen.
- * 
+ *
  * @author christopher
- * 
  */
 public final class StringConstants {
 

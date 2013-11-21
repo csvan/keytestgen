@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.keystone;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.keystone.util.Tuple;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import com.csvanefalk.keytestgen.util.transformers.NegationNormalFormTransformer;
@@ -10,6 +7,9 @@ import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
 import de.uka.ilkd.key.logic.DefaultVisitor;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.ProgramVariable;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Preprocessor {
 
@@ -75,7 +75,7 @@ public class Preprocessor {
     }
 
     private void createMinimalProblemSet_helper(final Term term,
-            final Set<Term> minimalProblemSet) throws KeYStoneException {
+                                                final Set<Term> minimalProblemSet) throws KeYStoneException {
 
         if (TermParserTools.isAnd(term)) {
             createMinimalProblemSet_helper(term.sub(0), minimalProblemSet);

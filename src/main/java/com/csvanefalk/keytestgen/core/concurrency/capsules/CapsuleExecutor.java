@@ -8,9 +8,8 @@ import java.util.concurrent.Executors;
 
 /**
  * Encapsulates an {@link Executor} for global use across KeYTestGen2.
- * 
+ *
  * @author christopher
- * 
  */
 public class CapsuleExecutor {
 
@@ -37,9 +36,8 @@ public class CapsuleExecutor {
     /**
      * Execute one or more {@link AbstractCapsule} instances, and block until
      * they finish executing.
-     * 
-     * @param runnables
-     *            the runnables
+     *
+     * @param containers the runnables
      */
     public void executeCapsulesAndWait(
             final Collection<? extends LaunchContainer> containers) {

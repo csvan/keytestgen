@@ -3,7 +3,7 @@ package com.csvanefalk.keytestgen.core.oracle.abstraction;
 /**
  * Represents a test case oracle - that is, a set of constraints on post-state
  * of a program following the execution of a test case.
- * 
+ *
  * @author christopher
  */
 public class Oracle {
@@ -20,14 +20,12 @@ public class Oracle {
 
     /**
      * Creates a new Oracle
-     * 
-     * @param constraints
-     *            the constraints on the poststate
-     * @param expectedException
-     *            the expected exception
+     *
+     * @param constraints       the constraints on the poststate
+     * @param expectedException the expected exception
      */
     public Oracle(final OracleConstraint constraints,
-            final OracleType expectedException) {
+                  final OracleType expectedException) {
         super();
         this.constraints = constraints;
         this.expectedException = expectedException;

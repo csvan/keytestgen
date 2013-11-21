@@ -1,10 +1,5 @@
 package com.csvanefalk.keytestgen.core.concurrency.capsules;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.backend.TestGeneratorException;
 import com.csvanefalk.keytestgen.core.CoreException;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClass;
@@ -17,6 +12,11 @@ import com.csvanefalk.keytestgen.core.concurrency.monitor.IMonitorEvent;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.testsuiteabstraction.TestSuite;
 import com.csvanefalk.keytestgen.util.Benchmark;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ClassCapsule extends AbstractCapsule implements ICapsuleMonitor {
 
@@ -32,7 +32,7 @@ public class ClassCapsule extends AbstractCapsule implements ICapsuleMonitor {
     private List<TestSuite> testSuites = null;
 
     public ClassCapsule(final ICodeCoverageParser codeCoverageParser,
-            final List<String> methods, final File source) {
+                        final List<String> methods, final File source) {
         super();
         this.codeCoverageParser = codeCoverageParser;
         this.methods = methods;
@@ -132,14 +132,12 @@ public class ClassCapsule extends AbstractCapsule implements ICapsuleMonitor {
     /**
      * This helper method will construct a {@link KeYJavaClass} instance for the
      * public class in a given Java source file.
-     * 
-     * @param source
-     *            path to the source file
+     *
+     * @param source path to the source file
      * @return a {@link KeYJavaClass} instance corresponding to the public class
      *         in the source file
-     * @throws TestGeneratorException
-     *             in the event that there is a failure in the KeYInterface, or
-     *             if there is a problem finding or reading the source file.
+     * @throws TestGeneratorException in the event that there is a failure in the KeYInterface, or
+     *                                if there is a problem finding or reading the source file.
      */
     private KeYJavaClass extractKeYJavaClass(final File source)
             throws CoreException {

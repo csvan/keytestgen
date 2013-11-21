@@ -1,14 +1,13 @@
 package com.csvanefalk.keytestgen.core.model;
 
-import java.io.IOException;
-
-import org.junit.Ignore;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import java.io.IOException;
 
 public class ModelArrayTest extends ModelTest {
 

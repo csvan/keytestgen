@@ -27,8 +27,7 @@ public class NumericConstant extends AbstractExpression {
     }
 
     /**
-     * @param value
-     *            the value to set
+     * @param value the value to set
      */
     public void setValue(final Fraction value) {
         this.value = value;

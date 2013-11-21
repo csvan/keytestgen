@@ -11,7 +11,7 @@ import de.uka.ilkd.key.logic.op.ProgramVariable;
  * the variable itself. However, it adds an additional layer of runtime
  * information, showing exactly which concrete object on the heap this variable
  * points to.
- * <p>
+ * <p/>
  * Instances of this class can represent either an object reference or primitive
  * type reference.
  * <ul>
@@ -23,19 +23,17 @@ import de.uka.ilkd.key.logic.op.ProgramVariable;
  * {@link Long}, {@link Byte} or {@link Character}). It cannot be null in this
  * case.</li>
  * </ul>
- * 
+ *
  * @author christopher
  */
 public class ModelVariable {
 
     /**
      * Factory method for creating a {@link ModelVariable} instance.
-     * 
-     * @param programVariable
-     *            the {@link IProgramVariable} instance which will be wrapped by
-     *            the created instance.
-     * @param identifier
-     *            a unique identifier for the variable.
+     *
+     * @param programVariable the {@link IProgramVariable} instance which will be wrapped by
+     *                        the created instance.
+     * @param identifier      a unique identifier for the variable.
      * @return the created instance.
      */
     public static ModelVariable constructModelVariable(
@@ -86,7 +84,7 @@ public class ModelVariable {
     private final IProgramVariable variable;
 
     private ModelVariable(final IProgramVariable programVariable,
-            final String identifier) {
+                          final String identifier) {
 
         variable = programVariable;
         this.identifier = identifier;
@@ -122,7 +120,7 @@ public class ModelVariable {
 
     /**
      * Returns the {@link ModelInstance} of which this variable is a field
-     * 
+     *
      * @return
      */
     public ModelInstance getParentModelInstance() {
@@ -172,8 +170,7 @@ public class ModelVariable {
     }
 
     /**
-     * @param isParameter
-     *            the isParameter to set
+     * @param isParameter the isParameter to set
      */
     public void setParameter(final boolean isParameter) {
         this.isParameter = isParameter;
@@ -182,7 +179,7 @@ public class ModelVariable {
     /**
      * Sets the {@link ModelInstance} of which this variable forms a field.
      * FIXME: this should not be assignable at all, violates abstraction.
-     * 
+     *
      * @param parentModelInstance
      */
     public void setParentModelInstance(final ModelInstance parentModelInstance) {
@@ -192,7 +189,7 @@ public class ModelVariable {
 
     /**
      * Sets the value of this variable. TODO: Add type checking?
-     * 
+     *
      * @param value
      */
     public void setValue(final Object value) {

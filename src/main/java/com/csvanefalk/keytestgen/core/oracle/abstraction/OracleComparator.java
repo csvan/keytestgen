@@ -5,14 +5,13 @@ package com.csvanefalk.keytestgen.core.oracle.abstraction;
  * be either a comparison between boolean expressions (i.e. a == true, where a
  * is boolean), numeric expressions (i.e. b < 3, where b is a number), or
  * references (i.e. c != null, where c is a Java object).
- * <p>
+ * <p/>
  * This abstraction does not enforce Java type safety (i.e. it is possible to
  * construct an abstraction such as 3 == false), but relies on the KeY, which
  * creates the underlying Term this abstraction is built from, in order to
  * ensure that this is already present.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleComparator extends OracleExpression {
 
@@ -83,17 +82,14 @@ public class OracleComparator extends OracleExpression {
 
     /**
      * Constructs a new comparator.
-     * 
-     * @param comparatorType
-     *            the comparator type
-     * @param firstOperand
-     *            the first operand
-     * @param secondOperand
-     *            the second operand
+     *
+     * @param comparatorType the comparator type
+     * @param firstOperand   the first operand
+     * @param secondOperand  the second operand
      */
     public OracleComparator(final ComparatorType comparatorType,
-            final OracleExpression firstOperand,
-            final OracleExpression secondOperand) {
+                            final OracleExpression firstOperand,
+                            final OracleExpression secondOperand) {
 
         super(OracleType.BOOLEAN);
         comparator = comparatorType;

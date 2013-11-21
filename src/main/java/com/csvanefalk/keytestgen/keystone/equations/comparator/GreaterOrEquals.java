@@ -1,15 +1,14 @@
 package com.csvanefalk.keytestgen.keystone.equations.comparator;
 
-import javax.naming.OperationNotSupportedException;
-
+import com.csvanefalk.keytestgen.keystone.equations.IExpression;
 import org.apache.commons.math3.fraction.Fraction;
 
-import com.csvanefalk.keytestgen.keystone.equations.IExpression;
+import javax.naming.OperationNotSupportedException;
 
 public class GreaterOrEquals extends AbstractComparator {
 
     public GreaterOrEquals(final IExpression leftOperand,
-            final IExpression rightOperand) {
+                           final IExpression rightOperand) {
         super(leftOperand, rightOperand);
     }
 

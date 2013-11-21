@@ -1,20 +1,14 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPathContext;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import de.uka.ilkd.key.java.SourceElement;
 import de.uka.ilkd.key.java.StatementBlock;
 import de.uka.ilkd.key.java.statement.BranchStatement;
 import de.uka.ilkd.key.java.statement.If;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.util.*;
 
 public class DecisionCoverageBuilder implements ICoverageBuilder {
 
@@ -72,7 +66,7 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
     /**
      * From a set of {@link SourceElement} instances, extracts all instances of
      * {@link BranchStatement} as a separate subset.
-     * 
+     *
      * @param visitedProgramNodes
      * @return
      */
@@ -116,7 +110,7 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
     }
 
     private boolean contains(final ExecutionPath path,
-            final SourceElement branchResult) {
+                             final SourceElement branchResult) {
 
         if (branchResult == null) {
             return false;
@@ -133,7 +127,7 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
     /**
      * Retrieves the {@link SourceElement} reached from a given branch of a
      * {@link BranchStatement}.
-     * 
+     *
      * @param thenBranchResult
      * @return
      */
@@ -244,7 +238,7 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
     }
 
     private boolean subsumes(final Set<BranchStatement> first,
-            final Set<BranchStatement> second) {
+                             final Set<BranchStatement> second) {
 
         if (second.size() > first.size()) {
             return false;

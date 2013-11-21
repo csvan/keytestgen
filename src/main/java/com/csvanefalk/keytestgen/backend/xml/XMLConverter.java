@@ -1,15 +1,5 @@
 package com.csvanefalk.keytestgen.backend.xml;
 
-import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
-import java.util.List;
-
-import javax.xml.stream.XMLEventFactory;
-import javax.xml.stream.XMLEventWriter;
-import javax.xml.stream.XMLOutputFactory;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.XMLEvent;
-
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
 import com.csvanefalk.keytestgen.backend.custom.ITestCaseParser;
@@ -22,12 +12,21 @@ import com.csvanefalk.keytestgen.core.testsuiteabstraction.TestSuite;
 import com.csvanefalk.keytestgen.util.visitors.XMLVisitorException;
 import de.uka.ilkd.key.logic.op.IProgramVariable;
 
+import javax.xml.stream.XMLEventFactory;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.XMLEvent;
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+import java.util.List;
+
 /**
  * Provides functionality for turning a set of {@link TestCase} instances into a
  * corresponding XML representation. This XML constitutes the default output
  * produced by KeYTestGen2, and can be parsed by instances of
  * {@link ITestCaseParser} in order to generate more specific test suites.
- * 
+ *
  * @author christopher
  */
 public class XMLConverter extends XMLHandler implements IFrameworkConverter {
@@ -76,14 +75,12 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
     /**
      * Sets up the XML visitor, initializing the {@link XMLEventWriter} in the
      * process.
-     * 
-     * @param rootTag
-     *            the name of the root tag of the resulting XML document. If
-     *            this parameter is null or empty, no root tag will be generated
-     *            for the document.
+     *
+     * @param rootTag the name of the root tag of the resulting XML document. If
+     *                this parameter is null or empty, no root tag will be generated
+     *                for the document.
      * @throws XMLGeneratorException
-     * @throws XMLVisitorException
-     *             in the event that the event writer could not be set up
+     * @throws XMLVisitorException   in the event that the event writer could not be set up
      */
     public XMLConverter() throws XMLGeneratorException {
 
@@ -112,17 +109,14 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
     /**
      * Create a complete test suite from a set of {@link TestCase} instances,
      * encoded in KeYTestGens native XML format.
-     * 
-     * @param testCases
-     *            the testcases to include in the test suite
-     * @param format
-     *            add formatting and indentation to the output document?
+     *
+     * @param testCases the testcases to include in the test suite
+     * @param format    add formatting and indentation to the output document?
      * @return an XML representation of the test suite
-     * @throws XMLGeneratorException
-     *             if XML generation failed
+     * @throws XMLGeneratorException if XML generation failed
      */
     public synchronized String createTestSuite(final List<TestCase> testCases,
-            final boolean format) throws XMLGeneratorException {
+                                               final boolean format) throws XMLGeneratorException {
 
         this.format = format;
 
@@ -155,7 +149,7 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Write the closing section of the document.
-     * 
+     *
      * @param documentName
      * @throws XMLStreamException
      */
@@ -177,9 +171,8 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Write a preamble for the generated XML document.
-     * 
-     * @param documentName
-     *            the root tag of the document
+     *
+     * @param documentName the root tag of the document
      * @throws XMLStreamException
      */
     private void writeDocumentStart(final String documentName)
@@ -200,11 +193,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Write a closing tag to the stream, i.e. <\"tag">
-     * 
-     * @param tagName
-     *            the name of the tag to write
-     * @throws XMLStreamException
-     *             in the event there was an error writing the xml
+     *
+     * @param tagName the name of the tag to write
+     * @throws XMLStreamException in the event there was an error writing the xml
      */
     private void writeEndTag(final String tagName) throws XMLStreamException {
 
@@ -224,11 +215,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
      * Converts a {@link Model} instance to KeYTestgens native XML format. In
      * the context of the test case itself, this represents the test fixture, or
      * program state prior to the execution of the method.
-     * 
-     * @param model
-     *            the model to convert
-     * @throws XMLStreamException
-     *             in case the XML could not be generated
+     *
+     * @param model the model to convert
+     * @throws XMLStreamException in case the XML could not be generated
      */
     private void writeFixture(final Model model) throws XMLStreamException {
 
@@ -285,11 +274,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Writes an instance of {@link ModelInstance} as XML.
-     * 
-     * @param instance
-     *            the instance to write
-     * @throws XMLStreamException
-     *             in case the XML could not be generated
+     *
+     * @param instance the instance to write
+     * @throws XMLStreamException in case the XML could not be generated
      */
     private void writeInstance(final ModelInstance instance)
             throws XMLStreamException {
@@ -323,11 +310,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Writes an instance of of some Object to XML
-     * 
-     * @param instance
-     *            the instance to write
-     * @throws XMLStreamException
-     *             in case the XML could not be generated
+     *
+     * @param instance the instance to write
+     * @throws XMLStreamException in case the XML could not be generated
      */
     private void writeInstance(final Object instance) throws XMLStreamException {
 
@@ -344,11 +329,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
     /**
      * Write the relevant information contained in the {@link KeYJavaMethod}
      * instance belonging to the test case.
-     * 
-     * @param method
-     *            the {@link KeYJavaMethod} instance
-     * @throws XMLStreamException
-     *             in case the XML could not be generated
+     *
+     * @param method the {@link KeYJavaMethod} instance
+     * @throws XMLStreamException in case the XML could not be generated
      */
     private void writeMethodInfo(final KeYJavaMethod method)
             throws XMLStreamException {
@@ -376,11 +359,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Write an opening tag to the stream, i.e. <\"tag">
-     * 
-     * @param tagName
-     *            the name of the tag to write
-     * @throws XMLStreamException
-     *             in the event there was an error writing the xml
+     *
+     * @param tagName the name of the tag to write
+     * @throws XMLStreamException in the event there was an error writing the xml
      */
     private void writeStartTag(final String tagName) throws XMLStreamException {
 
@@ -398,11 +379,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Converts a {@link TestCase} instance to KeYTestGens native XML format
-     * 
-     * @param testCase
-     *            the test case to convert
-     * @throws XMLStreamException
-     *             in case the XML could not be generated
+     *
+     * @param testCase the test case to convert
+     * @throws XMLStreamException  in case the XML could not be generated
      * @throws XMLVisitorException
      */
     private void writeTestCase(final TestCase testCase)
@@ -419,11 +398,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Write a text element to the XML stream
-     * 
-     * @param element
-     *            the text element to write
-     * @throws XMLStreamException
-     *             in the event there was an error writing the XML
+     *
+     * @param element the text element to write
+     * @throws XMLStreamException in the event there was an error writing the XML
      */
     private void writeTextElement(Object element) throws XMLStreamException {
 
@@ -447,11 +424,9 @@ public class XMLConverter extends XMLHandler implements IFrameworkConverter {
 
     /**
      * Writes an instance of {@link ModelVariable} as XML.
-     * 
-     * @param variable
-     *            the variable to write
-     * @throws XMLStreamException
-     *             in case the XML could not be generated
+     *
+     * @param variable the variable to write
+     * @throws XMLStreamException in case the XML could not be generated
      */
     private void writeVariable(final ModelVariable variable)
             throws XMLStreamException {

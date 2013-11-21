@@ -7,18 +7,7 @@ import de.uka.ilkd.key.collection.ImmutableArray;
 import de.uka.ilkd.key.logic.Name;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.TermFactory;
-import de.uka.ilkd.key.logic.op.Equality;
-import de.uka.ilkd.key.logic.op.Function;
-import de.uka.ilkd.key.logic.op.IfExThenElse;
-import de.uka.ilkd.key.logic.op.Junctor;
-import de.uka.ilkd.key.logic.op.LocationVariable;
-import de.uka.ilkd.key.logic.op.LogicVariable;
-import de.uka.ilkd.key.logic.op.ObserverFunction;
-import de.uka.ilkd.key.logic.op.Operator;
-import de.uka.ilkd.key.logic.op.ProgramMethod;
-import de.uka.ilkd.key.logic.op.ProgramVariable;
-import de.uka.ilkd.key.logic.op.SortDependingFunction;
-import de.uka.ilkd.key.logic.op.SortedOperator;
+import de.uka.ilkd.key.logic.op.*;
 import de.uka.ilkd.key.logic.sort.NullSort;
 import de.uka.ilkd.key.logic.sort.Sort;
 import de.uka.ilkd.key.logic.sort.SortImpl;
@@ -26,14 +15,13 @@ import de.uka.ilkd.key.logic.sort.SortImpl;
 /**
  * This class provides a lightweight framework for implementing {@link Term}
  * parsers intended to transform Terms.
- * <p>
+ * <p/>
  * This class does NOT currently contain functionality to transform all forms of
  * Terms, since it is primarily meant to be used by KeYTestGen, which only uses
  * a subset of such terms. As need dictates, this may change to support all
  * sorts of Term trees.
- * 
+ *
  * @author christopher
- * 
  */
 public abstract class AbstractTermTransformer implements ITermTransformer {
 
@@ -65,9 +53,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing the AND junctor.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformAnd(final Term term)
@@ -84,9 +71,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
      * functions include GreaterOrEquals, GreaterThan, LessOrEquals, and
      * LessThan. These are no explicitly defined as KeY operators, and are as
      * such recognized by their sorts.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformBinaryFunction(final Term term)
@@ -104,9 +90,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} corresponding to a boolean constant, i.e. TRUE
      * or FALSE.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      * @throws TermTransformerException
      */
@@ -116,9 +101,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing {@link Equality}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformEquals(final Term term)
@@ -136,9 +120,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} corresponding to the exists quantifier.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      * @throws TermTransformerException
      */
@@ -155,9 +138,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} corresponding to the for-all quantifier.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      * @throws TermTransformerException
      */
@@ -184,9 +166,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents some instance of a
      * {@link Function}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformFunction(final Term term)
@@ -254,9 +235,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents an {@link IfExThenElse}
      * structure (i.e. its {@link Operator} is of this type).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformIfExThenElse(final Term term) {
@@ -267,9 +247,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents an {@link IfThenElse}
      * structure (i.e. its {@link Operator} is of this type).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformIfThenElse(final Term term) {
@@ -279,9 +258,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} corresponding to a logical implication.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      * @throws TermTransformerException
      */
@@ -300,9 +278,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing a Junctor, i.e. AND, OR, NOT.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformJunctor(final Term term)
@@ -333,7 +310,7 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing a Literal.
-     * 
+     *
      * @param term
      * @return
      * @throws TermTransformerException
@@ -355,9 +332,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents an {@link LocationVariable}
      * structure (i.e. its {@link Operator} is of this type).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformLocationVariable(final Term term) {
@@ -371,9 +347,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} corresponding to an Array.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      * @throws TermTransformerException
      */
@@ -383,9 +358,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} corresponding to a {@link LogicVariable}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      * @throws TermTransformerException
      */
@@ -395,9 +369,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing a the NOT junctor.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformNot(final Term term)
@@ -411,9 +384,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents a null element, i.e. it has
      * the sort {@link NullSort}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformNull(final Term term) {
@@ -423,9 +395,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing an {@link ObserverFunction}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformObserverFunction(final Term term) {
@@ -435,9 +406,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing an OR-junctor.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformOr(final Term term) throws TermTransformerException {
@@ -450,9 +420,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing a {@link ProgramMethod}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformProgramMethod(final Term term) {
@@ -467,9 +436,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents a {@link ProgramVariable}
      * structure (i.e. its {@link Operator} is of this type).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformProgramVariable(final Term term)
@@ -502,9 +470,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
      * Transforms a {@link Term} which represents an
      * {@link SortDependingFunction} structure (i.e. its {@link Operator} is of
      * this type).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformSortDependentFunction(final Term term) {
@@ -515,9 +482,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
     /**
      * Transforms a {@link Term} which represents some kind of
      * {@link SortedOperator}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformSortedOperator(final Term term)
@@ -556,7 +522,7 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
      * function will do a preliminary check to see whether the top-level
      * operator of the Term is a basic {@link Operator} or a
      * {@link SortedOperator}, and proceed with parsing from there.
-     * 
+     *
      * @param term
      * @return
      */
@@ -587,9 +553,8 @@ public abstract class AbstractTermTransformer implements ITermTransformer {
 
     /**
      * Transforms a {@link Term} representing a unary function, such as NOT.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the transformed term
      */
     protected Term transformUnaryFunction(final Term term)

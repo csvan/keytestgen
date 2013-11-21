@@ -1,8 +1,8 @@
 package com.csvanefalk.keytestgen.keystone.equations.comparator;
 
-import javax.naming.OperationNotSupportedException;
-
 import com.csvanefalk.keytestgen.keystone.equations.IExpression;
+
+import javax.naming.OperationNotSupportedException;
 
 public class Equals extends AbstractComparator {
 

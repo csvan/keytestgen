@@ -3,7 +3,7 @@ package com.csvanefalk.keytestgen.targetmodels.publictransport.buses.travel;
 /**
  * Represents a transportation route between two points (intermediary stops are
  * not modelled for the sake of simplicity).
- * 
+ *
  * @author christopher
  */
 public class Route {

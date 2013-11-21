@@ -16,9 +16,10 @@ public class Train {
 
     MyList /* @ non_null @ */wagons;
 
-    public static Train createLocomotive(){ 
+    public static Train createLocomotive() {
         Train t = new Train();
-        t.nextStation = new Station("Central"); return t; 
+        t.nextStation = new Station("Central");
+        return t;
     }
 
     Train() {

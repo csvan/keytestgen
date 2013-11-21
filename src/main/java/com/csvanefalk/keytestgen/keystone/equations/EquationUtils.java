@@ -1,27 +1,17 @@
 package com.csvanefalk.keytestgen.keystone.equations;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Map;
-
-import org.apache.commons.math3.analysis.function.Exp;
-import org.apache.commons.math3.fraction.Fraction;
-
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;
 import com.csvanefalk.keytestgen.keystone.equations.comparator.Equals;
 import com.csvanefalk.keytestgen.keystone.equations.comparator.GreaterOrEquals;
 import com.csvanefalk.keytestgen.keystone.equations.comparator.LessOrEquals;
-import com.csvanefalk.keytestgen.keystone.equations.expression.AbstractBinaryExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.AbstractUnaryExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Division;
-import com.csvanefalk.keytestgen.keystone.equations.expression.ExpressionUtils;
-import com.csvanefalk.keytestgen.keystone.equations.expression.ITreeNode;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Multiplication;
-import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Variable;
+import com.csvanefalk.keytestgen.keystone.equations.expression.*;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import de.uka.ilkd.key.logic.Term;
+import org.apache.commons.math3.fraction.Fraction;
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Map;
 
 public class EquationUtils {
 
@@ -178,15 +168,15 @@ public class EquationUtils {
     /**
      * Simplifies an inequality by introducing extra variables, effectively
      * turning it into an equality.
-     * 
+     *
      * @param comparator
      * @param variableIndex
      * @param dummyVariable
      * @return
      */
     public Equals createEqualityFromInequality(final IComparator comparator,
-            final Map<String, Variable> variableIndex,
-            final Variable dummyVariable) {
+                                               final Map<String, Variable> variableIndex,
+                                               final Variable dummyVariable) {
 
         /*
          * Add slack variable.
@@ -246,9 +236,7 @@ public class EquationUtils {
                 simplifiedRightHand = ExpressionUtils.simplifyExpression(simplifiedRightHand);
 
                 simplifiedLeftHand = new NumericConstant(Fraction.ZERO);
-            }
-
-            else if (ExpressionUtils.isAddition(simplifiedLeftHand)) {
+            } else if (ExpressionUtils.isAddition(simplifiedLeftHand)) {
                 Addition addition = (Addition) simplifiedLeftHand;
 
                 /*
@@ -306,7 +294,7 @@ public class EquationUtils {
 
     /**
      * Check if a simplified expression contains a constant.
-     * 
+     *
      * @param expression
      * @return
      */
@@ -315,9 +303,7 @@ public class EquationUtils {
 
         if (ExpressionUtils.isConstant(expression)) {
             return true;
-        }
-
-        else if (ExpressionUtils.isAddition(expression)) {
+        } else if (ExpressionUtils.isAddition(expression)) {
             Addition addition = (Addition) expression;
             return ExpressionUtils.isConstant(addition.getLeftOperand())
                     || ExpressionUtils.isConstant(addition.getRightOperand());
@@ -395,13 +381,13 @@ public class EquationUtils {
     /**
      * Constructs a trace of expressions from the root of an equation, down to a
      * given variable. Assumes the variable only occurs in one place.
-     * 
+     *
      * @param node
-     * @param variable
+     * @param condition
      * @return
      */
     public static Deque<IExpression> buildTrace(final Equation node,
-            final ICondition condition) {
+                                                final ICondition condition) {
 
         assert node != null;
         assert condition != null;
@@ -427,13 +413,13 @@ public class EquationUtils {
     /**
      * Constructs a trace of expressions from the root of an equation, down to a
      * given variable. Assumes the variable only occurs in one place.
-     * 
+     *
      * @param node
-     * @param variable
+     * @param condition
      * @return
      */
     private static Deque<IExpression> buildTrace(final IExpression node,
-            final ICondition condition) {
+                                                 final ICondition condition) {
 
         assert node != null;
         assert condition != null;
@@ -487,7 +473,7 @@ public class EquationUtils {
     }
 
     private static Deque<IExpression> append(final Deque<IExpression> head,
-            final Deque<IExpression> tail) {
+                                             final Deque<IExpression> tail) {
 
         assert head != null;
         assert tail != null;

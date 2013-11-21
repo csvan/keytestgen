@@ -10,7 +10,7 @@ public abstract class AbstractComparator implements IComparator, ITreeNode {
     private IExpression rightOperand = null;
 
     public AbstractComparator(final IExpression leftOperand,
-            final IExpression rightOperand) {
+                              final IExpression rightOperand) {
         super();
         this.leftOperand = leftOperand;
         this.rightOperand = rightOperand;
@@ -40,8 +40,7 @@ public abstract class AbstractComparator implements IComparator, ITreeNode {
     }
 
     /**
-     * @param leftOperand
-     *            the leftOperand to set
+     * @param leftOperand the leftOperand to set
      */
     public void setLeftOperand(final IExpression leftOperand) {
         this.leftOperand = leftOperand;
@@ -55,8 +54,7 @@ public abstract class AbstractComparator implements IComparator, ITreeNode {
     }
 
     /**
-     * @param rightOperand
-     *            the rightOperand to set
+     * @param rightOperand the rightOperand to set
      */
     public void setRightOperand(final IExpression rightOperand) {
         this.rightOperand = rightOperand;

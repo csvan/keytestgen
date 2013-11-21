@@ -8,7 +8,7 @@ import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
  * {@link IModel} instances for the path condition of a given
  * {@link IExecutionNode}, i.e. find a set of concrete value assignments that
  * satisfy this particular path condition.
- * 
+ *
  * @author christopher
  */
 public interface IModelGenerator {

@@ -1,10 +1,9 @@
 package com.csvanefalk.keytestgen.util.transformer;
 
-import java.io.IOException;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.util.transformers.ConjunctionNormalFormTransformer;
-import com.csvanefalk.keytestgen.util.transformers.NegationNormalFormTransformer;
+
+import java.io.IOException;
 
 public class ConjunctionNormalFormTransformerTest extends TransformerTest {
 

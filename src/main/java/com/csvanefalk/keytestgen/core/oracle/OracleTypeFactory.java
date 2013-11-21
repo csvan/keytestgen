@@ -1,8 +1,5 @@
 package com.csvanefalk.keytestgen.core.oracle;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleComparator.ComparatorType;
 import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleQuantifier.QuantifierType;
@@ -10,12 +7,14 @@ import com.csvanefalk.keytestgen.core.oracle.abstraction.OracleType;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.QuantifiableVariable;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Factory singleton used for constructing instances of the various types
  * present in an Oracle.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleTypeFactory {
 
@@ -101,16 +100,14 @@ public class OracleTypeFactory {
     /**
      * Constructs a {@link ComparatorType} instance corresponding to a given
      * {@link Term}.
-     * 
-     * @param term
-     *            the term
-     * @param negated
-     *            flag to indicat whether the comparator should be negated.
+     *
+     * @param term    the term
+     * @param negated flag to indicat whether the comparator should be negated.
      * @return the comparator
      * @throws OracleGeneratorException
      */
     public static ComparatorType getComparatorType(final Term term,
-            final boolean negated) throws OracleGeneratorException {
+                                                   final boolean negated) throws OracleGeneratorException {
 
         final String operatorName = term.op().name().toString();
 
@@ -136,9 +133,8 @@ public class OracleTypeFactory {
      * instance. This is functionally identical to {@link #getOracleType(Term)},
      * and exsits to deal with the special case (syntactically speaking) of
      * these variables.
-     * 
-     * @param quantifiableVariable
-     *            the variable
+     *
+     * @param quantifiableVariable the variable
      * @return the corresponding type
      */
     public static OracleType getOracleType(
@@ -159,9 +155,8 @@ public class OracleTypeFactory {
     /**
      * Constructs an {@link OracleType} instance corresponding to the type of a
      * given {@link Term}.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the corresponding type
      */
     public static OracleType getOracleType(final Term term) {
@@ -191,9 +186,8 @@ public class OracleTypeFactory {
     /**
      * Construct a {@link QuantifierType} instance corresponding to a given
      * {@link Term} representing the same construct.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the quantifier type
      * @throws OracleGeneratorException
      */

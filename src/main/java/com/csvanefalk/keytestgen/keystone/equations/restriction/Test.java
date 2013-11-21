@@ -1,12 +1,11 @@
 package com.csvanefalk.keytestgen.keystone.equations.restriction;
 
-import java.util.Calendar;
-
-import org.apache.commons.math3.fraction.Fraction;
-
 import com.csvanefalk.keytestgen.keystone.equations.IExpression;
 import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
 import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
+import org.apache.commons.math3.fraction.Fraction;
+
+import java.util.Calendar;
 
 public class Test {
 

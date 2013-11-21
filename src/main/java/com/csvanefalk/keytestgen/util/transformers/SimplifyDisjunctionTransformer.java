@@ -1,17 +1,16 @@
 package com.csvanefalk.keytestgen.util.transformers;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.Junctor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * This Transformer simplifies the disjunctions present in a Term.
- * 
+ *
  * @author christopher
- * 
  */
 public class SimplifyDisjunctionTransformer extends AbstractTermTransformer {
 
@@ -43,10 +42,10 @@ public class SimplifyDisjunctionTransformer extends AbstractTermTransformer {
     /**
      * Simplifies a Term subtree depending on what literals are present in its
      * sibling (record in the literals set).
-     * <p>
+     * <p/>
      * This method recursively transforms the subtree, removing all literals
      * which already occur in the trees sibling.
-     * 
+     *
      * @param term
      * @param literals
      * @return
@@ -91,21 +90,20 @@ public class SimplifyDisjunctionTransformer extends AbstractTermTransformer {
 
     /**
      * Simplifies all the disjunctions present in the term.
-     * <p>
+     * <p/>
      * For example, given the following Term (human-readable):
-     * 
+     * <p/>
      * <pre>
      * (a &amp; b) | c | x | c | (a &amp; b)
      * </pre>
-     * 
+     * <p/>
      * this Transformer will produce the following:
-     * 
+     * <p/>
      * <pre>
      * x | c | (a &amp; b)
      * </pre>
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      */
     @Override
     public Term transform(final Term term) throws TermTransformerException {

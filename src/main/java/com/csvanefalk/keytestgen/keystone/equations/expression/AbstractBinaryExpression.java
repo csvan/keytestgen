@@ -8,7 +8,7 @@ public abstract class AbstractBinaryExpression extends AbstractExpression {
     private IExpression rightOperand = null;
 
     public AbstractBinaryExpression(final IExpression leftOperand,
-            final IExpression rightOperand) {
+                                    final IExpression rightOperand) {
 
         assert (leftOperand != null);
         assert (rightOperand != null);
@@ -35,8 +35,7 @@ public abstract class AbstractBinaryExpression extends AbstractExpression {
     }
 
     /**
-     * @param leftOperand
-     *            the leftOperand to set
+     * @param leftOperand the leftOperand to set
      */
     public void setLeftOperand(final IExpression leftOperand) {
         this.leftOperand = leftOperand;
@@ -44,8 +43,7 @@ public abstract class AbstractBinaryExpression extends AbstractExpression {
     }
 
     /**
-     * @param rightOperand
-     *            the rightOperand to set
+     * @param rightOperand the rightOperand to set
      */
     public void setRightOperand(final IExpression rightOperand) {
         this.rightOperand = rightOperand;

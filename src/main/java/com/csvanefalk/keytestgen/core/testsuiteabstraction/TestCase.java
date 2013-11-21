@@ -8,7 +8,7 @@ import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 
 /**
  * Formally, a test case is a tuple (m, I, Or), where:
- * <p>
+ * <p/>
  * <ul>
  * <li><i>m</i> is the method being tested</li>
  * <li><i>I</i> is the input (Pi, Si) for the method. where Pi is a set of
@@ -18,37 +18,34 @@ import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
  * </ul>
  * The OracleConstraint is defined as a function Or(R, Sf) -> {pass, fail},
  * where:
- * <p>
+ * <p/>
  * <ul>
  * <li><i>R</i> is the return value of the function when the method finishes
  * executing</li>
  * <li><i>Sf</i> is the final state of the program after the method finishes
  * executing</li>
  * </ul>
- * <p>
+ * <p/>
  * Thus, less formally speaking, we can define the execution of a test case as a
  * three-step process: set up a program state to hoĺd before the method
  * executes, execute the method, and then verify that the program is in a
  * desired state after the method finishes executing.
- * <p>
- * 
+ * <p/>
+ *
  * @author christopher
  */
 public class TestCase implements Comparable<TestCase> {
 
     /**
      * Factory method for creating a {@link TestCase} instance.
-     * 
-     * @param method
-     *            the method associated with the test case.
-     * @param model
-     *            the model for the test case.
-     * @param oracle
-     *            the oracle for the test case.
+     *
+     * @param method the method associated with the test case.
+     * @param model  the model for the test case.
+     * @param oracle the oracle for the test case.
      * @return the test case.
      */
     public static TestCase constructTestCase(final KeYJavaMethod method,
-            final Model model, final Oracle oracle) {
+                                             final Model model, final Oracle oracle) {
 
         return new TestCase(method, model, oracle);
     }
@@ -81,7 +78,7 @@ public class TestCase implements Comparable<TestCase> {
     private final Oracle oracle;
 
     private TestCase(final KeYJavaMethod method, final Model model,
-            final Oracle oracle) {
+                     final Oracle oracle) {
 
         this.method = method;
         this.model = model;
@@ -99,7 +96,7 @@ public class TestCase implements Comparable<TestCase> {
 
     /**
      * Retrieve the {@link KeYJavaMethod} this testcase belongs to.
-     * 
+     *
      * @return
      */
     public KeYJavaMethod getMethod() {
@@ -116,7 +113,7 @@ public class TestCase implements Comparable<TestCase> {
 
     /**
      * Retrieve the {@link IModel} instance for this test case.
-     * 
+     *
      * @return
      */
     public Model getModel() {
@@ -133,7 +130,7 @@ public class TestCase implements Comparable<TestCase> {
 
     /**
      * Retrieve the oracle for the test case.
-     * 
+     *
      * @return
      */
     public Oracle getOracle() {
@@ -142,8 +139,7 @@ public class TestCase implements Comparable<TestCase> {
     }
 
     /**
-     * @param node
-     *            the node to set
+     * @param node the node to set
      */
     public void setNode(final IExecutionNode node) {
         this.node = node;

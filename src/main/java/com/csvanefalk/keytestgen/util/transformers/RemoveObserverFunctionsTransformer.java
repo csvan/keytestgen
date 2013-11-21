@@ -3,9 +3,7 @@ package com.csvanefalk.keytestgen.util.transformers;
 import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import de.uka.ilkd.key.logic.Term;
-import de.uka.ilkd.key.logic.op.Function;
 import de.uka.ilkd.key.logic.op.Junctor;
-import de.uka.ilkd.key.logic.op.Operator;
 
 public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer {
 
@@ -31,7 +29,7 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * be simplified to null, the entire junction can be replaced by the second
      * operand. If both are simplified to null, the entire conjunction can be
      * removed (hence this method will return null as well).
-     * 
+     *
      * @param term
      * @throws ModelGeneratorException
      */
@@ -62,7 +60,7 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * comparators (leq, geq etc) in the sense that it can be applied to boolean
      * values as well as numeric ones. Thus, it is treated differently in the
      * sense that we simplify it the same way that we simplify junctors.
-     * 
+     *
      * @param term
      * @return
      * @throws ModelGeneratorException
@@ -116,9 +114,8 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * Simplify a negation. If the child is simplified to null, simply return
      * null. Otherwise, create a new negation of the simplification of the
      * child.
-     * 
-     * @param term
-     *            the term (logical negator) to simplify
+     *
+     * @param term the term (logical negator) to simplify
      * @return the simplified negation
      * @throws TermTransformerException
      * @throws ModelGeneratorException
@@ -146,7 +143,7 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * simplified to null, the entire junction can be replaced by the second
      * operand. If both are simplified to null, the entire conjunction can be
      * removed (hence this method will return null as well).
-     * 
+     *
      * @param term
      * @throws ModelGeneratorException
      */

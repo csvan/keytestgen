@@ -1,15 +1,7 @@
 package com.csvanefalk.keytestgen.core.oracle;
 
 import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
-import com.csvanefalk.keytestgen.util.transformers.AbstractTermTransformer;
-import com.csvanefalk.keytestgen.util.transformers.ConjunctionNormalFormTransformer;
-import com.csvanefalk.keytestgen.util.transformers.OrderOperandsTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveImplicationsTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveObserverFunctionsTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveSDPsTransformer;
-import com.csvanefalk.keytestgen.util.transformers.SimplifyConjunctionTransformer;
-import com.csvanefalk.keytestgen.util.transformers.SimplifyDisjunctionTransformer;
-import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
+import com.csvanefalk.keytestgen.util.transformers.*;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.Junctor;
 import de.uka.ilkd.key.logic.op.ObserverFunction;
@@ -23,13 +15,11 @@ class SimplifyPostconditionTransformer extends AbstractTermTransformer {
      * heap models. These are not needed (for now) for the purpose of expressing
      * correctness, and removing them makes the Term much more easy to work
      * with.
-     * 
-     * @param oracleTerm
-     *            the Term
+     *
+     * @param term the Term
      * @return the simplified Term
-     * @throws TermTransformerException
-     *             in the event of a parse error (including structural errors in
-     *             the Term itself.
+     * @throws TermTransformerException in the event of a parse error (including structural errors in
+     *                                  the Term itself.
      */
     @Override
     public Term transform(final Term term) throws TermTransformerException {
@@ -90,9 +80,8 @@ class SimplifyPostconditionTransformer extends AbstractTermTransformer {
      * be simplified to null, the entire junction can be replaced by the second
      * operand. If both are simplified to null, the entire conjunction can be
      * removed (hence this method will return null as well).
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @throws ModelGeneratorException
      */
     @Override
@@ -121,9 +110,8 @@ class SimplifyPostconditionTransformer extends AbstractTermTransformer {
      * Simplifies an EQUALS statement by examining the operands. If the first
      * operand is simplified to null, the entire statement can be removed since
      * it is now semanticallt useless.
-     * 
-     * @param term
-     *            the term the term
+     *
+     * @param term the term the term
      * @throws ModelGeneratorException
      */
     @Override
@@ -185,9 +173,8 @@ class SimplifyPostconditionTransformer extends AbstractTermTransformer {
      * Simplify a negation. If the child is simplified to null, simply return
      * null. Otherwise, create a new negation of the simplification of the
      * child.
-     * 
-     * @param term
-     *            the term (logical negator) to simplify
+     *
+     * @param term the term (logical negator) to simplify
      * @return the simplified negation
      * @throws TermTransformerException
      * @throws ModelGeneratorException
@@ -210,7 +197,7 @@ class SimplifyPostconditionTransformer extends AbstractTermTransformer {
      * simplified to null, the entire junction can be replaced by the second
      * operand. If both are simplified to null, the entire conjunction can be
      * removed (hence this method will return null as well).
-     * 
+     *
      * @param term
      * @throws ModelGeneratorException
      */

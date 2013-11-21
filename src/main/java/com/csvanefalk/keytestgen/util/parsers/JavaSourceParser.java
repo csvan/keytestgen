@@ -16,28 +16,26 @@ import java.util.regex.Pattern;
  * This parser can be used in order to extract information from (and about)
  * syntactically correct Java source files. Only the public class declared in
  * the source file will be subject to the parse.
- * 
+ *
  * @author christopher
- * 
  */
 public class JavaSourceParser {
 
     /**
      * Checks if the public class of the file declares a no-args constructor.
      * There are only two cases where this is true:
-     * 
+     * <p/>
      * <pre>
      * <li>The class explicitly declares a no-args constructor</li>
      * <li>The class does not declare a constructor at all</li>
      * </pre>
-     * 
+     * <p/>
      * Accordingly, this method will look for a declared no-args constructor,
      * while keeping track of parametrized constructors. If no declared no-args
      * constructor is found, the method will return true iff. the class declares
      * no other constructors.
-     * 
-     * @param path
-     *            path to the source file
+     *
+     * @param path path to the source file
      * @return
      * @throws IOException
      */
@@ -71,9 +69,8 @@ public class JavaSourceParser {
 
     /**
      * Extracts the package declaration for a Java source file on disk, if any.
-     * 
-     * @param path
-     *            path to the file
+     *
+     * @param path path to the file
      * @return the package declaration
      * @throws FileNotFoundException
      */
@@ -112,11 +109,11 @@ public class JavaSourceParser {
 
     /**
      * Reads a File into a String efficiently.
-     * 
+     * <p/>
      * Source:
      * http://stackoverflow.com/questions/326390/how-to-create-a-java-string
      * -from-the-contents-of-a-file
-     * 
+     *
      * @param path
      * @return
      * @throws IOException

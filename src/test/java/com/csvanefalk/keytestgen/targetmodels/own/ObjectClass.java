@@ -1,13 +1,11 @@
 package com.csvanefalk.keytestgen.targetmodels.own;
 
 
-
-
 public class ObjectClass {
 
     private ClassProxy proxy;
     int instanceZ;
-    
+
     /*
      *@ public normal_behavior
      * 
@@ -23,7 +21,7 @@ public class ObjectClass {
             return b;
         }
     }
-    
+
     /*
      *@ public normal_behavior
      * 

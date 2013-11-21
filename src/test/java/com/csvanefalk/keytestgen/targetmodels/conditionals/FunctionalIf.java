@@ -1,8 +1,8 @@
 package com.csvanefalk.keytestgen.targetmodels.conditionals;
 
 public class FunctionalIf {
-	/* Start
-	 * self.min(_i_i, _j_j)
+    /* Start
+     * self.min(_i_i, _j_j)
 	 * int result;
 	 * if (confert(i) < convert(j))
 	 * self.invert(_i_i) @FunctinalIfParameter
@@ -22,22 +22,21 @@ public class FunctionalIf {
 	 *       return _j_j
 	 *       <endNode>
 	 */
-	
-	/*@ requires true;
-	  @ ensures true;
-	  @*/
-	public int min(int i, int j) {
-		int result;
-		if (invert(i) < invert(j)) {
-			result = i;
-		}
-		else {
-			result = j;
-		}
-		return result;
-	}
-	
-	public int invert(int a) {
-		return a * -1;
-	}
+
+    /*@ requires true;
+      @ ensures true;
+      @*/
+    public int min(int i, int j) {
+        int result;
+        if (invert(i) < invert(j)) {
+            result = i;
+        } else {
+            result = j;
+        }
+        return result;
+    }
+
+    public int invert(int a) {
+        return a * -1;
+    }
 }

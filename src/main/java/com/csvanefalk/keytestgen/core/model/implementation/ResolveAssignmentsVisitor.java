@@ -10,7 +10,7 @@ import de.uka.ilkd.key.logic.op.SortDependingFunction;
 /**
  * Looks for junctors in a {@link Term}, and reflects their semantic meaning in
  * the {@link Model} corresponding to the term.
- * 
+ *
  * @author christopher
  */
 class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
@@ -41,7 +41,7 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
      * Equality has to be dealt with depending on the type of the
      * <strong>left-hand</strong> variable, since this is the operand which will
      * determine the meaning of the equality.
-     * <p>
+     * <p/>
      * If the variable is <strong>primitve</strong>, equality, in our
      * abstraction, implies a value assignment: equals(a,b) simply means that
      * the value of b is copied into a. For Integer types, there is no need to
@@ -49,7 +49,7 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
      * and we would thus only be performing the same work twice. For Boolean
      * types, however, which are not resolved by the SMT interface, we do this
      * explicitly.
-     * <p>
+     * <p/>
      * If the variable is a <strong>reference</strong> type, things get more
      * interesting, since equality in this case implies that the operands are
      * pointing to a common object in memory. To represent this in our
@@ -57,9 +57,8 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
      * operands, making them point to each other. We do this by making sure that
      * whatever Value is assigned to both operands has the same unique
      * identifier.
-     * 
-     * @param term
-     *            the term to process
+     *
+     * @param term the term to process
      */
     private void parseEquals(final Term term) {
 

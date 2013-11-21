@@ -1,10 +1,10 @@
 package com.csvanefalk.keytestgen.core;
 
-import java.io.IOException;
-
 import com.csvanefalk.keytestgen.KeYTestGenTest;
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
-import testutils.TestEnvironment;
+import com.csvanefalk.keytestgen.testutils.TestEnvironment;
+
+import java.io.IOException;
 
 public class CoreTest extends KeYTestGenTest {
 

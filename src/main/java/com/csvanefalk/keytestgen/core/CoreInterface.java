@@ -1,18 +1,11 @@
 package com.csvanefalk.keytestgen.core;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
-
 import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
-import com.csvanefalk.keytestgen.backend.TestGenerator;
 import com.csvanefalk.keytestgen.backend.TestGeneratorException;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClass;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaClassFactory;
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
 import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
-import com.csvanefalk.keytestgen.core.codecoverage.implementation.StatementCoverageParser;
 import com.csvanefalk.keytestgen.core.concurrency.capsules.CapsuleController;
 import com.csvanefalk.keytestgen.core.concurrency.capsules.CapsuleExecutor;
 import com.csvanefalk.keytestgen.core.concurrency.capsules.ICapsule;
@@ -24,19 +17,23 @@ import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.testsuiteabstraction.TestSuite;
 import com.csvanefalk.keytestgen.util.Benchmark;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * API singleton for the core package
- * <p>
+ * <p/>
  * Instances of this class provide a single interface between backend modules
  * and KeYTestGen itself, allowing them to request services related to test case
  * generation.
- * <p>
+ * <p/>
  * Backend modules should not be allowed to interact with KeYTestGen2 through
  * any other means than this singleton. TODO: Enforce this through access
  * restriction.
- * 
+ *
  * @author christopher
- * 
  */
 public class CoreInterface implements ICapsuleMonitor {
 
@@ -87,27 +84,23 @@ public class CoreInterface implements ICapsuleMonitor {
      * Generate a set of test suites for a selection of methods in a Java source
      * file. The test suites will will be in accord with the code coverage
      * criteria specified.
-     * 
-     * @param source
-     *            path to the Java source file.
-     * @param coverage
-     *            code coverage critera to be satisfied by the generated test
-     *            cases. May be <code>null</code>, in which case a default
-     *            statement coverage is used. See {@link ICodeCoverageParser}.
-     * @param converter
-     *            converter to turn the output of KTG into code for a given
-     *            testing framework. See {@link IFrameworkConverter}.
+     *
+     * @param source    path to the Java source file.
+     * @param coverage  code coverage critera to be satisfied by the generated test
+     *                  cases. May be <code>null</code>, in which case a default
+     *                  statement coverage is used. See {@link ICodeCoverageParser}.
+     * @param converter converter to turn the output of KTG into code for a given
+     *                  testing framework. See {@link IFrameworkConverter}.
      * @return a test suite for the target class, in the specified test
      *         framework.
-     * @throws TestGeneratorException
-     *             in the event that something went wrong in the process of test
-     *             case generation.
+     * @throws TestGeneratorException in the event that something went wrong in the process of test
+     *                                case generation.
      */
     public List<TestSuite> createTestSuites(final File source,
-            final ICodeCoverageParser codeCoverageParser,
-            final boolean includePublic, final boolean includeProtected,
-            final boolean includePrivate, final boolean includeNative,
-            final List<String> methods) throws CoreException {
+                                            final ICodeCoverageParser codeCoverageParser,
+                                            final boolean includePublic, final boolean includeProtected,
+                                            final boolean includePrivate, final boolean includeNative,
+                                            final List<String> methods) throws CoreException {
 
         /*
          * Get the abstract representation of the class.
@@ -122,8 +115,8 @@ public class CoreInterface implements ICapsuleMonitor {
     }
 
     private List<String> filterMethods(KeYJavaClass targetClass,
-            boolean includePublic, boolean includeProtected,
-            boolean includePrivate, boolean includeNative) {
+                                       boolean includePublic, boolean includeProtected,
+                                       boolean includePrivate, boolean includeNative) {
 
         List<String> filteredMethod = new LinkedList<>();
         for (String methodIdentifier : targetClass.getMethods()) {
@@ -139,18 +132,12 @@ public class CoreInterface implements ICapsuleMonitor {
                 if (includeNative) {
                     filteredMethod.add(methodIdentifier);
                 }
-            }
-
-            else if (includePublic && method.isPublic()) {
+            } else if (includePublic && method.isPublic()) {
                 filteredMethod.add(methodIdentifier);
-            }
-
-            else if (includeProtected && method.isProtected()) {
+            } else if (includeProtected && method.isProtected()) {
 
                 filteredMethod.add(methodIdentifier);
-            }
-
-            else if (includePrivate && method.isPrivate()) {
+            } else if (includePrivate && method.isPrivate()) {
                 filteredMethod.add(methodIdentifier);
             }
         }
@@ -160,7 +147,7 @@ public class CoreInterface implements ICapsuleMonitor {
 
     /**
      * Main method for invoking the core system itself.
-     * 
+     *
      * @param targetClass
      * @param codeCoverageParser
      * @param methods
@@ -168,8 +155,8 @@ public class CoreInterface implements ICapsuleMonitor {
      * @throws CoreException
      */
     private List<TestSuite> createTestSuites(final KeYJavaClass targetClass,
-            final ICodeCoverageParser codeCoverageParser,
-            final List<String> methods) throws CoreException {
+                                             final ICodeCoverageParser codeCoverageParser,
+                                             final List<String> methods) throws CoreException {
 
         /*
          * The result set of abstract test suites.
@@ -255,14 +242,12 @@ public class CoreInterface implements ICapsuleMonitor {
     /**
      * This helper method will construct a {@link KeYJavaClass} instance for the
      * public class in a given Java source file.
-     * 
-     * @param source
-     *            path to the source file
+     *
+     * @param source path to the source file
      * @return a {@link KeYJavaClass} instance corresponding to the public class
      *         in the source file
-     * @throws TestGeneratorException
-     *             in the event that there is a failure in the KeYInterface, or
-     *             if there is a problem finding or reading the source file.
+     * @throws TestGeneratorException in the event that there is a failure in the KeYInterface, or
+     *                                if there is a problem finding or reading the source file.
      */
     private KeYJavaClass extractKeYJavaClass(final File source)
             throws CoreException {

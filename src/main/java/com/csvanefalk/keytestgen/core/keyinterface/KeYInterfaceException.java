@@ -4,9 +4,8 @@ import com.csvanefalk.keytestgen.KeYTestGenException;
 
 /**
  * Base class for all exceptions thrown by the KeY interface subsystem.
- * 
+ *
  * @author christopher
- * 
  */
 public class KeYInterfaceException extends KeYTestGenException {
 

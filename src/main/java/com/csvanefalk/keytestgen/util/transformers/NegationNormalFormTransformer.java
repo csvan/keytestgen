@@ -6,10 +6,10 @@ import de.uka.ilkd.key.logic.op.Junctor;
 
 /**
  * This transformer brings a Term into Negation Normal Form.
- * <p>
+ * <p/>
  * A Term is in NNF iff. the only negations it contains are negations of logical
  * atoms.
- * 
+ *
  * @author christopher
  */
 public class NegationNormalFormTransformer extends AbstractTermTransformer {
@@ -28,7 +28,7 @@ public class NegationNormalFormTransformer extends AbstractTermTransformer {
 
     /**
      * Puts a Term into Negation Normal Form, using the following algorithm:
-     * 
+     * <p/>
      * <pre>
      * Pre: x is implication free and in Negation Normal Form
      * Post: NNF(x) computes and equivalent NNF for x
@@ -44,9 +44,9 @@ public class NegationNormalFormTransformer extends AbstractTermTransformer {
      *     end case
      * end function
      * </pre>
-     * 
+     * <p/>
      * The algorithm was taken from:
-     * <p>
+     * <p/>
      * (Huth and Ryan, <i>Logic in Computer Science</i>, page 62, 2nd Ed.
      * Cambridge University press, 2008)
      */

@@ -27,9 +27,8 @@ public class RemoveSDPsTransformer extends AbstractTermTransformer {
      * term, replacing them with {@link LocationVariable} instances whose names
      * will correspond to the nesting hiearchy expressed in the
      * SortDependingFunction they correspond to.
-     * 
-     * @param term
-     *            the term
+     *
+     * @param term the term
      * @return the term with all SortDependingFunctions removed
      */
     @Override

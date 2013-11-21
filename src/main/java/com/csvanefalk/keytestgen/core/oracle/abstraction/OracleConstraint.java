@@ -7,15 +7,14 @@ import java.util.Set;
  * An {@link OracleConstraint} is a set of assertions which must hold for the
  * poststate of the system under test, in order for the testcase to be
  * considered a success.
- * <p>
+ * <p/>
  * On a logical level, it is semantically equivalent to a set of formulas joined
  * by conjunction. These sub-formulas must in turn by joined only by
  * disjunctions (i.e. the entire formula represented by this class must be in
  * Conjunctive Normal Form). In our abstraction, such sub-formulas ar explicitly
  * represented by {@link OracleAssertion} instanes.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleConstraint {
 
@@ -26,9 +25,8 @@ public class OracleConstraint {
 
     /**
      * Sets up a constraint.
-     * 
-     * @param assertions
-     *            the assertions associated with this constraint.
+     *
+     * @param assertions the assertions associated with this constraint.
      */
     public OracleConstraint(final Set<OracleAssertion> assertions) {
         this.assertions = assertions;

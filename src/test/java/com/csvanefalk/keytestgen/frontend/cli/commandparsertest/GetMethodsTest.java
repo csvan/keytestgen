@@ -1,17 +1,16 @@
 package com.csvanefalk.keytestgen.frontend.cli.commandparsertest;
 
-import java.util.List;
-
 import junit.framework.Assert;
-
 import org.junit.Test;
+
+import java.util.List;
 
 public class GetMethodsTest extends CommandParserTest {
 
     @Test
     public void testGetMethodsAll() {
 
-        String[] args = { "-m", "all" };
+        String[] args = {"-m", "all"};
         processor.parse(args);
 
         List<String> expectedMethods = getList("all");
@@ -23,7 +22,7 @@ public class GetMethodsTest extends CommandParserTest {
     @Test
     public void testGetMethodsAllLong() {
 
-        String[] args = { "--methods", "all" };
+        String[] args = {"--methods", "all"};
         processor.parse(args);
 
         List<String> expectedMethods = getList("all");
@@ -35,9 +34,9 @@ public class GetMethodsTest extends CommandParserTest {
     // @Test
     public void testGetMethodsSpecific() {
 
-        String[] args = { "--methods", "publicMethod", "publicMethod2",
+        String[] args = {"--methods", "publicMethod", "publicMethod2",
                 "protectedMethod", "protectedMethod2", "privateMethod",
-                "privateMethod2", "-c", "stat", "hey.java" };
+                "privateMethod2", "-c", "stat", "hey.java"};
         processor.parse(args);
 
         List<String> expectedMethods = getList("publicMethod", "publicMethod",
@@ -51,7 +50,7 @@ public class GetMethodsTest extends CommandParserTest {
     // @Test
     public void testGetMethodsSpecificLong() {
 
-        String[] args = { "--methods", "all" };
+        String[] args = {"--methods", "all"};
         processor.parse(args);
         Assert.assertTrue(commandParser.isAboutFlagSet());
     }

@@ -4,9 +4,8 @@ import com.csvanefalk.keytestgen.KeYTestGenException;
 
 /**
  * Base class for all exceptions thrown by the oracle generation subsystem.
- * 
+ *
  * @author christopher
- * 
  */
 public class OracleGeneratorException extends KeYTestGenException {
 
@@ -14,7 +13,7 @@ public class OracleGeneratorException extends KeYTestGenException {
 
     /**
      * Construct a new oracle generator exception.
-     * 
+     *
      * @param message
      */
     public OracleGeneratorException(final String message) {

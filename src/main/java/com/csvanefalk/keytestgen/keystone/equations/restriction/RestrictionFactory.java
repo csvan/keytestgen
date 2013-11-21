@@ -7,12 +7,12 @@ public class RestrictionFactory {
     private abstract class FractionRestrictions implements IRestriction {
 
         protected final boolean greaterOrEquals(final Fraction left,
-                final Fraction right) {
+                                                final Fraction right) {
             return (left.getNumerator() * right.getDenominator()) >= (left.getDenominator() * right.getNumerator());
         }
 
         protected final boolean lessOrEquals(final Fraction left,
-                final Fraction right) {
+                                             final Fraction right) {
             return (left.getNumerator() * right.getDenominator()) <= (left.getDenominator() * right.getNumerator());
         }
     }
@@ -43,7 +43,7 @@ public class RestrictionFactory {
         private final IRestriction enforceUpperBound;
 
         public IntervalRestriction(final Fraction lowerBound,
-                final Fraction upperBound) {
+                                   final Fraction upperBound) {
             enforceLowerBound = RestrictionFactory.getInstance().createLessOrEqualsRestriction(
                     lowerBound);
             enforceUpperBound = RestrictionFactory.getInstance().createLessOrEqualsRestriction(
@@ -121,7 +121,7 @@ public class RestrictionFactory {
     }
 
     public IRestriction createRangeRestriction(final Fraction lowerLimit,
-            final Fraction upperLimit) {
+                                               final Fraction upperLimit) {
 
         assert upperLimit != null;
         assert lowerLimit != null;

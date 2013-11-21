@@ -1,22 +1,11 @@
 package com.csvanefalk.keytestgen.core.codecoverage.executionpath;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Stack;
-
 import de.uka.ilkd.key.java.SourceElement;
 import de.uka.ilkd.key.symbolic_execution.ExecutionNodePreorderIterator;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionBranchCondition;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionBranchStatement;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionStatement;
-import de.uka.ilkd.key.symbolic_execution.model.IExecutionTermination;
+import de.uka.ilkd.key.symbolic_execution.model.*;
 import de.uka.ilkd.key.symbolic_execution.model.impl.AbstractExecutionStateNode;
+
+import java.util.*;
 
 public class ExecutionPathContext {
 
@@ -99,9 +88,8 @@ public class ExecutionPathContext {
         /**
          * Constructs a new {@link ExecutionPathContext} instance for a symbolic
          * execution tree.
-         * 
-         * @param root
-         *            root node of the symbolic execution tree
+         *
+         * @param root root node of the symbolic execution tree
          * @return the execution context
          */
         public ExecutionPathContext build(final IExecutionStart root) {
@@ -328,9 +316,7 @@ public class ExecutionPathContext {
         }
 
         /**
-         * 
-         * @param node
-         *            the node
+         * @param node the node
          * @return true if the node has more than one child, false otherwise
          */
         private boolean isBranchingNode(final IExecutionNode node) {
@@ -351,8 +337,7 @@ public class ExecutionPathContext {
         }
 
         /**
-         * @param node
-         *            the node
+         * @param node the node
          * @return true if the node corresponds to a program statement, false
          *         otherwise
          */

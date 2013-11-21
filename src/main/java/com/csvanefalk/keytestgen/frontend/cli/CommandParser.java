@@ -1,15 +1,15 @@
 package com.csvanefalk.keytestgen.frontend.cli;
 
+import com.beust.jcommander.Parameter;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.beust.jcommander.Parameter;
 
 /**
  * Instances of this class are used in order to parse command line invocations
  * of KeyTestGen2, both checking syntactical correctness and extracting user
  * supplied data,
- * 
+ *
  * @author christopher
  */
 public class CommandParser {
@@ -27,14 +27,14 @@ public class CommandParser {
     /**
      * Set to display about information.
      */
-    @Parameter(names = { "-a", "--about" }, description = "show version and copyright information")
+    @Parameter(names = {"-a", "--about"}, description = "show version and copyright information")
     private boolean about;
 
     /**
      * Select the degree of code coverage to guarantee. Only one option per
      * session is legal. Default is standard statement coverage.
      */
-    @Parameter(names = { "-c", "--coverage" }, arity = 1, description = "target degree of code coverage for each method.\n"
+    @Parameter(names = {"-c", "--coverage"}, arity = 1, description = "target degree of code coverage for each method.\n"
             + CommandParser.INDENT
             + "Parameters (only one per session):\n"
             + CommandParser.INDENT
@@ -60,7 +60,7 @@ public class CommandParser {
     /**
      * Flag to decide if usage help should be shown.
      */
-    @Parameter(names = { "-h", "--help" }, description = "displays usage help")
+    @Parameter(names = {"-h", "--help"}, description = "displays usage help")
     private boolean help;
 
     /**
@@ -69,7 +69,7 @@ public class CommandParser {
      * native) or on a specific basis. Both ways can be combined in order to
      * customize method coverage.
      */
-    @Parameter(names = { "-m", "--methods" }, echoInput = true, variableArity = true, description = "what methods should be included in the test suite.\n"
+    @Parameter(names = {"-m", "--methods"}, echoInput = true, variableArity = true, description = "what methods should be included in the test suite.\n"
             + CommandParser.INDENT
             + "Parameters:\n"
             + CommandParser.INDENT
@@ -90,7 +90,7 @@ public class CommandParser {
      * Select top-level output directory for the generated test suite(s).
      * Default is the current directory at the time o invocation.
      */
-    @Parameter(names = { "-o", "--output" }, description = "target output directory for generated test suites.\n"
+    @Parameter(names = {"-o", "--output"}, description = "target output directory for generated test suites.\n"
             + CommandParser.INDENT + "default: current folder (.))", arity = 1)
     private final String outputDirectory = ".";
 
@@ -99,7 +99,7 @@ public class CommandParser {
      * selections are possible per session, in which case a separate output
      * folder will be generated for each framework. Default is JUnit4.
      */
-    @Parameter(names = { "-fr", "--framework" }, variableArity = true, description = "the test frameworks to use.\n"
+    @Parameter(names = {"-fr", "--framework"}, variableArity = true, description = "the test frameworks to use.\n"
             + CommandParser.INDENT
             + "Parameters:\n"
             + CommandParser.INDENT
@@ -111,7 +111,7 @@ public class CommandParser {
     /**
      * Set to enable verbose mode.
      */
-    @Parameter(names = { "-v", "--verbose" }, description = "enable verbose output")
+    @Parameter(names = {"-v", "--verbose"}, description = "enable verbose output")
     private boolean verbose;
 
     public String getCoverage() {

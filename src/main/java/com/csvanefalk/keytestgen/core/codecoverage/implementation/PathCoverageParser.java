@@ -1,14 +1,14 @@
 package com.csvanefalk.keytestgen.core.codecoverage.implementation;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
 import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPath;
 import com.csvanefalk.keytestgen.core.codecoverage.executionpath.ExecutionPathContext;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 public class PathCoverageParser implements ICodeCoverageParser {
 
@@ -32,9 +32,8 @@ public class PathCoverageParser implements ICodeCoverageParser {
      * sequence results in an infinite number of possible execution paths. In
      * that event, this method returns <code>null</code>.
      * </p>
-     * 
-     * @param root
-     *            the root of the symbolic execution tree
+     *
+     * @param root the root of the symbolic execution tree
      * @return
      */
     @Override

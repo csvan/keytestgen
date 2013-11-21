@@ -1,8 +1,8 @@
 /**
- * 
+ *
  */
 /**
  * @author christopher
  *
  */
-package testutils;
+package com.csvanefalk.keytestgen.testutils;

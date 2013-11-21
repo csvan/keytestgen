@@ -1,18 +1,14 @@
-package testutils;
-
-import java.io.File;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+package com.csvanefalk.keytestgen.testutils;
 
 import org.junit.Assert;
+
+import java.io.File;
+import java.util.*;
 
 public class FileEnvironment {
 
     public static FileEnvironment constructFileEnvironment(String directory,
-            boolean includeSubdirectories) {
+                                                           boolean includeSubdirectories) {
 
         List<File> javaFiles = loadAllJavaFilesInDirectory(directory,
                 includeSubdirectories);
@@ -28,7 +24,7 @@ public class FileEnvironment {
     }
 
     public static FileEnvironment constructFileEnvironment(String directory,
-            String... files) {
+                                                           String... files) {
 
         List<File> javaFiles = loadAllJavaFilesInDirectory(directory, false);
         javaFiles.removeAll(Arrays.asList(files));
@@ -67,13 +63,13 @@ public class FileEnvironment {
 
     /**
      * Gets file handlers for all Java files in a directory.
-     * 
+     *
      * @param directory
      * @param includeSubdirectories
      * @return
      */
     private static List<File> loadAllJavaFilesInDirectory(String directory,
-            boolean includeSubdirectories) {
+                                                          boolean includeSubdirectories) {
         List<File> results = new LinkedList<>();
 
         String path = keYTestGenPath + targetModelsPath + directory;

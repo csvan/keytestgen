@@ -1,5 +1,13 @@
 package com.csvanefalk.keytestgen.frontend.cli;
 
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.ParameterDescription;
+import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
+import com.csvanefalk.keytestgen.backend.ITestSuite;
+import com.csvanefalk.keytestgen.backend.TestGenerator;
+import com.csvanefalk.keytestgen.backend.TestGeneratorException;
+import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -7,27 +15,17 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.csvanefalk.keytestgen.backend.IFrameworkConverter;
-import com.csvanefalk.keytestgen.backend.ITestSuite;
-import com.csvanefalk.keytestgen.backend.TestGenerator;
-import com.csvanefalk.keytestgen.backend.TestGeneratorException;
-import com.csvanefalk.keytestgen.core.codecoverage.ICodeCoverageParser;
-
-import com.beust.jcommander.JCommander;
-import com.beust.jcommander.ParameterDescription;
-
 /**
  * Provides a CLI interface for KeYTestGen2.
- * 
+ *
  * @author christopher
  */
 public final class CommandLineInterface {
 
     /**
      * Worker class to service public invocations to the CLI.
-     * 
+     *
      * @author christopher
-     * 
      */
     private static class CommandLineInterfaceWorker {
 
@@ -40,7 +38,7 @@ public final class CommandLineInterface {
 
         /**
          * Setup default values which are not currently handled by the parser.
-         * 
+         *
          * @param parser
          */
         private static void checkAndSetDefaults(final CommandParser parser) {
@@ -83,7 +81,7 @@ public final class CommandLineInterface {
 
         /**
          * Prints usage information.
-         * 
+         *
          * @param processor
          */
         private static void printUsage(final JCommander processor) {
@@ -123,9 +121,8 @@ public final class CommandLineInterface {
         /**
          * Executes a single test case generation session based on the user
          * provided parameters.
-         * 
-         * @param args
-         *            user provided parameters.
+         *
+         * @param args user provided parameters.
          */
         public void execute(final String[] args) {
 
@@ -190,7 +187,7 @@ public final class CommandLineInterface {
 
         /**
          * Generate a set of test cases and write them to disc.
-         * 
+         *
          * @param parser
          */
         private void generateTestCases(final CommandParser parser) {
@@ -253,7 +250,7 @@ public final class CommandLineInterface {
         /**
          * Get a handler for the folder to which a given test suite should be
          * written.
-         * 
+         *
          * @param rootFolder
          * @param testSuite
          * @return
@@ -273,21 +270,17 @@ public final class CommandLineInterface {
         /**
          * Generates a set of test suites for the selected methods of the
          * current class.
-         * 
-         * @param file
-         *            path to the Java sourcefile
-         * @param coverageParser
-         *            parser for the coverage criteria selected
-         * @param frameworkConverter
-         *            converter for the selected framework
-         * @param methods
-         *            the methods to generate test suites for
+         *
+         * @param file               path to the Java sourcefile
+         * @param coverageParser     parser for the coverage criteria selected
+         * @param frameworkConverter converter for the selected framework
+         * @param methods            the methods to generate test suites for
          * @return the test suites
          */
         private List<ITestSuite> generateTestCases(final String file,
-                final ICodeCoverageParser coverageParser,
-                final IFrameworkConverter frameworkConverter,
-                final List<String> methods) {
+                                                   final ICodeCoverageParser coverageParser,
+                                                   final IFrameworkConverter frameworkConverter,
+                                                   final List<String> methods) {
 
             final List<String> userMethods = new LinkedList<>();
             final List<String> methodQualifiers = new LinkedList<>();
@@ -298,9 +291,7 @@ public final class CommandLineInterface {
                         || method.equals("private") || method.equals("native")) {
 
                     methodQualifiers.add(method);
-                }
-
-                else {
+                } else {
                     userMethods.add(method);
                 }
             }
@@ -360,7 +351,7 @@ public final class CommandLineInterface {
 
     /**
      * Main entry point for the CLI frontend.
-     * 
+     *
      * @param args
      */
     public static void main(String[] args) {

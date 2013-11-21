@@ -1,26 +1,24 @@
 package com.csvanefalk.keytestgen.keystone.simplex;
 
+import com.csvanefalk.keytestgen.keystone.equations.Equation;
+import com.csvanefalk.keytestgen.keystone.equations.EquationSystem;
+import com.csvanefalk.keytestgen.keystone.equations.expression.Variable;
+import org.apache.commons.math3.fraction.Fraction;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.math3.fraction.Fraction;
-
-import com.csvanefalk.keytestgen.keystone.equations.Equation;
-import com.csvanefalk.keytestgen.keystone.equations.EquationSystem;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Variable;
-
 /**
  * Various methods for solving constraints using the Simplex method.
- * 
+ *
  * @author christopher
- * 
  */
 public strictfp class Simplex {
 
     public static void addRows(final Fraction[][] table,
-            final int indexOfSourceRow, final int indexOfTargetRow,
-            Fraction multiplier) {
+                               final int indexOfSourceRow, final int indexOfTargetRow,
+                               Fraction multiplier) {
 
         if (multiplier == null) {
             multiplier = Fraction.ONE;
@@ -101,7 +99,7 @@ public strictfp class Simplex {
 
     /**
      * Prototype solver method.
-     * 
+     *
      * @return
      */
     public static Map<String, Integer> experimentalSolve(
@@ -172,7 +170,7 @@ public strictfp class Simplex {
     }
 
     private static int indexOfLargestColumnValue(final Fraction[][] table,
-            final int rowIndex) {
+                                                 final int rowIndex) {
         int resultIndex = -1;
         Fraction largest = Fraction.ZERO;
         for (int i = 0; i < (table[rowIndex].length - 1); i++) {
@@ -185,7 +183,7 @@ public strictfp class Simplex {
     }
 
     private static int indexOfLargestRowValue(final Fraction[][] table,
-            final int columnIndex) {
+                                              final int columnIndex) {
         int resultIndex = -1;
         Fraction largest = Fraction.ZERO;
         for (int i = 1; i < table.length; i++) {
@@ -198,7 +196,7 @@ public strictfp class Simplex {
     }
 
     private static void multiplyRow(final Fraction[][] table,
-            final int rowIndex, final Fraction multiplier) {
+                                    final int rowIndex, final Fraction multiplier) {
 
         for (int i = 0; i < table[rowIndex].length; i++) {
             table[rowIndex][i] = table[rowIndex][i].multiply(multiplier);

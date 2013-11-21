@@ -1,17 +1,16 @@
 package com.csvanefalk.keytestgen.core.model;
 
-import java.io.IOException;
-import java.util.List;
-
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
 import com.csvanefalk.keytestgen.core.model.implementation.ModelVariable;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.util.List;
 
 public class ModelIntegerTest extends ModelTest {
 

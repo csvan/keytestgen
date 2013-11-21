@@ -1,11 +1,9 @@
 package com.csvanefalk.keytestgen.frontend.cli.commandparsertest;
 
-import org.junit.Before;
-
+import com.beust.jcommander.JCommander;
 import com.csvanefalk.keytestgen.frontend.cli.CLITest;
 import com.csvanefalk.keytestgen.frontend.cli.CommandParser;
-
-import com.beust.jcommander.JCommander;
+import org.junit.Before;
 
 public class CommandParserTest extends CLITest {
 

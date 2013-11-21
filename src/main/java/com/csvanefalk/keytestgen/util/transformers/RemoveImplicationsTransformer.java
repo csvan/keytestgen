@@ -5,9 +5,8 @@ import de.uka.ilkd.key.logic.op.Junctor;
 
 /**
  * Instances of this transformer removes implications from terms.
- * 
+ *
  * @author christopher
- * 
  */
 public class RemoveImplicationsTransformer extends AbstractTermTransformer {
 
@@ -26,7 +25,7 @@ public class RemoveImplicationsTransformer extends AbstractTermTransformer {
     /**
      * Transforms a {@link Term} by replacing all implications a -> b with the
      * equivalent form !a \/ b.
-     * 
+     *
      * @author christopher
      */
     @Override
