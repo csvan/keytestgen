@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_uka_ilkd_key_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_uka_ilkd_key_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_custom_antlr_custom_2_7_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javacc_javacc_1_6.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.jar" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/key.jar" afterPath="$PROJECT_DIR$/lib/key.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.jar.md5" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.jar.md5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.jar.sha1" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.jar.sha1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.pom" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/2.0/key-2.0.pom" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keytestgen.iml" afterPath="$PROJECT_DIR$/keytestgen.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/maven-metadata.xml.md5" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/maven-metadata.xml.md5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/maven-metadata.xml.sha1" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/maven-metadata.xml.sha1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repo/de/uka/ilkd/key/maven-metadata.xml" afterPath="$PROJECT_DIR$/repo/de/uka/ilkd/key/maven-metadata.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="keytestgen.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057453524" ignored="false" />
-    <file path="/pom.xml" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385058444494" ignored="false" />
+    <file path="/Dummy.txt" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385062197137" ignored="false" />
+    <file path="/pom.xml" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385061973593" ignored="false" />
     <file path="$PROJECT_DIR$/smt/SMT/ModelSettings.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056941268" ignored="false" />
     <file path="$PROJECT_DIR$/smt/SMT/ModelGenerator_SMT.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056941269" ignored="false" />
     <file path="$PROJECT_DIR$/smt/SMT/package-info.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056941269" ignored="false" />
@@ -23,6 +32,7 @@
     <file path="/KeYInterface.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057372043" ignored="false" />
     <file path="/KeYJavaClassFactory.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057408662" ignored="false" />
     <file path="/TermParserTools.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057429135" ignored="false" />
+    <file path="$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/symbolic_execution/SymbolicExecutionTreeBuilder.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385061859391" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +47,25 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <exception_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint class_name="de.uka.ilkd.key.proof.io.ProblemLoaderException" package_name="de.uka.ilkd.key.proof.io">
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+    </exception_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -74,98 +103,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" line="211" class="com.csvanefalk.keytestgen.core.keyinterface.KeYInterface" package="com.csvanefalk.keytestgen.core.keyinterface">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" line="208" class="com.csvanefalk.keytestgen.core.keyinterface.KeYInterface" package="com.csvanefalk.keytestgen.core.keyinterface">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/ProblemInitializer.java" line="460" class="de.uka.ilkd.key.proof.init.ProblemInitializer" package="de.uka.ilkd.key.proof.init">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/ProblemInitializer.java" line="335" class="de.uka.ilkd.key.proof.init.ProblemInitializer" package="de.uka.ilkd.key.proof.init">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/ProblemInitializer.java" line="316" class="de.uka.ilkd.key.proof.init.ProblemInitializer" package="de.uka.ilkd.key.proof.init">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/ProblemInitializer.java" line="324" class="de.uka.ilkd.key.proof.init.ProblemInitializer" package="de.uka.ilkd.key.proof.init">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -175,93 +112,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CoreTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/CoreTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeYInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="208" column="0" selection-start="8210" selection-end="8210" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Maze.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Maze.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeYEnvironment.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/symbolic_execution/util/KeYEnvironment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="28" selection-start="8040" selection-end="8040" vertical-scroll-proportion="1.3444676">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractUserInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/ui/AbstractUserInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="2382" selection-end="2382" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsoleUserInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/ui/ConsoleUserInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="426" column="0" selection-start="13975" selection-end="13975" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultProblemLoader.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DefaultProblemLoader.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/io/DefaultProblemLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="232" column="36" selection-start="8791" selection-end="8791" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProblemInitializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/ProblemInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="460" column="0" selection-start="15629" selection-end="15629" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeYFile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/io/KeYFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="497" column="0" selection-start="17465" selection-end="17465" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Includes.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/Includes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
+            <state line="165" column="0" selection-start="6174" selection-end="6174" vertical-scroll-proportion="0.01734104">
               <folding />
             </state>
           </provider>
@@ -299,8 +153,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -371,6 +225,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -390,145 +245,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="targetmodels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="targetmodels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="own" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="keytestgen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -545,33 +263,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ModelIntegerTest">
-    <configuration default="false" name="com.csvanefalk.keytestgen.keystone.expression in keytestgen" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="keytestgen" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.csvanefalk.keytestgen.keystone.expression" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ModelIntegerTest.testSolveSingleLessThanConstraintMax">
     <configuration default="false" name="SymbolicDebuggerTests" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="keytestgen" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -666,10 +362,32 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration default="false" name="ModelIntegerTest.testSolveSingleLessThanConstraintMax" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="keytestgen" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.csvanefalk.keytestgen.core.model" />
+      <option name="MAIN_CLASS_NAME" value="com.csvanefalk.keytestgen.core.model.ModelIntegerTest" />
+      <option name="METHOD_NAME" value="testSolveSingleLessThanConstraintMax" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -680,25 +398,18 @@
       <option name="testName" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -726,6 +437,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -763,19 +487,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.com.csvanefalk.keytestgen.keystone.expression in keytestgen" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests.testStatements" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.OracleGeneratorTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests.testStatements" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.OracleGeneratorTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest.testSolveSingleLessThanConstraintMax" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.OracleGeneratorTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests.testStatements" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.com.csvanefalk.keytestgen.keystone.expression in keytestgen" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest.testSolveSingleLessThanConstraintMax" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.OracleGeneratorTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests.testStatements" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -798,7 +522,11 @@
       <created>1385057477651</created>
       <updated>1385057477651</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixing path errors.">
+      <created>1385060688639</created>
+      <updated>1385060688639</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -809,20 +537,20 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40243903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40243903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3335112" sideWeight="0.597561" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33724654" sideWeight="0.6707317" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.597561" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -872,7 +600,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Overall cleanup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing path errors." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -888,6 +616,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Fixing project setup. Should build cleanly now." />
     <MESSAGE value="Overall cleanup." />
+    <MESSAGE value="Fixing path errors." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -901,20 +630,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-1.7.0/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="24" selection-start="7773" selection-end="7773" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0/src.zip!/sun/misc/URLClassPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="370" column="0" selection-start="12784" selection-end="12784" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="370" column="0" selection-start="14752" selection-end="14752" vertical-scroll-proportion="0.0">
@@ -954,49 +669,47 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/uka/ilkd/key/2.0/key-2.0.jar!/de/uka/ilkd/key/symbolic_execution/util/KeYEnvironment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="120" selection-start="2288" selection-end="2288" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="37" column="120" selection-start="2288" selection-end="2288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/ui/ConsoleUserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="426" column="0" selection-start="13975" selection-end="13975" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/ui/AbstractUserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2382" selection-end="2382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/io/DefaultProblemLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="36" selection-start="8791" selection-end="8791" vertical-scroll-proportion="0.0">
+        <state line="431" column="0" selection-start="14263" selection-end="14263" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/Includes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
+        <state line="66" column="0" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.25906736">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/io/KeYFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="497" column="0" selection-start="17465" selection-end="17465" vertical-scroll-proportion="0.0">
+        <state line="497" column="0" selection-start="17465" selection-end="17465" vertical-scroll-proportion="0.7614841">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/init/ProblemInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="460" column="0" selection-start="15629" selection-end="15629" vertical-scroll-proportion="0.0">
+        <state line="455" column="0" selection-start="15504" selection-end="15504" vertical-scroll-proportion="0.28091872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/symbolic_execution/util/KeYEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="28" selection-start="8898" selection-end="8898" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="16" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1008,9 +721,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/symbolic_execution/util/KeYEnvironment.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="28" selection-start="8040" selection-end="8040" vertical-scroll-proportion="1.3444676">
+        <state line="48" column="24" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/ui/AbstractUserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2559" selection-end="2559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../key/system/src/de/uka/ilkd/key/proof/io/DefaultProblemLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="0" selection-start="6174" selection-end="6174" vertical-scroll-proportion="0.01734104">
           <folding />
         </state>
       </provider>

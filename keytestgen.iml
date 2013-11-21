@@ -12,7 +12,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Maven: antlr_custom:antlr_custom:2.7.2" level="project" />
+    <orderEntry type="library" name="Maven: javacc:javacc:1.6" level="project" />
     <orderEntry type="library" name="Maven: de.uka.ilkd:key:2.0" level="project" />
     <orderEntry type="library" name="Maven: de.uka.ilkd:recoderKey:2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
