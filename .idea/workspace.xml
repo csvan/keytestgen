@@ -1,315 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Overall cleanup.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/AbstractBinaryExpression.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/AbstractBinaryExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/AbstractCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/AbstractCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/AbstractComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/AbstractComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/AbstractJavaSourceGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/AbstractJavaSourceGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/AbstractUnaryExpression.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/AbstractUnaryExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Addition.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Addition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/AdditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/AdditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/AliasTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/AliasTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/ArrayInstanceCreationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/ArrayInstanceCreationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySizeDoWhile.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySizeDoWhile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySizeWhile.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySizeWhile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumFor.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumFor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumForEach.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumForEach.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhile.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileInitiallyInvalid.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileInitiallyInvalid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithBreak.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithBreak.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithContinue.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithContinue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithException.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithReturn.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhileWithReturn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/AssociationSourceIsNotRepresentativeTermOfEquivalenceClass.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/AssociationSourceIsNotRepresentativeTermOfEquivalenceClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/Benchmark.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/Benchmark.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/BranchCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/BranchCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/BranchCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/BranchCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CLIResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CLIResources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ClassCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ClassCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/ClassProxy.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/ClassProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/CodeCoverageParserException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/CodeCoverageParserException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/CommandParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/CommandParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/admin/Company.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/admin/Company.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/ComplexConstructorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/ComplexConstructorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ComplexFlatSteps.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ComplexFlatSteps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/ComplexIf.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/ComplexIf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ConditionCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ConditionCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ConditionCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ConditionCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ConfigurationExtractorWithOperationContractsTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ConfigurationExtractorWithOperationContractsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/ConjunctionNormalFormTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/ConjunctionNormalFormTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/ConjunctionNormalFormTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/ConjunctionNormalFormTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/CoreTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/CoreTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DescendingExecutionPathComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DescendingExecutionPathComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Division.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Division.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/DivisionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/DivisionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileFalseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileFalseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/travel/Driver.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/travel/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ElseIfDifferentVariables.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ElseIfDifferentVariables.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/ElseIfTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/ElseIfTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/EmptyBlockTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/EmptyBlockTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/EmptyPathConditionAndNoUpdates.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/EmptyPathConditionAndNoUpdates.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/Equals.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/Equals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/EquationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/EquationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/ExecuteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/ExecuteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPath.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPath.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPathContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPathContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ExistingContractTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/ExistingContractTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/ExpressionUtilsTest_negate.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/ExpressionUtilsTest_negate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/FixedRecursiveMethodCallTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/FixedRecursiveMethodCallTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/FlatSteps.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/FlatSteps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/ForEachTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/ForEachTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/ForTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/ForTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/FunctionalDoWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/FunctionalDoWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/FunctionalForTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/FunctionalForTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/FunctionalIf.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/FunctionalIf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/FunctionalWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/FunctionalWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/GetMethodsTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/GetMethodsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/GreaterOrEquals.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/GreaterOrEquals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/ICodeCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/ICodeCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ICoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ICoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/IExpression.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/IExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/IFrameworkConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/IFrameworkConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/IModelGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/IModelGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/INodeTestCaseGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/INodeTestCaseGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/ITermTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/ITermTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/ITestCaseGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/ITestCaseGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/custom/ITestCaseParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/custom/ITestCaseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/IVisitable.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/IVisitable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/InstanceCreationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/InstanceCreationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/IntegerConditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/IntegerConditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/IsAboutFlagSetTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/IsAboutFlagSetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/IsHelpFlagSetTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/IsHelpFlagSetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/IsInstanceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/IsInstanceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/IsNullTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/IsNullTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/IsVerboseFlagSetTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/IsVerboseFlagSetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/junit/JUnitConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/junit/JUnitConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/JavaClass.xsd" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/JavaClass.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/JavaFileConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/JavaFileConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/JavaFileValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/JavaFileValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/JavaSourceParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/JavaSourceParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterfaceException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterfaceException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStoneException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStoneException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/KeYTestGenException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/KeYTestGenException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/gui/KeYTestGenGUI.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/gui/KeYTestGenGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/visitors/KeYTestGenTermVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/visitors/KeYTestGenTermVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/KeYTestGenTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/KeYTestGenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/LabelTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/LabelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/LessOrEquals.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/LessOrEquals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/LimitedIntegerSet.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/LimitedIntegerSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/LogicConditionExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/LogicConditionExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/LoopBodyBranchClosed.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/LoopBodyBranchClosed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/LoopIterationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/LoopIterationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/LoopUsageBranchClosed.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/LoopUsageBranchClosed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/Magic42.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/Magic42.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Maze.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Maze.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodCallOnObject.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodCallOnObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodCallOnObjectWithException.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodCallOnObjectWithException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodCallParallelTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodCallParallelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodFormatTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodFormatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodHierarchyCallTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodHierarchyCallTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodHierarchyCallWithExceptionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodHierarchyCallWithExceptionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodPOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodPOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodPartPOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/MethodPartPOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/Model.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/Model.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilderVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilderVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/tools/ModelGenerationTools.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/tools/ModelGenerationTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/ModelGeneratorException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/ModelGeneratorException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelInstance.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelVariable.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelVariable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/Model_SMTTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/Model_SMTTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Multiplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Multiplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/MyList.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/MyList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NegationNormalFormTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NegationNormalFormTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/NegationNormalFormTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/NegationNormalFormTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedDoWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedDoWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedForTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedForTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedLoopsWithContinue.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedLoopsWithContinue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/NestedWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/NestedWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/NodeTestGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/NodeTestGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/NumericConstant.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/NumericConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/ObjectClass.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/ObjectClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/ObjectConditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/ObjectConditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/OneAssignmentTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/OneAssignmentTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/Oracle.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/Oracle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleAssertion.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleAssertion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/OracleCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/OracleCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleConstraint.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleExpression.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleGeneratorException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleGeneratorException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/oraclegeneration/OracleGeneratorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/oraclegeneration/OracleGeneratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleLiteral.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleLiteral.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleMetaExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleMetaExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleMethodInvocation.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleMethodInvocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleOperator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleQuantifier.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleQuantifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleType.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleTypeFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleTypeFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/OrderOperandsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/OrderOperandsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/OrderOperandsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/OrderOperandsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/PathCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/PathCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/PathCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/PathCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/QuantifiedClass.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/QuantifiedClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/QuantifierTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/QuantifierTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Queue.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Queue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveAxiomaticExpressionsTransformer.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveAxiomaticExpressionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveDisjunctionsTransformer.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveDisjunctionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveIfThenElseTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveIfThenElseTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveIfThenElseTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveIfThenElseTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveImplicationsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveImplicationsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveImplicationsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveImplicationsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveObserverFunctionsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveObserverFunctionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveObserverFunctionsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveObserverFunctionsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveSDPsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveSDPsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveSDPsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveSDPsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ResolveAssignmentsVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ResolveAssignmentsVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/RestrictionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/RestrictionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/travel/Route.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/travel/Route.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/SimpleArrayCreation.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/SimpleArrayCreation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleConstructorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleConstructorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/SimpleIf.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/SimpleIf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedArrays.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedArrays.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbects.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsDeletion.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsDeletion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsInsertion.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsInsertion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsInstanceVariable.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsInstanceVariable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsWithAdditionalInstances.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleLinkedOjbectsWithAdditionalInstances.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/SimpleNullPointerSplitTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/SimpleNullPointerSplitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleStaticAttributes.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/SimpleStaticAttributes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyConjunctionTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyConjunctionTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyConjunctionTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyConjunctionTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyDisjunctionTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyDisjunctionTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyDisjunctionTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyDisjunctionTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/SimplifyPostconditionTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/SimplifyPostconditionTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/StatementCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/StatementCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/StatementCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/StatementCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/StatementKindTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/StatementKindTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/StaticMethodCall.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/StaticMethodCall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Station.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Station.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/StepOverOnTwoBranches.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/StepOverOnTwoBranches.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/SwitchCaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/SwitchCaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/TermEquivalenceChecker.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/TermEquivalenceChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserException.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestCase.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/TestCase.xsd" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/TestCase.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/TestEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/TestEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/TestGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/TestGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/TestJUnitTestCaseGenerator.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/TestJUnitTestCaseGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/testNG/TestNGConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/testNG/TestNGConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/testNG/TestNGTestSuite.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/testNG/TestNGTestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestSuite.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/ThrowTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/ThrowTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/ThrowVariableTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/ThrowVariableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Train.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Train.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/TransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/TransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/TryCatchFinally.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/TryCatchFinally.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/UnknownTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/UnknownTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractAllBranchesOpenTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractAllBranchesOpenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractExceptionalNoPreconditionWithNullCheckTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractExceptionalNoPreconditionWithNullCheckTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractFalsePreconditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractFalsePreconditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractFixedNormalPostTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractFixedNormalPostTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractInvalidPreconditionOnObjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractInvalidPreconditionOnObjectTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractInvalidPreconditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractInvalidPreconditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNoExceptionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNoExceptionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNoPreconditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNoPreconditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNoPreconditionWithNullCheckTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNoPreconditionWithNullCheckTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNormalAndExceptionalBranchTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNormalAndExceptionalBranchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNormalAndExceptionalTogetherTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractNormalAndExceptionalTogetherTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractQueryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/UseOperationContractQueryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/UtilTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/UtilTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Variable.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Variable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/VariablesArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/VariablesArrayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/VariablesLocalTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/VariablesLocalTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/VariablesParameterAttributesChange.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/VariablesParameterAttributesChange.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/VariablesStaticTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/VariablesStaticTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/VoidWhileWithReturn.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/VoidWhileWithReturn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/WhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/WhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/WhileWithMethodCallAsCondition.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/WhileWithMethodCallAsCondition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLTestSuite.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLTestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/monitor/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/monitor/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/util/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/util/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/publictransport/tests/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/publictransport/tests/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/publictransport/tests/trains/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/publictransport/tests/trains/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/conditionals/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/exceptions/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/fors/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/whiles/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/methods/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/objects/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/operationalcontracts/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/buses/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/package-info.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/package-info.java" />
+    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_uka_ilkd_recoderKey_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keytestgen.iml" afterPath="$PROJECT_DIR$/keytestgen.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="keytestgen.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056958335" ignored="false" />
-    <file path="/pom.xml" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385055304127" ignored="false" />
+    <file path="/Dummy.txt" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057453524" ignored="false" />
+    <file path="/pom.xml" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385058444494" ignored="false" />
     <file path="$PROJECT_DIR$/smt/SMT/ModelSettings.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056941268" ignored="false" />
     <file path="$PROJECT_DIR$/smt/SMT/ModelGenerator_SMT.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056941269" ignored="false" />
     <file path="$PROJECT_DIR$/smt/SMT/package-info.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385056941269" ignored="false" />
@@ -398,19 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JavaSourceParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/JavaSourceParser.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="14" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XMLConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="14" selection-start="2920" selection-end="2920" vertical-scroll-proportion="0.0">
+            <state line="53" column="34" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.57251906">
               <folding />
             </state>
           </provider>
@@ -479,10 +172,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TermParserTools.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TermParserTools.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="531" column="28" selection-start="16716" selection-end="16716" vertical-scroll-proportion="0.60215056">
+            <state line="531" column="28" selection-start="16716" selection-end="16716" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SymbolicDebuggerTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -506,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/package-info.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/publictransport/tests/trains/package-info.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/package-info.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/casestudies/publictransport/tests/package-info.java" />
@@ -522,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -610,6 +312,170 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="targetmodels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symbolic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qantifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="keytestgen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -631,7 +497,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.com.csvanefalk.keytestgen.keystone.expression in keytestgen">
+  <component name="RunManager" selected="JUnit.SymbolicDebuggerTests">
     <configuration default="false" name="AdditionTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="keytestgen" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -662,6 +528,28 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SymbolicDebuggerTests" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="keytestgen" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.csvanefalk.keytestgen.symbolic" />
+      <option name="MAIN_CLASS_NAME" value="com.csvanefalk.keytestgen.symbolic.SymbolicDebuggerTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -772,14 +660,16 @@
       <patterns />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AdditionTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.com.csvanefalk.keytestgen.keystone.expression in keytestgen" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.com.csvanefalk.keytestgen.keystone.expression in keytestgen" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AdditionTest" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SymbolicDebuggerTests" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.com.csvanefalk.keytestgen.keystone.expression in keytestgen" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AdditionTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -798,11 +688,15 @@
       <created>1385056912112</created>
       <updated>1385056912112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Overall cleanup.">
+      <created>1385057477651</created>
+      <updated>1385057477651</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
+    <frame x="-1" y="27" width="1922" height="1054" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -813,13 +707,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3335112" sideWeight="0.6707317" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -897,20 +791,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/SimplifyPostconditionTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="14" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
@@ -1006,7 +886,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="531" column="28" selection-start="16716" selection-end="16716" vertical-scroll-proportion="0.60215056">
+        <state line="531" column="28" selection-start="16716" selection-end="16716" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="34" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.57251906">
           <folding />
         </state>
       </provider>
