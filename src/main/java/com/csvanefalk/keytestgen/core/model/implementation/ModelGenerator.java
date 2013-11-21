@@ -1,18 +1,11 @@
 package com.csvanefalk.keytestgen.core.model.implementation;
 
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.core.model.IModelGenerator;
 import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
-import com.csvanefalk.keytestgen.core.model.SMT.PaperTest;
 import com.csvanefalk.keytestgen.core.model.tools.ModelGenerationTools;
 import com.csvanefalk.keytestgen.keystone.KeYStone;
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;
-import com.csvanefalk.keytestgen.util.transformer.RemoveAxiomaticExpressionsTransformer;
-import com.csvanefalk.keytestgen.util.transformer.RemoveDisjunctionsTransformer;
 import com.csvanefalk.keytestgen.util.transformers.NormalizeArithmeticComparatorsTransformer;
 import com.csvanefalk.keytestgen.util.transformers.RemoveIfThenElseTransformer;
 import com.csvanefalk.keytestgen.util.transformers.RemoveImplicationsTransformer;
@@ -22,17 +15,21 @@ import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Given that a client does not specify anything else, KeYTestGen2 will default
  * to this implementation of {@link IModelGenerator} for the purpose of
  * instantiating path conditions.
- * <p>
+ * <p/>
  * This particular implementation makes use of SMT solvers in order to
  * facilitate model generation. The pathcondition to be instantiated is
  * translated into the SMT-LIB2 language, and the KeY SMT interface is
  * subsequently invoked in order to find an assignment of variables that satisfy
  * the pathcondition (if such an assignment exits).
- * <p>
+ * <p/>
  * The set of assignments found are further processed into an instance of
  * {@link IModel}, which constitutes the final representaiton of the model.
  */
@@ -55,11 +52,9 @@ public class ModelGenerator implements IModelGenerator {
 
     /**
      * Constructs a standard model generator.
-     * 
-     * @param solvers
-     *            the solvers to use
-     * @param settings
-     *            the settings for the used solvers
+     *
+     * @param solvers  the solvers to use
+     * @param settings the settings for the used solvers
      */
     private ModelGenerator() {
 
@@ -68,14 +63,11 @@ public class ModelGenerator implements IModelGenerator {
     /**
      * generates a {@link Model} for the pathcondition of a single
      * {@link IExecutionNode}, i.e. a single program statement.
-     * 
-     * @param node
-     *            the node for which to generate a Model
-     * @param mediator
-     *            session mediator
+     *
+     * @param node     the node for which to generate a Model
+     * @param mediator session mediator
      * @return the Model instance for the node
-     * @throws ModelGeneratorException
-     *             in the event that there was a failure to generate the Model
+     * @throws ModelGeneratorException in the event that there was a failure to generate the Model
      */
     @Override
     public Model generateModel(final IExecutionNode node)
@@ -135,10 +127,10 @@ public class ModelGenerator implements IModelGenerator {
 
         /*
          * Resolve and remove axiomatic statements (hack...)
-         */
+
         pathCondition = RemoveAxiomaticExpressionsTransformer.getInstance().transform(
                 pathCondition);
-
+         */
         /*
          * Remove all implications from the path condition.
          */
@@ -147,10 +139,10 @@ public class ModelGenerator implements IModelGenerator {
 
         /*
          * Remove disjunctions from the path condition.
-         */
+
         pathCondition = RemoveDisjunctionsTransformer.getInstance().transform(
                 pathCondition);
-
+         */
         /*
          * Remove if-then-else assertions from the path condition.
          */
@@ -161,7 +153,7 @@ public class ModelGenerator implements IModelGenerator {
     }
 
     private Map<String, Integer> getConcreteValues(final Term pathCondition,
-            final Services services) throws ModelGeneratorException {
+                                                   final Services services) throws ModelGeneratorException {
 
         try {
             /*
@@ -183,10 +175,10 @@ public class ModelGenerator implements IModelGenerator {
             } else {
                 result = keYStone.solveConstraint(simplifiedPathCondition);
             }
-
+            /*
             PaperTest.addResult(pathCondition + "_KEYSTONE",
                     Calendar.getInstance().getTimeInMillis() - time);
-
+              */
             return result;
 
         } catch (final TermTransformerException e) {
@@ -197,7 +189,7 @@ public class ModelGenerator implements IModelGenerator {
     }
 
     private void instantiateModel(final Model model,
-            final Map<String, Integer> concreteValues) {
+                                  final Map<String, Integer> concreteValues) {
 
         for (final String variableName : concreteValues.keySet()) {
 

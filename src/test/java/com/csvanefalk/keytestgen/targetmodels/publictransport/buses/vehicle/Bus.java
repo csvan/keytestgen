@@ -1,12 +1,12 @@
 package com.csvanefalk.keytestgen.targetmodels.publictransport.buses.vehicle;
 
-import targetmodels.publictransport.buses.admin.Company;
-import targetmodels.publictransport.buses.travel.Driver;
-import targetmodels.publictransport.buses.travel.Route;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.admin.Company;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.travel.Driver;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.travel.Route;
 
 /**
  * Represents a bus used in a public transportation system.
- * 
+ *
  * @author christopher
  */
 public class Bus {

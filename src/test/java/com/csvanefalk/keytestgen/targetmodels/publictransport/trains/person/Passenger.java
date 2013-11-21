@@ -1,8 +1,9 @@
 package com.csvanefalk.keytestgen.targetmodels.publictransport.trains.person;
 
-import targetmodels.publictransport.trains.train.Station;
-import targetmodels.publictransport.trains.train.Train;
-import targetmodels.publictransport.trains.train.Wagon;
+
+import com.csvanefalk.keytestgen.targetmodels.publictransport.trains.train.Station;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.trains.train.Train;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.trains.train.Wagon;
 
 public class Passenger {
 

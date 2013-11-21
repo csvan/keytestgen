@@ -1,9 +1,9 @@
 package com.csvanefalk.keytestgen.targetmodels.publictransport.trains.train;
 
-import targetmodels.publictransport.buses.admin.Company;
-import targetmodels.publictransport.buses.travel.Driver;
-import targetmodels.publictransport.buses.travel.Route;
-import targetmodels.publictransport.buses.vehicle.Bus;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.admin.Company;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.travel.Driver;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.travel.Route;
+import com.csvanefalk.keytestgen.targetmodels.publictransport.buses.vehicle.Bus;
 
 public class TrainBusConnection {
     Train t;

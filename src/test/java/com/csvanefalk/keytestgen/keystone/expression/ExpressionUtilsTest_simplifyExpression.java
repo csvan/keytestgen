@@ -1,16 +1,11 @@
 package com.csvanefalk.keytestgen.keystone.expression;
 
-import junit.framework.Assert;
-
-import org.apache.commons.math3.fraction.Fraction;
-import org.junit.Test;
 
 import com.csvanefalk.keytestgen.keystone.equations.IExpression;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Addition;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Division;
-import com.csvanefalk.keytestgen.keystone.equations.expression.ExpressionUtils;
-import com.csvanefalk.keytestgen.keystone.equations.expression.Multiplication;
-import com.csvanefalk.keytestgen.keystone.equations.expression.NumericConstant;
+import com.csvanefalk.keytestgen.keystone.equations.expression.*;
+import org.apache.commons.math3.fraction.Fraction;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ExpressionUtilsTest_simplifyExpression {
 
@@ -272,8 +267,8 @@ public class ExpressionUtilsTest_simplifyExpression {
         IExpression expression = new Addition(new NumericConstant(5),
                 new Addition(new NumericConstant(15), new Multiplication(
                         new NumericConstant(-10), new Division(
-                                new NumericConstant(15),
-                                new NumericConstant(25)))));
+                        new NumericConstant(15),
+                        new NumericConstant(25)))));
 
         IExpression simplifiedExpression = ExpressionUtils.simplifyExpression(expression);
         Fraction simplifiedValue = simplifiedExpression.evaluate();
@@ -291,8 +286,8 @@ public class ExpressionUtilsTest_simplifyExpression {
         IExpression expression = new Addition(new NumericConstant(5),
                 new Addition(new NumericConstant(-15), new Multiplication(
                         new NumericConstant(10), new Division(
-                                new NumericConstant(15),
-                                new NumericConstant(25)))));
+                        new NumericConstant(15),
+                        new NumericConstant(25)))));
 
         IExpression simplifiedExpression = ExpressionUtils.simplifyExpression(expression);
         Fraction simplifiedValue = simplifiedExpression.evaluate();

@@ -1,22 +1,19 @@
 package com.csvanefalk.keytestgen.core.concurrency.capsules;
 
-import java.util.Calendar;
-
 import com.csvanefalk.keytestgen.core.concurrency.monitor.CaughtException;
 import com.csvanefalk.keytestgen.core.model.IModelGenerator;
-import com.csvanefalk.keytestgen.core.model.SMT.PaperTest;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
 import com.csvanefalk.keytestgen.core.model.implementation.ModelGenerator;
-import com.csvanefalk.keytestgen.core.model.implementation.SMT.ModelGenerator_SMT;
 import com.csvanefalk.keytestgen.core.testsuiteabstraction.TestCase;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
+
+import java.util.Calendar;
 
 /**
  * Instances of this class are used in order to enable concurrent model
  * generation for several nodes simultaneously.
- * 
+ *
  * @author christopher
- * 
  */
 public class ModelCapsule extends AbstractCapsule {
 
@@ -57,8 +54,10 @@ public class ModelCapsule extends AbstractCapsule {
         try {
             long time = Calendar.getInstance().getTimeInMillis();
             model = modelGenerator.generateModel(node);
+            /*
             PaperTest.addResult(node.getPathCondition().toString(),
                     Calendar.getInstance().getTimeInMillis() - time);
+                    */
         } catch (final Exception e) {
             notifyMonitors(new CaughtException(e));
             setThrownException(e);
@@ -74,7 +73,7 @@ public class ModelCapsule extends AbstractCapsule {
     /**
      * Return the resulting Model created by this AbstractCapsule, if
      * successful.
-     * 
+     *
      * @return
      */
     public Model getResult() {
