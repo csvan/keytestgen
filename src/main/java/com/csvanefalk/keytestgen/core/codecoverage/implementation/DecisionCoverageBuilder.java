@@ -73,7 +73,7 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
     private Set<BranchStatement> collectBranchStatements(
             final Set<SourceElement> visitedProgramNodes) {
 
-        final Set<BranchStatement> branchStatements = new HashSet<>();
+        final Set<BranchStatement> branchStatements = new HashSet<BranchStatement>();
         for (final SourceElement element : visitedProgramNodes) {
             if (element instanceof BranchStatement) {
                 branchStatements.add((BranchStatement) element);
@@ -102,7 +102,7 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
             }
         }
 
-        final Set<ExecutionPath> minimalSet = new HashSet<>();
+        final Set<ExecutionPath> minimalSet = new HashSet<ExecutionPath>();
         for (final ExecutionPath path : mapping.keySet()) {
             minimalSet.add(path);
         }
@@ -212,9 +212,9 @@ public class DecisionCoverageBuilder implements ICoverageBuilder {
          * these two sets. This is most likely NOT an optimal algorithm for
          * calculating a minimal set.
          */
-        final PriorityQueue<ExecutionPath> thenSortedPaths = new PriorityQueue<>(
+        final PriorityQueue<ExecutionPath> thenSortedPaths = new PriorityQueue<ExecutionPath>(
                 20, new DescendingExecutionBranchComparator(thenMapping));
-        final PriorityQueue<ExecutionPath> elseSortedPaths = new PriorityQueue<>(
+        final PriorityQueue<ExecutionPath> elseSortedPaths = new PriorityQueue<ExecutionPath>(
                 20, new DescendingExecutionBranchComparator(elseMapping));
 
         for (final ExecutionPath executionPath : executionPaths) {

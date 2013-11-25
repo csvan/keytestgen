@@ -25,7 +25,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "statementKindTest/test/StatementKindTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -41,7 +41,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "whileFalseTest/test/WhileFalseTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -57,7 +57,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "whileTest/test/WhileTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -73,7 +73,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "tryCatchFinally/test/TryCatchFinally.java";
         String methodName = "tryCatchFinally";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -89,7 +89,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "throwVariableTest/test/ThrowVariableTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -105,7 +105,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "throwTest/test/ThrowTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -121,7 +121,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "switchCaseTest/test/SwitchCaseTest.java";
         String methodName = "switchCase";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -137,7 +137,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "staticMethodCall/test/StaticMethodCall.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -153,7 +153,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "statements/test/FlatSteps.java";
         String methodName = "doSomething";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -169,7 +169,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "simpleNullPointerSplitTest/test/SimpleNullPointerSplitTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -185,7 +185,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "simpleIf/test/SimpleIf.java";
         String methodName = "min";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -200,7 +200,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "recursiveFibonacci/test/RecursiveFibonacci.java";
         String methodName = "fibonacci10";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -216,7 +216,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "nestedWhileTest/test/NestedWhileTest.java";
         String methodName = "mainNested";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -232,7 +232,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "nestedForTest/test/NestedForTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -248,7 +248,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "nestedDoWhileTest/test/NestedDoWhileTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -265,7 +265,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "methodHierarchyCallWithExceptionTest/test/MethodHierarchyCallWithExceptionTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -281,7 +281,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "methodHierarchyCallTest/test/MethodHierarchyCallTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -297,7 +297,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "methodFormatTest/test/MethodFormatTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -313,7 +313,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "methodCallParallelTest/test/MethodCallParallelTest.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -330,7 +330,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "methodCallOnObjectWithException/test/MethodCallOnObjectWithException.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 
@@ -346,7 +346,7 @@ public class SymbolicDebuggerTests {
 
         String classPath = "methodCallOnObject/test/MethodCallOnObject.java";
         String methodName = "main";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         File file = loadFile(classPath);
 

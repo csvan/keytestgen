@@ -69,8 +69,8 @@ public class NodeTestGenerator {
             /*
              * Create and dispatc the Model and Oracle geneators.
              */
-            final CapsuleController<ModelCapsule> modelController = new CapsuleController<>();
-            final CapsuleController<OracleCapsule> oracleController = new CapsuleController<>();
+            final CapsuleController<ModelCapsule> modelController = new CapsuleController<ModelCapsule>();
+            final CapsuleController<OracleCapsule> oracleController = new CapsuleController<OracleCapsule>();
 
             final ModelCapsule modelGenerationCapsule = new ModelCapsule(node);
             modelController.addChild(modelGenerationCapsule);

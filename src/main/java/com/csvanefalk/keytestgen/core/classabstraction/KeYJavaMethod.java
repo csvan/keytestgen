@@ -81,7 +81,7 @@ public class KeYJavaMethod {
          * TODO: This violates the abstraction in a very ugly way, is there no
          * nicer way to get the parameters?
          */
-        final List<IProgramVariable> parameters = new LinkedList<>();
+        final List<IProgramVariable> parameters = new LinkedList<IProgramVariable>();
         for (final ParameterDeclaration declaration : programMethod.getParameters()) {
             parameters.add(declaration.getVariableSpecification().getProgramVariable());
         }

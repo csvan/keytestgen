@@ -24,7 +24,7 @@ public abstract class AbstractCapsule implements ICapsule {
     /**
      * Monitors for this capsule.
      */
-    private final List<ICapsuleMonitor> monitors = new LinkedList<>();
+    private final List<ICapsuleMonitor> monitors = new LinkedList<ICapsuleMonitor>();
 
     /**
      * Flag to indicate whether or not the outcome of this capsules execution

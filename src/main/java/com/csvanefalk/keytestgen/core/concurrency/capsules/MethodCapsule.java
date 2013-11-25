@@ -111,8 +111,8 @@ public class MethodCapsule extends AbstractCapsule implements ICapsuleMonitor {
             /*
              * Begin preparing the capsules to be executed
              */
-            final CapsuleController<OracleCapsule> oracleController = new CapsuleController<>();
-            final CapsuleController<ModelCapsule> modelController = new CapsuleController<>();
+            final CapsuleController<OracleCapsule> oracleController = new CapsuleController<OracleCapsule>();
+            final CapsuleController<ModelCapsule> modelController = new CapsuleController<ModelCapsule>();
 
             /*
              * Setup the model generation capsules for each node.

@@ -91,7 +91,7 @@ public class Equation extends Equals {
      */
     private static Map<String, Variable> extractVariables(final Equals root) {
 
-        final Map<String, Variable> variables = new HashMap<>();
+        final Map<String, Variable> variables = new HashMap<String, Variable>();
 
         Equation.extractVariables_helper(root.getLeftOperand(), variables);
         Equation.extractVariables_helper(root.getRightOperand(), variables);

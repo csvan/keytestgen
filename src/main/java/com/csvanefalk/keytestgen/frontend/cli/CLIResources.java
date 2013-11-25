@@ -24,7 +24,7 @@ public class CLIResources {
     private static CLIResources instance = null;
 
     static {
-        COVERAGE_PARSERS = new HashMap<>();
+        COVERAGE_PARSERS = new HashMap<String, ICodeCoverageParser>();
         CLIResources.COVERAGE_PARSERS.put("statement",
                 ICodeCoverageParser.statementCoverageParser);
         CLIResources.COVERAGE_PARSERS.put("branch",
@@ -36,7 +36,7 @@ public class CLIResources {
         CLIResources.COVERAGE_PARSERS.put("mcdc",
                 ICodeCoverageParser.modifiedConditionDecisionCoverageParser);
 
-        FRAMEWORK_CONVERTERS = new HashMap<>();
+        FRAMEWORK_CONVERTERS = new HashMap<String, IFrameworkConverter>();
         CLIResources.FRAMEWORK_CONVERTERS.put("junit4",
                 JUnitConverter.getInstance());
     }

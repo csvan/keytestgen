@@ -41,7 +41,7 @@ public class TestJUnitTestCaseGenerator {
         final HashMap<String, Double> results = new HashMap<String, Double>();
 
         final String methodName = "max";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
         final List<ITestSuite> output = testCaseGenerator.generateTestSuite(
                 "/home/christopher/git/key/projects/KeYTestGen/test/se/gu/svanefalk/testgeneration/targetmodels/ObjectClass.java",
@@ -102,7 +102,7 @@ public class TestJUnitTestCaseGenerator {
         final HashMap<String, Double> results = new HashMap<String, Double>();
 
         String methodName = "mid";
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add(methodName);
 
         for (int i = 0; i < RUNS; i++) {

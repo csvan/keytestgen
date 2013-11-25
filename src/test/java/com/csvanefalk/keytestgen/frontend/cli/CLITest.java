@@ -7,7 +7,7 @@ public class CLITest {
 
     protected List<String> getList(String... strings) {
 
-        List<String> stringList = new LinkedList<>();
+        List<String> stringList = new LinkedList<String>();
         for (String string : strings) {
             stringList.add(string);
         }

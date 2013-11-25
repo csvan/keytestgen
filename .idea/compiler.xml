@@ -25,8 +25,8 @@
         <module name="keytestgen" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="keytestgen" target="1.7" />
+    <bytecodeTargetLevel target="1.6">
+      <module name="keytestgen" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

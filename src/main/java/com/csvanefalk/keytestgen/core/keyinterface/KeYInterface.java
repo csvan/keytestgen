@@ -14,7 +14,6 @@ import de.uka.ilkd.key.symbolic_execution.po.ProgramMethodPO;
 import de.uka.ilkd.key.symbolic_execution.strategy.ExecutedSymbolicExecutionTreeNodesStopCondition;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionEnvironment;
-import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionUtil;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
 import java.io.File;
@@ -106,7 +105,7 @@ public class KeYInterface {
         /*
          * Setup a strategy and goal chooser for the proof session
          */
-        SymbolicExecutionUtil.configureProof(proof);
+        //SymbolicExecutionUtil.configureProof(proof);
         SymbolicExecutionEnvironment.configureProofForSymbolicExecution(
                 proof,
                 ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN,
@@ -146,7 +145,7 @@ public class KeYInterface {
             final SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(
                     mediator, proof, false);
 
-            final SymbolicExecutionEnvironment<CustomConsoleUserInterface> environment = new SymbolicExecutionEnvironment<>(
+            final SymbolicExecutionEnvironment<CustomConsoleUserInterface> environment = new SymbolicExecutionEnvironment<CustomConsoleUserInterface>(
                     method.getEnvironment(), builder);
 
             /*
@@ -201,7 +200,7 @@ public class KeYInterface {
             /*
              * Manually load the classpath relevant for 
              */
-            List<File> classpath = new ArrayList<>();
+            List<File> classpath = new ArrayList<File>();
             for (String path : System.getProperty("java.class.path").split(":")) {
                 classpath.add(new File(path));
             }

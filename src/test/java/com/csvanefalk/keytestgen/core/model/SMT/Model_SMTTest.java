@@ -31,7 +31,7 @@ public class Model_SMTTest {
         final ICodeCoverageParser codeCoverageParser = new StatementCoverageParser();
 
         final HashMap<String, Double> results = new HashMap<String, Double>();
-        List<String> methods = new LinkedList<>();
+        List<String> methods = new LinkedList<String>();
         methods.add("mid");
 
         for (int i = 0; i < 100; i++) {

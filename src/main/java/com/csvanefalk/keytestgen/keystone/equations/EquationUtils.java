@@ -392,7 +392,7 @@ public class EquationUtils {
         assert node != null;
         assert condition != null;
 
-        final LinkedList<IExpression> queue = new LinkedList<>();
+        final LinkedList<IExpression> queue = new LinkedList<IExpression>();
 
         final Deque<IExpression> leftBranch = buildTrace(node.getLeftOperand(),
                 condition);
@@ -424,7 +424,7 @@ public class EquationUtils {
         assert node != null;
         assert condition != null;
 
-        final LinkedList<IExpression> queue = new LinkedList<>();
+        final LinkedList<IExpression> queue = new LinkedList<IExpression>();
 
         if (condition.check(node)) {
             queue.add(node);

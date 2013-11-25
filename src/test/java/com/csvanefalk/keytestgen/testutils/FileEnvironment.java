@@ -13,7 +13,7 @@ public class FileEnvironment {
         List<File> javaFiles = loadAllJavaFilesInDirectory(directory,
                 includeSubdirectories);
 
-        Map<String, File> sourceFiles = new HashMap<>();
+        Map<String, File> sourceFiles = new HashMap<String, File>();
         for (File file : javaFiles) {
             String name = file.getName();
             name = name.substring(0, name.indexOf("."));
@@ -29,7 +29,7 @@ public class FileEnvironment {
         List<File> javaFiles = loadAllJavaFilesInDirectory(directory, false);
         javaFiles.removeAll(Arrays.asList(files));
 
-        Map<String, File> sourceFiles = new HashMap<>();
+        Map<String, File> sourceFiles = new HashMap<String, File>();
         for (File file : javaFiles) {
             String name = file.getName();
             name = name.substring(0, name.indexOf("."));
@@ -70,7 +70,7 @@ public class FileEnvironment {
      */
     private static List<File> loadAllJavaFilesInDirectory(String directory,
                                                           boolean includeSubdirectories) {
-        List<File> results = new LinkedList<>();
+        List<File> results = new LinkedList<File>();
 
         String path = keYTestGenPath + targetModelsPath + directory;
         File folder = new File(path);
@@ -109,13 +109,13 @@ public class FileEnvironment {
     }
 
     public List<String> getFileNames() {
-        List<String> fileNames = new LinkedList<>();
+        List<String> fileNames = new LinkedList<String>();
         fileNames.addAll(sourceFiles.keySet());
         return fileNames;
     }
 
     public List<File> getFiles() {
-        List<File> files = new LinkedList<>();
+        List<File> files = new LinkedList<File>();
         files.addAll(sourceFiles.values());
         return files;
     }

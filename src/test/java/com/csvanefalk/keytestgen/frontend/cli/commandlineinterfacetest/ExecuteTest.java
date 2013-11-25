@@ -25,7 +25,7 @@ public class ExecuteTest extends CommandLineInterFaceTest {
     @Test
     public void generateAllUtilMethodsOneFile() {
 
-        String[] args = {"/home/christopher/git/key/projects/KeYTestGen/test/se/gu/svanefalk/testgeneration/targetmodels/IntegerClass.java"};
+        String[] args = {"/home/christopher/git/keytestgen/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java"};
 
         cli.main(args);
     }

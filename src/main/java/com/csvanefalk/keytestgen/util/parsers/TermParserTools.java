@@ -68,20 +68,20 @@ public final class TermParserTools {
 
     static {
 
-        primitiveTypes = new LinkedList<>();
+        primitiveTypes = new LinkedList<String>();
         TermParserTools.primitiveTypes.add(StringConstants.INTEGER);
         TermParserTools.primitiveTypes.add(StringConstants.BOOLEAN);
         TermParserTools.primitiveTypes.add(StringConstants.LONG);
         TermParserTools.primitiveTypes.add(StringConstants.BYTE);
 
-        literals = new LinkedList<>();
+        literals = new LinkedList<String>();
         TermParserTools.literals.add(StringConstants.NUMBERS);
 
-        unaryFunctions = new LinkedList<>();
+        unaryFunctions = new LinkedList<String>();
         TermParserTools.unaryFunctions.add(StringConstants.Z);
         TermParserTools.unaryFunctions.add(StringConstants.NEGATE_LITERAL);
 
-        binaryFunctions = new LinkedList<>();
+        binaryFunctions = new LinkedList<String>();
         TermParserTools.binaryFunctions.add(StringConstants.GREATER_OR_EQUALS);
         TermParserTools.binaryFunctions.add(StringConstants.LESS_OR_EQUALS);
         TermParserTools.binaryFunctions.add(StringConstants.GREATER_THAN);
@@ -91,7 +91,7 @@ public final class TermParserTools {
         TermParserTools.binaryFunctions.add(StringConstants.ADDITION);
         TermParserTools.binaryFunctions.add(StringConstants.SUBTRACTION);
 
-        operators = new LinkedList<>();
+        operators = new LinkedList<String>();
         TermParserTools.operators.add(StringConstants.AND);
         TermParserTools.operators.add(StringConstants.OR);
         TermParserTools.operators.add(StringConstants.NOT);
@@ -106,14 +106,14 @@ public final class TermParserTools {
         TermParserTools.operators.add(StringConstants.EQUALS);
         TermParserTools.operators.add(StringConstants.IMPLIES);
 
-        exceptionSorts = new LinkedList<>();
+        exceptionSorts = new LinkedList<String>();
         TermParserTools.exceptionSorts.add(StringConstants.EXCEPTION_BASE);
 
-        quantifiers = new LinkedList<>();
+        quantifiers = new LinkedList<String>();
         TermParserTools.quantifiers.add(StringConstants.FORALL);
         TermParserTools.quantifiers.add(StringConstants.EXISTS);
 
-        builtinFunctions = new LinkedList<>();
+        builtinFunctions = new LinkedList<String>();
         builtinFunctions.add(StringConstants.LENGTH);
         builtinFunctions.add(StringConstants.ARRAYSTOREVALID);
     }

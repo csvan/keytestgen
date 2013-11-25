@@ -14,7 +14,7 @@ public class CapsuleController<T extends ICapsule> {
     /**
      * Capsules controlled by this instance.
      */
-    private final Map<T, LaunchContainer> childCapsules = new HashMap<>();
+    private final Map<T, LaunchContainer> childCapsules = new HashMap<T, LaunchContainer>();
 
     public void addChild(final T capsule) {
         capsule.addController(this);

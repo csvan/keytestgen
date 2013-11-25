@@ -82,7 +82,7 @@ public class ClassCapsule extends AbstractCapsule implements ICapsuleMonitor {
              * generation. These capsules will then carry out the test
              * generation process concurrently.
              */
-            final CapsuleController<MethodCapsule> controller = new CapsuleController<>();
+            final CapsuleController<MethodCapsule> controller = new CapsuleController<MethodCapsule>();
             for (final String method : methods) {
 
                 /*

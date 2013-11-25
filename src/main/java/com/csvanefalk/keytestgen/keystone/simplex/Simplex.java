@@ -112,7 +112,7 @@ public strictfp class Simplex {
          * Construct the index mapping in the tableaux for the variables.
          */
         int index = 0;
-        final Map<Integer, Variable> variableIndex = new HashMap<>();
+        final Map<Integer, Variable> variableIndex = new HashMap<Integer, Variable>();
         for (final Variable variable : variables.values()) {
             variableIndex.put(index, variable);
             index++;
@@ -154,7 +154,7 @@ public strictfp class Simplex {
         final Map<Variable, Fraction> solution = Simplex.solvePhaseOne(
                 tableaux, variableIndex);
 
-        final Map<String, Integer> finalSolution = new HashMap<>();
+        final Map<String, Integer> finalSolution = new HashMap<String, Integer>();
         for (final Variable variable : solution.keySet()) {
             if (variable.getClass() == Variable.class) {
                 final Fraction value = solution.get(variable);
@@ -253,7 +253,7 @@ public strictfp class Simplex {
          * Configure and return the final variable bindings.
          */
         final int valueIndex = initialTableaux[0].length - 1;
-        final Map<Variable, Fraction> result = new HashMap<>();
+        final Map<Variable, Fraction> result = new HashMap<Variable, Fraction>();
         for (final Variable variable : variableIndex.values()) {
             result.put(variable, Fraction.ZERO);
         }

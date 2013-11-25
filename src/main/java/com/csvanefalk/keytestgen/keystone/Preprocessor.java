@@ -47,7 +47,7 @@ public class Preprocessor {
     }
 
     private Set<ProgramVariable> collectVariables(final Term term) {
-        final Set<ProgramVariable> variableSet = new HashSet<>();
+        final Set<ProgramVariable> variableSet = new HashSet<ProgramVariable>();
         term.execPreOrder(new VariableCollector(variableSet));
         return variableSet;
     }
@@ -55,7 +55,7 @@ public class Preprocessor {
     public Set<Term> createMinimalProblemSet(final Term term)
             throws KeYStoneException {
 
-        final Set<Term> minimalProblemSet = new HashSet<>();
+        final Set<Term> minimalProblemSet = new HashSet<Term>();
 
         try {
 
@@ -126,7 +126,7 @@ public class Preprocessor {
             final Tuple<Integer, Set<ProgramVariable>> rightTuple = priceGather(term.sub(1));
 
             final int newWeight = leftTuple.getFirst() + rightTuple.getFirst();
-            final Set<ProgramVariable> newVariableSet = new HashSet<>();
+            final Set<ProgramVariable> newVariableSet = new HashSet<ProgramVariable>();
             newVariableSet.addAll(leftTuple.getSecond());
             newVariableSet.addAll(leftTuple.getSecond());
 

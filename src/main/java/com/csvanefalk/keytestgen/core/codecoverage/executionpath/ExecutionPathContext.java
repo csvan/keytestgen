@@ -25,7 +25,7 @@ public class ExecutionPathContext {
 
         Stack<ExecutionBranch> branchesForSubtree = new Stack<ExecutionBranch>();
 
-        List<ExecutionBranch> executionBranches = new LinkedList<>();
+        List<ExecutionBranch> executionBranches = new LinkedList<ExecutionBranch>();
         /**
          * The ExecutionPath currently being constructed
          */
@@ -38,7 +38,7 @@ public class ExecutionPathContext {
          * Data structures for constructing the ExecutionBranches, together with
          * associated metadata.
          */
-        Map<ExecutionBranch, List<ExecutionPath>> executionPathsForBranch = new HashMap<>();
+        Map<ExecutionBranch, List<ExecutionPath>> executionPathsForBranch = new HashMap<ExecutionBranch, List<ExecutionPath>>();
 
         /**
          * The last seen PathBranchNode
@@ -283,7 +283,7 @@ public class ExecutionPathContext {
                         for (final ExecutionBranch executionBranch : branchesForSubtree) {
                             List<ExecutionPath> pathsForBranch = executionPathsForBranch.get(executionBranch);
                             if (pathsForBranch == null) {
-                                pathsForBranch = new LinkedList<>();
+                                pathsForBranch = new LinkedList<ExecutionPath>();
                                 executionPathsForBranch.put(executionBranch,
                                         pathsForBranch);
                             }

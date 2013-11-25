@@ -118,7 +118,7 @@ public class CoreInterface implements ICapsuleMonitor {
                                        boolean includePublic, boolean includeProtected,
                                        boolean includePrivate, boolean includeNative) {
 
-        List<String> filteredMethod = new LinkedList<>();
+        List<String> filteredMethod = new LinkedList<String>();
         for (String methodIdentifier : targetClass.getMethods()) {
 
             KeYJavaMethod method = targetClass.getMethod(methodIdentifier);
@@ -168,7 +168,7 @@ public class CoreInterface implements ICapsuleMonitor {
          * These capsules will then carry out the test generation process
          * concurrently.
          */
-        final CapsuleController<MethodCapsule> controller = new CapsuleController<>();
+        final CapsuleController<MethodCapsule> controller = new CapsuleController<MethodCapsule>();
         for (final String method : methods) {
 
             /*

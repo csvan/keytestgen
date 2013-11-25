@@ -26,7 +26,7 @@ public class TermEquivalenceChecker {
     public boolean areEquivalent(Term firstTerm, Term secondTerm) {
 
         // Extract the atoms
-        Set<Term> atoms = new HashSet<>();
+        Set<Term> atoms = new HashSet<Term>();
         extractAtoms(firstTerm, atoms);
         extractAtoms(secondTerm, atoms);
 
@@ -111,7 +111,7 @@ public class TermEquivalenceChecker {
         }
 
         private Map<Term, Boolean> getMapForRow(int row) {
-            Map<Term, Boolean> truthMap = new HashMap<>();
+            Map<Term, Boolean> truthMap = new HashMap<Term, Boolean>();
             for (int column = 0; column < table.length; column++) {
                 Term term = atomsIndex[column];
                 Boolean value = table[column][row];

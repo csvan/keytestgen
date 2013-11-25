@@ -34,7 +34,7 @@ public class EquationSystem {
         /*
          * Create the equations
          */
-        final List<Equation> equations = new ArrayList<>();
+        final List<Equation> equations = new ArrayList<Equation>();
         for (final Term term : terms) {
 
             /*
@@ -53,7 +53,7 @@ public class EquationSystem {
         /*
          * Construct the variable index for the system.
          */
-        final Map<String, Variable> variableIndex = new HashMap<>();
+        final Map<String, Variable> variableIndex = new HashMap<String, Variable>();
         for (final Equation equation : equations) {
             variableIndex.putAll(equation.getVariables());
         }
@@ -156,7 +156,7 @@ public class EquationSystem {
          * Empty systems should not occur, but we accomodate them just in case.
          */
         if (equations.isEmpty()) {
-            return new HashMap<>();
+            return new HashMap<String, Fraction>();
         }
 
         /*
@@ -172,18 +172,18 @@ public class EquationSystem {
          * dependent and independent variables, by simply solving for as many
          * non-dummy variables as possible through regular substitution.
          */
-        final List<Equation> equationsToSolve = new LinkedList<>();
+        final List<Equation> equationsToSolve = new LinkedList<Equation>();
         equationsToSolve.addAll(equations);
 
-        final Deque<Variable> variablesToSolve = new LinkedList<>();
+        final Deque<Variable> variablesToSolve = new LinkedList<Variable>();
         for (final Variable variable : variableIndex.values()) {
             if (!(variable instanceof DummyVariable)) {
                 variablesToSolve.add(variable);
             }
         }
 
-        final Set<Variable> boundVariables = new HashSet<>();
-        final Set<Variable> unBoundVariables = new HashSet<>();
+        final Set<Variable> boundVariables = new HashSet<Variable>();
+        final Set<Variable> unBoundVariables = new HashSet<Variable>();
 
         while (!equationsToSolve.isEmpty()) {
             final Variable variableToSolve = variablesToSolve.poll();
@@ -226,7 +226,7 @@ public class EquationSystem {
         /*
          * Finally, compile a set of relevant, resulting values, and return it.
          */
-        final Map<String, Fraction> valueMapping = new HashMap<>();
+        final Map<String, Fraction> valueMapping = new HashMap<String, Fraction>();
         for (final Variable variable : variableIndex.values()) {
             if (!(variable instanceof DummyVariable)) {
                 valueMapping.put(variable.getName(), variable.evaluate());

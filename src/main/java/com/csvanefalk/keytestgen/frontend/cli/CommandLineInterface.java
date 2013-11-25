@@ -282,8 +282,8 @@ public final class CommandLineInterface {
                                                    final IFrameworkConverter frameworkConverter,
                                                    final List<String> methods) {
 
-            final List<String> userMethods = new LinkedList<>();
-            final List<String> methodQualifiers = new LinkedList<>();
+            final List<String> userMethods = new LinkedList<String>();
+            final List<String> methodQualifiers = new LinkedList<String>();
             for (final String method : methods) {
 
                 if (method.equals("all") || method.equals("public")

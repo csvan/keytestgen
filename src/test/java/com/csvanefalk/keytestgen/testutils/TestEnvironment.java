@@ -25,10 +25,10 @@ public class TestEnvironment {
     /**
      * Repository of loaded folders.
      */
-    private static final Map<String, TestEnvironment> repository = new HashMap<>();
+    private static final Map<String, TestEnvironment> repository = new HashMap<String, TestEnvironment>();
 
     private TestEnvironment() {
-        symbolicTrees = new HashMap<>();
+        symbolicTrees = new HashMap<String, IExecutionStart>();
     }
 
     public static synchronized TestEnvironment loadEnvironmentForDirectory(
@@ -51,7 +51,7 @@ public class TestEnvironment {
         /*
          * Symbolically execute all methods, and prepare the mapping.
          */
-        Map<String, IExecutionStart> trees = new HashMap<>();
+        Map<String, IExecutionStart> trees = new HashMap<String, IExecutionStart>();
         for (KeYJavaClass keYJavaClass : keYJavaClasses) {
 
             for (String methoIdentifier : keYJavaClass.getMethods()) {
@@ -105,7 +105,7 @@ public class TestEnvironment {
     protected static List<KeYJavaClass> loadKeYJavaFiles(List<File> javaFiles)
             throws KeYInterfaceException, IOException {
 
-        List<KeYJavaClass> keYJavaClasses = new LinkedList<>();
+        List<KeYJavaClass> keYJavaClasses = new LinkedList<KeYJavaClass>();
         KeYJavaClassFactory factory = KeYJavaClassFactory.getInstance();
         for (File javaFile : javaFiles) {
             KeYJavaClass keYJavaClass = factory.createKeYJavaClass(javaFile);

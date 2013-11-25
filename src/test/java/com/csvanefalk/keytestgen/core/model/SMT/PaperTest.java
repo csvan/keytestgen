@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class PaperTest {
 
-    public static final HashMap<String, Long> map = new HashMap<>();
+    public static final HashMap<String, Long> map = new HashMap<String, Long>();
 
     public static void addResult(String key, Long res) {
         Long previous = map.get(key);
