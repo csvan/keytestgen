@@ -17,8 +17,12 @@ target frameworks for test case generation. Currently, basic
 support for JUnit4 is is the main concern, but this will
 grow over time.
 
-Halp!!
-=====
+You can see a Prezi which provides an overview here:
+http://prezi.com/byvnxmmikjyj/keytestgen2/
+
+
+Help!!
+======
 I have very little spare time to develop KTG in, but I would
 very much love to see this project grow to its full potential.
 If you are willing to join in, I would be more than happy to
