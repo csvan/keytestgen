@@ -6,50 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Repository tweaks to use custom deps.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/key.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/keytestgen_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/key.jar" afterPath="$PROJECT_DIR$/lib/key.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/AbstractCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/AbstractCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CLIResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CLIResources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ClassCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ClassCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/ExecuteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/ExecuteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPathContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPathContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_uka_ilkd_key_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_uka_ilkd_key_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/Model_SMTTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/Model_SMTTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/NodeTestGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/NodeTestGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/PaperTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/PaperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveDisjunctionsTransformer.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveDisjunctionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/TermEquivalenceChecker.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/TermEquivalenceChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/TestEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/TestEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/TestJUnitTestCaseGenerator.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/TestJUnitTestCaseGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keytestgen.iml" afterPath="$PROJECT_DIR$/keytestgen.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="keytestgen.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385413686235" ignored="false" />
+    <file path="/Dummy.txt" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385446059252" ignored="false" />
     <file path="/pom.xml" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385061973593" ignored="false" />
     <file path="/Benchmark.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057168554" ignored="false" />
     <file path="/CapsuleExecutor.java" changelist="56178314-d8da-4be1-b105-b411ca0889c3" time="1385057184253" ignored="false" />
@@ -255,7 +217,9 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="78" column="8" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1154,11 +1118,15 @@
       <created>1385062307759</created>
       <updated>1385062307759</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Convert to Java 1.6. Uptade to latest KeY build.">
+      <created>1385413724826</created>
+      <updated>1385413724826</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
+    <frame x="-1" y="27" width="1922" height="1054" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1228,7 +1196,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repository tweaks to use custom deps." />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert to Java 1.6. Uptade to latest KeY build." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1246,6 +1214,7 @@
     <MESSAGE value="Overall cleanup." />
     <MESSAGE value="Fixing path errors." />
     <MESSAGE value="Repository tweaks to use custom deps." />
+    <MESSAGE value="Convert to Java 1.6. Uptade to latest KeY build." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1263,11 +1232,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="117" column="48" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#478#491#0" expanded="true" />
-            <element signature="e#1077#1090#0" expanded="true" />
-            <element signature="e#2340#2346#0" expanded="true" />
-            <element signature="e#3727#3735#0" expanded="true" />
-            <element signature="e#3896#3902#0" expanded="true" />
+            <element signature="e#478#492#0" expanded="false" />
+            <element signature="e#1078#1092#0" expanded="false" />
+            <element signature="e#2342#2348#0" expanded="false" />
+            <element signature="e#3729#3737#0" expanded="false" />
+            <element signature="e#3898#3904#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1276,9 +1245,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="107" column="73" selection-start="3673" selection-end="3673" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#933#957#0" expanded="true" />
-            <element signature="e#1875#1899#0" expanded="true" />
-            <element signature="e#3658#3672#0" expanded="true" />
+            <element signature="e#933#958#0" expanded="false" />
+            <element signature="e#1877#1902#0" expanded="false" />
+            <element signature="e#3661#3675#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1287,28 +1256,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="70" selection-start="1424" selection-end="1424" vertical-scroll-proportion="-2.4313726">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1159#1167#0" expanded="true" />
-            <element signature="e#1686#1694#0" expanded="true" />
-            <element signature="e#2204#2212#0" expanded="true" />
-            <element signature="e#2746#2754#0" expanded="true" />
-            <element signature="e#3283#3291#0" expanded="true" />
-            <element signature="e#3796#3804#0" expanded="true" />
-            <element signature="e#4330#4338#0" expanded="true" />
-            <element signature="e#4864#4872#0" expanded="true" />
-            <element signature="e#5386#5394#0" expanded="true" />
-            <element signature="e#5950#5958#0" expanded="true" />
-            <element signature="e#6459#6467#0" expanded="true" />
-            <element signature="e#7015#7023#0" expanded="true" />
-            <element signature="e#7552#7560#0" expanded="true" />
-            <element signature="e#8077#8085#0" expanded="true" />
-            <element signature="e#8614#8622#0" expanded="true" />
-            <element signature="e#9220#9228#0" expanded="true" />
-            <element signature="e#9775#9783#0" expanded="true" />
-            <element signature="e#10309#10317#0" expanded="true" />
-            <element signature="e#10861#10869#0" expanded="true" />
-            <element signature="e#11452#11460#0" expanded="true" />
-            <element signature="e#11992#12000#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1159#1167#0" expanded="false" />
+            <element signature="e#1686#1694#0" expanded="false" />
+            <element signature="e#2204#2212#0" expanded="false" />
+            <element signature="e#2746#2754#0" expanded="false" />
+            <element signature="e#3283#3291#0" expanded="false" />
+            <element signature="e#3796#3804#0" expanded="false" />
+            <element signature="e#4330#4338#0" expanded="false" />
+            <element signature="e#4864#4872#0" expanded="false" />
+            <element signature="e#5386#5394#0" expanded="false" />
+            <element signature="e#5950#5958#0" expanded="false" />
+            <element signature="e#6459#6467#0" expanded="false" />
+            <element signature="e#7015#7023#0" expanded="false" />
+            <element signature="e#7552#7560#0" expanded="false" />
+            <element signature="e#8077#8085#0" expanded="false" />
+            <element signature="e#8614#8622#0" expanded="false" />
+            <element signature="e#9220#9228#0" expanded="false" />
+            <element signature="e#9775#9783#0" expanded="false" />
+            <element signature="e#10309#10317#0" expanded="false" />
+            <element signature="e#10861#10869#0" expanded="false" />
+            <element signature="e#11452#11460#0" expanded="false" />
+            <element signature="e#11992#12000#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1317,8 +1286,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="138" column="78" selection-start="5078" selection-end="5078" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#3747#3764#0" expanded="true" />
-            <element signature="e#5060#5077#0" expanded="true" />
+            <element signature="e#3747#3764#0" expanded="false" />
+            <element signature="e#5060#5077#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1327,7 +1296,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="77" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#167#180#0" expanded="true" />
+            <element signature="e#167#181#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1336,8 +1305,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="113" column="68" selection-start="3445" selection-end="3445" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#837#843#0" expanded="true" />
-            <element signature="e#3430#3444#0" expanded="true" />
+            <element signature="e#837#843#0" expanded="false" />
+            <element signature="e#3430#3445#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1345,7 +1314,9 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="8" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
