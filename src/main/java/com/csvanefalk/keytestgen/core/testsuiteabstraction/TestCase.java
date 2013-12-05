@@ -112,7 +112,7 @@ public class TestCase implements Comparable<TestCase> {
     }
 
     /**
-     * Retrieve the {@link IModel} instance for this test case.
+     * Retrieve the {@link Model} instance for this test case.
      *
      * @return
      */

@@ -39,17 +39,12 @@ public class KeYInterface {
     private static KeYInterface instance = null;
 
     /**
-     * The public methods of this singleton must use this {@link ReentrantLock}
-     * instance in order to guarantee atomic access to the singleton at all
-     * times. Private methods need not use the lock. Further, no two public
-     * methods using the lock are allowed to call each other under any
-     * circumstances, in order to make sure that a single thread no longer
-     * requires services from KeY before another requests them.
+     * Used to ensure atomic access to KeY services.
      */
     private static final ReentrantLock lock = new ReentrantLock(true);
 
     /**
-     * Assert that a given object is not null, and generate an exception if it
+     * Assert that a given object is not null, and raise an exception if it
      * is.
      *
      * @param object         the object to check
@@ -64,10 +59,14 @@ public class KeYInterface {
         }
     }
 
+    // DEBUG - disposes of the interface
     public static void __DEBUG_DISPOSE() {
         instance = null;
     }
 
+    /**
+     * @return the KeYInterface singleton.
+     */
     public static KeYInterface getInstance() {
         if (KeYInterface.instance == null) {
             KeYInterface.instance = new KeYInterface();
@@ -108,7 +107,8 @@ public class KeYInterface {
         //SymbolicExecutionUtil.configureProof(proof);
         SymbolicExecutionEnvironment.configureProofForSymbolicExecution(
                 proof,
-                ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN,
+                ExecutedSymbolicExecutionTreeNodesStopCondition
+                        .MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN,
                 false, false, false, false);
 
         return proof;
@@ -145,14 +145,17 @@ public class KeYInterface {
             final SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(
                     mediator, proof, false);
 
-            final SymbolicExecutionEnvironment<CustomConsoleUserInterface> environment = new SymbolicExecutionEnvironment<CustomConsoleUserInterface>(
+            final SymbolicExecutionEnvironment<CustomConsoleUserInterface> environment = new
+                    SymbolicExecutionEnvironment<CustomConsoleUserInterface>(
                     method.getEnvironment(), builder);
 
             /*
              * Setup the stop condition for the symbolic execution process.
              */
-            final ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new ExecutedSymbolicExecutionTreeNodesStopCondition(
-                    ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN);
+            final ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new
+                    ExecutedSymbolicExecutionTreeNodesStopCondition(
+                    ExecutedSymbolicExecutionTreeNodesStopCondition
+                            .MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN);
             environment.getProof().getSettings().getStrategySettings().setCustomApplyStrategyStopCondition(
                     stopCondition);
             // SymbolicExecutionUtil.updateStrategyPropertiesForSymbolicExecution(environment.getProof());
