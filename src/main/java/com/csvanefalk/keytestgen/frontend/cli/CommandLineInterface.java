@@ -192,7 +192,8 @@ public final class CommandLineInterface {
          */
         private void generateTestCases(final CommandParser parser) {
 
-            final ICodeCoverageParser coverageParser = CommandLineInterfaceWorker.cliResources.getCodeCoverageParser(parser.getCoverage());
+            final ICodeCoverageParser coverageParser = CommandLineInterfaceWorker.cliResources.getCodeCoverageParser
+                    (parser.getCoverage());
 
             for (final String sourceFile : parser.getFiles()) {
 
@@ -201,7 +202,8 @@ public final class CommandLineInterface {
                  */
                 List<ITestSuite> testSuites = null;
                 for (final String framework : parser.getTestFrameworks()) {
-                    final IFrameworkConverter frameworkConverter = CommandLineInterfaceWorker.cliResources.getFrameworkConverter(framework);
+                    final IFrameworkConverter frameworkConverter = CommandLineInterfaceWorker.cliResources
+                            .getFrameworkConverter(framework);
                     testSuites = generateTestCases(sourceFile, coverageParser,
                             frameworkConverter, parser.getMethods());
                 }

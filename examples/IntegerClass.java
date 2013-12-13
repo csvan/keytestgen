@@ -1,4 +1,4 @@
-package se.gu.svanefalk.testgeneration.targetmodels;
+//package se.gu.svanefalk.testgeneration.targetmodels;
 
 public class IntegerClass {
 

@@ -15,7 +15,9 @@ import de.uka.ilkd.key.symbolic_execution.model.IExecutionMethodCall;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -116,9 +118,15 @@ public class KeYJavaClassFactory {
          * Retrieve the KeYJavaType for the top level class declaration in this
          * file
          */
+
         final String fileName = getFileName(javaFile);
-        System.out.println(fileName);
-        final KeYJavaType mainClass = javaInfo.getKeYJavaType(fileName);
+        final String packageName = getPackage(javaFile);
+        final String qualifiedName = packageName.equals("") ? fileName : packageName + "." + fileName;
+        final KeYJavaType mainClass = javaInfo.getKeYJavaType(qualifiedName);
+
+        if (mainClass == null) {
+            throw new KeYInterfaceException("Failed to retrieve type information for " + javaFile.getName());
+        }
 
         return constructClass(mainClass, environment);
     }
@@ -143,7 +151,8 @@ public class KeYJavaClassFactory {
      * method, i.e. a mapping between a precondition (initial heapstate) and
      * postcondition (postcondition).
      *
-     * @param methodCallNode the symbolic execution node corresponding to the method call
+     * @param method   the symbolic execution node corresponding to the method call
+     * @param services KeY service class
      * @return the contract for the method
      * @throws OracleGeneratorException failure to find a contract for the method is always
      *                                  exceptional
@@ -177,10 +186,27 @@ public class KeYJavaClassFactory {
      * @return the name of the file
      */
     private String getFileName(final File file) {
-
         final String name = file.getName();
         final int delimiter = name.indexOf('.');
         return name.substring(0, delimiter);
+    }
+
+    /**
+     * @param javaFile a valid java source
+     * @return the package of the source
+     */
+    private String getPackage(final File javaFile) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(javaFile));
+        String next = "";
+        while ((next = reader.readLine()) != null) {
+            next = next.trim();
+            if (next.startsWith("package")) {
+                String[] partition = next.split(" ");
+                String packageName = partition[partition.length-1];
+                return packageName.substring(0, packageName.indexOf(";"));
+            }
+        }
+        return next;
     }
 
     public static void __DEBUG_DISPOSE() {

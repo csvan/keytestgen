@@ -201,20 +201,21 @@ public class KeYInterface {
             KeYInterface.lock.lock();
 
             /*
-             * Manually load the classpath relevant for 
+             * Manually load the classpath needed to symbolically execute this file.
              */
             List<File> classpath = new ArrayList<File>();
+            /*
             for (String path : System.getProperty("java.class.path").split(":")) {
+                System.out.println(path);
                 classpath.add(new File(path));
             }
-
+            */
             final KeYEnvironment<CustomConsoleUserInterface> environment = KeYEnvironment.load(
                     javaFile, classpath, null);
 
             return environment;
 
         } catch (final ProblemLoaderException e) {
-
             throw new KeYInterfaceException(e.getMessage());
         } finally {
 
