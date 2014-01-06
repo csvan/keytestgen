@@ -8,7 +8,6 @@ import de.uka.ilkd.key.java.abstraction.KeYJavaType;
 import de.uka.ilkd.key.logic.op.IProgramMethod;
 import de.uka.ilkd.key.proof.Goal;
 import de.uka.ilkd.key.proof.Proof;
-import de.uka.ilkd.key.proof.init.FunctionalOperationContractPO;
 import de.uka.ilkd.key.proof.init.InitConfig;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.proof.init.ProofOblInput;
@@ -44,6 +43,12 @@ import java.util.concurrent.locks.ReentrantLock;
 public class KeYInterface {
 
     private static KeYInterface instance = null;
+
+
+    /*
+     *Set stop condition to stop after a number of detected symbolic execution tree nodes instead of applied rules
+     */
+    private static final int maximalNumberOfExecutedSetNodes = ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN;
 
     /**
      * Used to ensure atomic access to KeY services.
@@ -142,8 +147,6 @@ public class KeYInterface {
             //Prettyprinting can be left on for debugging. Probably not appropriate for production environments.
             SymbolicExecutionEnvironment<CustomConsoleUserInterface> env = createSymbolicExecutionEnvironment(method, false, true, true, false, false);
 
-            // Set stop condition to stop after a number of detected symbolic execution tree nodes instead of applied rules
-            int maximalNumberOfExecutedSetNodes = ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN;
             ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new ExecutedSymbolicExecutionTreeNodesStopCondition(maximalNumberOfExecutedSetNodes);
 
             env.getProof().getSettings().getStrategySettings().setCustomApplyStrategyStopCondition(stopCondition);
@@ -236,16 +239,15 @@ public class KeYInterface {
                                                                                                         boolean aliasChecks) throws ProblemLoaderException, ProofInputException {
 
         KeYEnvironment<CustomConsoleUserInterface> environment = method.getEnvironment();
-        IProgramMethod pm = method.getProgramMethod();
 
         // Start proof
-        //ProofOblInput input = new ProgramMethodPO(environment.getInitConfig(), pm.getFullName(), pm, precondition, true, true);
-        ProofOblInput input = new FunctionalOperationContractPO(method.getInitConfig(), method.getFunctionalContract());
+        ProofOblInput input = new ProgramMethodPO(environment.getInitConfig(), method.getProgramMethod().getFullName(), method.getProgramMethod(), null, true, true);
+        //ProofOblInput input = new FunctionalOperationContractPO(method.getInitConfig(), method.getFunctionalContract());
         Proof proof = environment.createProof(input);
         assert (proof != null);
 
         // Set strategy and goal chooser to use for auto mode
-        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(proof, ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN, useOperationContracts, useLoopInvarints, nonExecutionBranchHidingSideProofs, aliasChecks);
+        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(proof, maximalNumberOfExecutedSetNodes, useOperationContracts, useLoopInvarints, nonExecutionBranchHidingSideProofs, aliasChecks);
 
         // Create symbolic execution tree which contains only the start node at beginning
         SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(environment.getMediator(), proof, mergeBranchConditions);
