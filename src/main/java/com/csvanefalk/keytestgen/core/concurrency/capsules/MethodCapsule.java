@@ -118,8 +118,7 @@ public class MethodCapsule extends AbstractCapsule implements ICapsuleMonitor {
              * Setup the model generation capsules for each node.
              */
             for (final IExecutionNode node : nodes) {
-                final ModelCapsule modelGenerationCapsule = new ModelCapsule(
-                        node);
+                final ModelCapsule modelGenerationCapsule = new ModelCapsule(node);
                 modelGenerationCapsule.addMonitor(this);
                 modelController.addChild(modelGenerationCapsule);
             }
