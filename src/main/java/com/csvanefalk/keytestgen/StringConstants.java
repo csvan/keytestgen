@@ -22,10 +22,10 @@ public final class StringConstants {
     public static final String FLOAT = "float";
     public static final String FORALL = "all";
     public static final String GREATER_OR_EQUALS = "geq";
-    public static final String GREATER_THAN = "grt";
+    public static final String GREATER_THAN = "gt";
     public static final String IMPLIES = "imp";
     public static final String INTEGER = "int";
-    public static final String LESS_OR_EQUALS = "leq";
+    public static final String LESS_OR_EQUALS = "lt";
     public static final String LESS_THAN = "less";
     public static final String LONG = "long";
     public static final String MULTIPLICATION = "mul";
