@@ -8,9 +8,7 @@ import de.uka.ilkd.key.java.Services;
 import de.uka.ilkd.key.java.abstraction.KeYJavaType;
 import de.uka.ilkd.key.logic.op.IProgramMethod;
 import de.uka.ilkd.key.proof.mgt.SpecificationRepository;
-import de.uka.ilkd.key.speclang.ContractWrapper;
 import de.uka.ilkd.key.speclang.FunctionalOperationContract;
-import de.uka.ilkd.key.speclang.FunctionalOperationContractImpl;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionMethodCall;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
@@ -64,8 +62,7 @@ public class KeYJavaClassFactory {
                  * (since each one will effectively represent a unique set of
                  * restrictions on the invocation of the method).
                  */
-                final List<ContractWrapper> contracts = getContracts(
-                        memberMethod, services);
+                final List<FunctionalOperationContract> contracts = getContracts(memberMethod, services);
 
                 /*
                  * If the user has not specified a postcondition, simply let it
@@ -81,11 +78,9 @@ public class KeYJavaClassFactory {
 
                 } else {
 
-                    for (final ContractWrapper contract : contracts) {
+                    for (final FunctionalOperationContract contract : contracts) {
 
-                        final KeYJavaMethod keYJavaMethod = new KeYJavaMethod(
-                                keYJavaClass, memberMethod, environment,
-                                contract);
+                        final KeYJavaMethod keYJavaMethod = new KeYJavaMethod(keYJavaClass, memberMethod, environment, contract);
 
                         keYJavaClass.addMethodMapping(
                                 memberMethod.getFullName(), keYJavaMethod);
@@ -156,8 +151,7 @@ public class KeYJavaClassFactory {
      * @throws OracleGeneratorException failure to find a contract for the method is always
      *                                  exceptional
      */
-    private List<ContractWrapper> getContracts(final IProgramMethod method,
-                                               final Services services) {
+    private List<FunctionalOperationContract> getContracts(final IProgramMethod method, final Services services) {
 
         final SpecificationRepository specificationRepository = services.getSpecificationRepository();
 
@@ -168,15 +162,13 @@ public class KeYJavaClassFactory {
          * method.
          */
         final KeYJavaType containerClass = method.getContainerType();
-        final List<ContractWrapper> contracts = new LinkedList<ContractWrapper>();
-        for (final FunctionalOperationContract contract : specificationRepository.getOperationContracts(
-                containerClass, method)) {
-            contracts.add(new ContractWrapper(
-                    (FunctionalOperationContractImpl) contract));
+        final List<FunctionalOperationContract> contracts = new LinkedList<FunctionalOperationContract>();
+        for (final FunctionalOperationContract contract : specificationRepository.getOperationContracts(containerClass, method)) {
+            contracts.add(contract);
         }
-
         return contracts;
     }
+
 
     /**
      * Strips the file extension from a file name

@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Overhauling build structure. Other fixes.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/key.xml" afterPath="$PROJECT_DIR$/.idea/libraries/key.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keytestgen.iml" afterPath="$PROJECT_DIR$/keytestgen.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="keytestgen.iws" />
@@ -70,7 +73,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" line="142" class="com.csvanefalk.keytestgen.core.keyinterface.KeYInterface" package="com.csvanefalk.keytestgen.core.keyinterface">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -126,19 +129,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="43" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MethodCapsule.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="0" selection-start="5841" selection-end="5841" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="2550">
+            <state line="169" column="0" selection-start="5841" selection-end="5841" vertical-scroll-proportion="0.0" vertical-offset="2535" max-vertical-offset="2805">
               <folding />
             </state>
           </provider>
@@ -147,16 +141,7 @@
       <file leaf-file-name="SymbolicExecutionTreeBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../key/system/src/de/uka/ilkd/key/symbolic_execution/SymbolicExecutionTreeBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="432" column="15" selection-start="18221" selection-end="18221" vertical-scroll-proportion="0.0" vertical-offset="5144" max-vertical-offset="13440">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CLITest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="675">
+            <state line="432" column="15" selection-start="18221" selection-end="18221" vertical-scroll-proportion="0.0" vertical-offset="6480" max-vertical-offset="14685">
               <folding />
             </state>
           </provider>
@@ -180,11 +165,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeYJavaMethod.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="KeYJavaMethod.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="52" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2610">
+            <state line="111" column="61" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.59615386" vertical-offset="1037" max-vertical-offset="2340">
+              <folding>
+                <element signature="e#1112#1113#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContractWrapper.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/key.jar!/de/uka/ilkd/key/speclang/ContractWrapper.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeYJavaClassFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="150" column="15" selection-start="5678" selection-end="5678" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2925">
+              <folding>
+                <element signature="e#6454#6483#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,10 +206,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntegerClass.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IntegerClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="30" selection-start="906" selection-end="906" vertical-scroll-proportion="0.9529412" vertical-offset="135" max-vertical-offset="1245">
+            <state line="36" column="30" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1245">
               <folding />
             </state>
           </provider>
@@ -251,12 +259,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/AbstractJavaSourceGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/ExecuteTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
       </list>
     </option>
   </component>
@@ -365,7 +373,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FullScreen" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value="pom" />
+    <property name="SearchEverywhereHistory" value="&#10;POM&#10;pom" />
   </component>
   <component name="RunManager" selected="JUnit.ExecuteTest">
     <configuration default="false" name="ModelIntegerTest.testSolveCompoundConstraintMid2" type="JUnit" factoryName="JUnit" temporary="true">
@@ -759,7 +767,9 @@
       <workItem from="1387940547295" duration="1775000" />
       <workItem from="1388821441782" duration="9300000" />
       <workItem from="1388980345651" duration="148000" />
-      <workItem from="1388980496101" duration="3331000" />
+      <workItem from="1388980496101" duration="5154000" />
+      <workItem from="1389012776970" duration="281000" />
+      <workItem from="1389013064080" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing project setup. Should build cleanly now.">
       <created>1385056912112</created>
@@ -797,7 +807,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14554000" />
+    <option name="totallyTimeSpent" value="17076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -810,13 +820,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3678619" sideWeight="0.59765625" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3678619" sideWeight="0.59765625" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3929078" sideWeight="0.40234375" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.235461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1410" y="97" width="510" height="943" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21197917" sideWeight="0.672949" order="5" side_tool="false" content_ui="tabs" />
@@ -829,6 +838,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.235461" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -871,18 +881,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandlineinterfacetest/ExecuteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="377" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="6241" selection-end="6241" vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="6696">
-          <folding />
-        </state>
+        <state line="182" column="0" selection-start="6241" selection-end="6241" vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="6696" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java">
@@ -900,7 +901,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="120" column="70" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3276">
-          <folding />
+          <folding>
+            <element signature="e#6454#6483#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -913,9 +916,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="6241" selection-end="6241" vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="6696">
-          <folding />
-        </state>
+        <state line="182" column="0" selection-start="6241" selection-end="6241" vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="6696" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java">
@@ -933,7 +934,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="120" column="70" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3276">
-          <folding />
+          <folding>
+            <element signature="e#6454#6483#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -967,7 +970,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="158" column="27" selection-start="6105" selection-end="6105" vertical-scroll-proportion="0.0" vertical-offset="2844" max-vertical-offset="3528">
-          <folding />
+          <folding>
+            <element signature="e#6454#6483#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,9 +1065,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="6241" selection-end="6241" vertical-scroll-proportion="0.0" vertical-offset="2269" max-vertical-offset="6462">
-          <folding />
-        </state>
+        <state line="182" column="0" selection-start="6241" selection-end="6241" vertical-scroll-proportion="0.0" vertical-offset="2269" max-vertical-offset="6462" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/key.jar!/de/uka/ilkd/key/java/JavaInfo.class">
@@ -1072,16 +1075,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="0" selection-start="10822" selection-end="10822" vertical-scroll-proportion="0.0" vertical-offset="4448" max-vertical-offset="5022">
-          <folding />
-        </state>
+        <state line="277" column="0" selection-start="10822" selection-end="10822" vertical-scroll-proportion="0.0" vertical-offset="4448" max-vertical-offset="5022" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveObserverFunctionsTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="0" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="2595">
-          <folding />
-        </state>
+        <state line="147" column="0" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="2595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/SystemControl.java">
@@ -1094,20 +1093,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/AbstractJavaSourceGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="16" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4860">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="53" selection-start="3329" selection-end="3329" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="3015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="52" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2400">
           <folding />
         </state>
       </provider>
@@ -1140,18 +1125,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="43" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/key.jar!/de/uka/ilkd/key/symbolic_execution/SymbolicExecutionTreeBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1500">
-          <folding />
-        </state>
+        <state line="42" column="16" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1500" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../key/system/src/de/uka/ilkd/key/symbolic_execution/SymbolicExecutionTreeBuilder.java">
@@ -1177,8 +1153,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="30" selection-start="906" selection-end="906" vertical-scroll-proportion="0.9529412" vertical-offset="135" max-vertical-offset="1245">
+        <state line="36" column="30" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1245">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/key.jar!/de/uka/ilkd/key/speclang/ContractWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="31" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="15" selection-start="5678" selection-end="5678" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2925">
+          <folding>
+            <element signature="e#6454#6483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="61" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.59615386" vertical-offset="1037" max-vertical-offset="2340">
+          <folding>
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

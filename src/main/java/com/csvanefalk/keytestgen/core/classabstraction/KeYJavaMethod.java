@@ -8,6 +8,7 @@ import de.uka.ilkd.key.logic.op.IProgramVariable;
 import de.uka.ilkd.key.proof.init.InitConfig;
 import de.uka.ilkd.key.speclang.ContractWrapper;
 import de.uka.ilkd.key.speclang.FunctionalOperationContract;
+import de.uka.ilkd.key.speclang.FunctionalOperationContractImpl;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
@@ -28,7 +29,7 @@ public class KeYJavaMethod {
      */
     private final KeYJavaClass declaringClass;
 
-    public ContractWrapper getFunctionalContract() {
+    public FunctionalOperationContract getFunctionalContract() {
         return functionalContract;
     }
 
@@ -38,7 +39,7 @@ public class KeYJavaMethod {
      * specifications for the method (i.e. mappings between preconditions and
      * postconditions).
      */
-    private final ContractWrapper functionalContract;
+    private final FunctionalOperationContract functionalContract;
 
     /**
      * The {@link IProgramMethod} instance for this method, containing the
@@ -49,7 +50,7 @@ public class KeYJavaMethod {
     KeYJavaMethod(final KeYJavaClass declaringClass,
                   final IProgramMethod programMethod,
                   final KeYEnvironment<CustomConsoleUserInterface> environment,
-                  final ContractWrapper functionalContract) {
+                  final FunctionalOperationContract functionalContract) {
 
         this.declaringClass = declaringClass;
         this.programMethod = programMethod;
@@ -99,8 +100,7 @@ public class KeYJavaMethod {
      */
     public List<Term> getPostconditions() {
 
-        return functionalContract == null ? null
-                : functionalContract.getPostconditions();
+        return functionalContract == null ? null : new ContractWrapper((FunctionalOperationContractImpl) functionalContract).getPostconditions();
     }
 
     /**
@@ -109,8 +109,7 @@ public class KeYJavaMethod {
      * @return the preconditions
      */
     public List<Term> getPreconditions() {
-
-        return functionalContract.getPreconditions();
+        return new ContractWrapper((FunctionalOperationContractImpl) functionalContract).getPreconditions();
     }
 
     /**
