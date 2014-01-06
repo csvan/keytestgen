@@ -1,9 +1,14 @@
 package com.csvanefalk.keytestgen.core.keyinterface;
 
 import com.csvanefalk.keytestgen.core.classabstraction.KeYJavaMethod;
-import de.uka.ilkd.key.gui.KeYMediator;
+import de.uka.ilkd.key.collection.ImmutableList;
+import de.uka.ilkd.key.java.JavaInfo;
+import de.uka.ilkd.key.java.Services;
+import de.uka.ilkd.key.java.abstraction.KeYJavaType;
 import de.uka.ilkd.key.logic.op.IProgramMethod;
+import de.uka.ilkd.key.proof.Goal;
 import de.uka.ilkd.key.proof.Proof;
+import de.uka.ilkd.key.proof.init.FunctionalOperationContractPO;
 import de.uka.ilkd.key.proof.init.InitConfig;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.proof.init.ProofOblInput;
@@ -11,15 +16,17 @@ import de.uka.ilkd.key.proof.io.ProblemLoaderException;
 import de.uka.ilkd.key.symbolic_execution.SymbolicExecutionTreeBuilder;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;
 import de.uka.ilkd.key.symbolic_execution.po.ProgramMethodPO;
+import de.uka.ilkd.key.symbolic_execution.profile.SymbolicExecutionJavaProfile;
 import de.uka.ilkd.key.symbolic_execution.strategy.ExecutedSymbolicExecutionTreeNodesStopCondition;
+import de.uka.ilkd.key.symbolic_execution.util.IFilter;
+import de.uka.ilkd.key.symbolic_execution.util.JavaUtil;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.symbolic_execution.util.SymbolicExecutionEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -117,6 +124,8 @@ public class KeYInterface {
     /**
      * Symbolically execute a given method, and return the resulting symbolic
      * execution tree.
+     * <p/>
+     * Uses code by Martin Hentschel.
      *
      * @param method the method
      * @return the symbolic execution tree
@@ -130,48 +139,32 @@ public class KeYInterface {
 
             KeYInterface.lock.lock();
 
-            /*
-             * Setup and prepare the proof session, and retrieve the KeYMediator
-             * instance to use.
-             */
-            final Proof proof = getProof(method.getEnvironment(),
-                    method.getProgramMethod(), null);
-            final KeYMediator mediator = method.getEnvironment().getMediator();
+            //Prettyprinting can be left on for debugging. Probably not appropriate for production environments.
+            SymbolicExecutionEnvironment<CustomConsoleUserInterface> env = createSymbolicExecutionEnvironment(method, false, true, true, false, false);
 
-            /*
-             * Create the symbolic execution tree builder, and associate it with
-             * an environment.
-             */
-            final SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(
-                    mediator, proof, false);
+            // Set stop condition to stop after a number of detected symbolic execution tree nodes instead of applied rules
+            int maximalNumberOfExecutedSetNodes = ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN;
+            ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new ExecutedSymbolicExecutionTreeNodesStopCondition(maximalNumberOfExecutedSetNodes);
 
-            final SymbolicExecutionEnvironment<CustomConsoleUserInterface> environment = new
-                    SymbolicExecutionEnvironment<CustomConsoleUserInterface>(
-                    method.getEnvironment(), builder);
+            env.getProof().getSettings().getStrategySettings().setCustomApplyStrategyStopCondition(stopCondition);
+            int nodeCount;
+            // Execute auto mode until no more symbolic execution tree nodes are found or no new rules are applied.
+            do {
+                // Store the number of nodes before start of the auto mode
+                nodeCount = env.getProof().countNodes();
+                // Run proof
+                env.getUi().startAndWaitForAutoMode(env.getProof());
+                // Update symbolic execution tree
+                env.getBuilder().analyse();
+                // Make sure that not to many set nodes are executed
+                Map<Goal, Integer> executedSetNodesPerGoal = stopCondition.getExectuedSetNodesPerGoal();
+                for (Integer value : executedSetNodesPerGoal.values()) {
+                    assert (value != null);
+                    assert (value.intValue() <= maximalNumberOfExecutedSetNodes);
+                }
+            } while (stopCondition.wasSetNodeExecuted() && nodeCount != env.getProof().countNodes());
 
-            /*
-             * Setup the stop condition for the symbolic execution process.
-             */
-            final ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new
-                    ExecutedSymbolicExecutionTreeNodesStopCondition(
-                    ExecutedSymbolicExecutionTreeNodesStopCondition
-                            .MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN);
-            environment.getProof().getSettings().getStrategySettings().setCustomApplyStrategyStopCondition(
-                    stopCondition);
-            // SymbolicExecutionUtil.updateStrategyPropertiesForSymbolicExecution(environment.getProof());
-
-            /*
-             * Symbolically execute the code, and extract the root of the
-             * resulting symbolic execution tree.
-             */
-            environment.getUi().startAndWaitForAutoMode(environment.getProof());
-            environment.getBuilder().analyse();
-
-            final IExecutionStart rootNode = builder.getStartNode();
-            KeYInterface.assertNotNull(rootNode,
-                    "FATAL: unable to initialize proof tree");
-
-            return rootNode;
+            return env.getBuilder().getStartNode();
 
         } catch (final ProofInputException e) {
 
@@ -203,23 +196,97 @@ public class KeYInterface {
             /*
              * Manually load the classpath needed to symbolically execute this file.
              */
-            List<File> classpath = new ArrayList<File>();
             /*
+            List<File> classpath = new ArrayList<File>();
             for (String path : System.getProperty("java.class.path").split(":")) {
                 System.out.println(path);
                 classpath.add(new File(path));
             }
             */
-            final KeYEnvironment<CustomConsoleUserInterface> environment = KeYEnvironment.load(
-                    javaFile, classpath, null);
-
-            return environment;
+            return KeYEnvironment.load(SymbolicExecutionJavaProfile.getDefaultInstance(), javaFile, null, null);
 
         } catch (final ProblemLoaderException e) {
             throw new KeYInterfaceException(e.getMessage());
         } finally {
-
             KeYInterface.lock.unlock();
         }
+    }
+
+    /**
+     * Original code by Martin Hentschel.
+     * <p/>
+     * Creates a {@link SymbolicExecutionEnvironment} which consists
+     * of loading a file to load, finding the method to proof, instantiation
+     * of proof and creation with configuration of {@link SymbolicExecutionTreeBuilder}.
+     *
+     * @param mergeBranchConditions              Merge branch conditions?
+     * @param useOperationContracts              Use operation contracts?
+     * @param useLoopInvarints                   Use loop invariants?
+     * @param nonExecutionBranchHidingSideProofs {@code true} hide non execution branch labels by side proofs, {@code false} do not hide execution branch labels.
+     * @param aliasChecks                        Do alias checks?
+     * @return The created {@link SymbolicExecutionEnvironment}.
+     * @throws ProblemLoaderException Occurred Exception.
+     * @throws ProofInputException    Occurred Exception.
+     */
+    private SymbolicExecutionEnvironment<CustomConsoleUserInterface> createSymbolicExecutionEnvironment(KeYJavaMethod method,
+                                                                                                        boolean mergeBranchConditions,
+                                                                                                        boolean useOperationContracts,
+                                                                                                        boolean useLoopInvarints,
+                                                                                                        boolean nonExecutionBranchHidingSideProofs,
+                                                                                                        boolean aliasChecks) throws ProblemLoaderException, ProofInputException {
+
+        KeYEnvironment<CustomConsoleUserInterface> environment = method.getEnvironment();
+        IProgramMethod pm = method.getProgramMethod();
+
+        // Start proof
+        //ProofOblInput input = new ProgramMethodPO(environment.getInitConfig(), pm.getFullName(), pm, precondition, true, true);
+        ProofOblInput input = new FunctionalOperationContractPO(method.getInitConfig(), method.getFunctionalContract());
+        Proof proof = environment.createProof(input);
+        assert (proof != null);
+
+        // Set strategy and goal chooser to use for auto mode
+        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(proof, ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN, useOperationContracts, useLoopInvarints, nonExecutionBranchHidingSideProofs, aliasChecks);
+
+        // Create symbolic execution tree which contains only the start node at beginning
+        SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(environment.getMediator(), proof, mergeBranchConditions);
+        //builder.analyse();
+        //assert (builder.getStartNode() != null);
+        return new SymbolicExecutionEnvironment<CustomConsoleUserInterface>(environment, builder);
+    }
+
+    /**
+     * Original code by Martin Hentschel.
+     * <p/>
+     * Searches a {@link IProgramMethod} in the given {@link Services}.
+     *
+     * @param services          The {@link Services} to search in.
+     * @param containerTypeName The name of the type which contains the method.
+     * @param methodFullName    The method name to search.
+     * @return The first found {@link IProgramMethod} in the type.
+     */
+    private IProgramMethod searchProgramMethod(Services services,
+                                               String containerTypeName,
+                                               final String methodFullName) {
+
+        JavaInfo javaInfo = services.getJavaInfo();
+        KeYJavaType containerKJT = javaInfo.getTypeByClassName(containerTypeName);
+        ImmutableList<IProgramMethod> pms = javaInfo.getAllProgramMethods(containerKJT);
+        IProgramMethod pm = JavaUtil.search(pms, new IFilter<IProgramMethod>() {
+            @Override
+            public boolean select(IProgramMethod element) {
+                return methodFullName.equals(element.getFullName());
+            }
+        });
+        if (pm == null) {
+            pms = javaInfo.getConstructors(containerKJT);
+            pm = JavaUtil.search(pms, new IFilter<IProgramMethod>() {
+                @Override
+                public boolean select(IProgramMethod element) {
+                    return methodFullName.equals(element.getFullName());
+                }
+            });
+        }
+        assert (pm != null);
+        return pm;
     }
 }

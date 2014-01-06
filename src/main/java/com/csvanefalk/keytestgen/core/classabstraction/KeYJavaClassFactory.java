@@ -55,7 +55,6 @@ public class KeYJavaClassFactory {
 
         final KeYJavaClass keYJavaClass = new KeYJavaClass(parent, environment);
 
-        System.out.println(parent);
         for (final IProgramMethod memberMethod : javaInfo.getAllProgramMethods(parent)) {
             if (!memberMethod.getFullName().startsWith("<")) {
 
@@ -202,7 +201,7 @@ public class KeYJavaClassFactory {
             next = next.trim();
             if (next.startsWith("package")) {
                 String[] partition = next.split(" ");
-                String packageName = partition[partition.length-1];
+                String packageName = partition[partition.length - 1];
                 return packageName.substring(0, packageName.indexOf(";"));
             }
         }

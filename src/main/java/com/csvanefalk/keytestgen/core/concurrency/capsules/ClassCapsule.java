@@ -135,7 +135,7 @@ public class ClassCapsule extends AbstractCapsule implements ICapsuleMonitor {
      *
      * @param source path to the source file
      * @return a {@link KeYJavaClass} instance corresponding to the public class
-     *         in the source file
+     * in the source file
      * @throws TestGeneratorException in the event that there is a failure in the KeYInterface, or
      *                                if there is a problem finding or reading the source file.
      */

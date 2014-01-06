@@ -108,7 +108,7 @@ public class EquationSystem {
      * @param equation
      * @param variableToSolve
      * @return true if the equation contains the variable, false otherwise.
-     *         Reference based comparisons are enforced.
+     * Reference based comparisons are enforced.
      */
     private boolean constainsVariable(final Equation equation,
                                       final Variable variableToSolve) {

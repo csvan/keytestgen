@@ -271,7 +271,7 @@ public abstract class AbstractJavaSourceGenerator {
         output.append(")");
 
 		/*
-		 * Write the exceptions, if any.
+         * Write the exceptions, if any.
 		 */
         if (exceptions != null) {
             output.append(AbstractJavaSourceGenerator.NEWLINE);

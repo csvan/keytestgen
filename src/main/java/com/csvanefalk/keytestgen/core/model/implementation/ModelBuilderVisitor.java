@@ -193,7 +193,7 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
      *
      * @param term a {@link Term} with a sort of type Field
      * @return the {@link ProgramVariable} instance corresponding to the field
-     *         represented by the Term
+     * represented by the Term
      */
     private ProgramVariable getProgramVariableForField(final Term term) {
 
@@ -211,7 +211,7 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
      *
      * @param term the term to process
      * @return the {@link ProgramVariable} corresponding to the Term, iff. the
-     *         Term represents a variable.
+     * Term represents a variable.
      */
     private ProgramVariable getVariable(final Term term) {
 

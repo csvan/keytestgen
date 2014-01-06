@@ -150,8 +150,8 @@ public final class TermParserTools {
      *
      * @param term the Term to process
      * @return the short-hand name of the variable represented by the Term. If
-     *         the Term does not represent a variable, the regular toString
-     *         output of the Terms {@link Operator} instance is returned.
+     * the Term does not represent a variable, the regular toString
+     * output of the Terms {@link Operator} instance is returned.
      */
     public static String getVariableNameForTerm(final Term term) {
 
@@ -191,7 +191,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents an arithmetic comparator, i.e. GEQ,
-     *         GREATER_THAN, LEQ, or LESS_THAN.
+     * GREATER_THAN, LEQ, or LESS_THAN.
      */
     public static boolean isArithmeticComparator(final Term term) {
 
@@ -242,7 +242,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents a boolean constant, false
-     *         otherwise.
+     * otherwise.
      */
     public static boolean isBooleanConstant(final Term term)
             throws TermParserException {
@@ -253,7 +253,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents the boolean constant FALSE, false
-     *         otherwise.
+     * otherwise.
      */
     public static boolean isBooleanFalse(final Term term)
             throws TermParserException {
@@ -268,7 +268,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents the boolean constant TRUE, false
-     *         otherwise.
+     * otherwise.
      */
     public static boolean isBooleanTrue(final Term term)
             throws TermTransformerException {
@@ -309,7 +309,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents the EXISTS quantifier, false
-     *         otherwise.
+     * otherwise.
      */
     public static boolean isExistsQuantifier(final Term term) {
 
@@ -319,7 +319,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents the FOR-ALL quantifier, false
-     *         otherwise.
+     * otherwise.
      */
     public static boolean isForAllQuantifier(final Term term) {
 
@@ -391,7 +391,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents a negative number, i.e. the Z
-     *         function, false otherwise.
+     * function, false otherwise.
      */
     public static boolean isInteger(final Term term) {
 
@@ -403,7 +403,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents a negative number, i.e. the Z
-     *         function, false otherwise.
+     * function, false otherwise.
      */
     public static boolean isIntegerNegation(final Term term) {
 
@@ -495,7 +495,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents an {@link ObserverFunction}
-     *         construct.
+     * construct.
      */
     public static boolean isObserverFunction(final Term term) {
 
@@ -533,7 +533,7 @@ public final class TermParserTools {
      *
      * @param term the term to check
      * @return true if the Term represents an integer program construct, false
-     *         otherwise
+     * otherwise
      */
     public static boolean isPrimitiveType(final Term term) {
 
@@ -586,7 +586,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents a {@link SortedOperator}, which is
-     *         one of the two fundamental base sorts for Terms in KeY.
+     * one of the two fundamental base sorts for Terms in KeY.
      */
     public static boolean isSortedOperator(final Term term) {
 
@@ -636,7 +636,7 @@ public final class TermParserTools {
     /**
      * @param term the term
      * @return true iff. the term represents a built-in function, false
-     *         otherwise.
+     * otherwise.
      */
     public static boolean isBuiltinFunction(final Term term) {
 

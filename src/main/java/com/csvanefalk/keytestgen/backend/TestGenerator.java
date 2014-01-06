@@ -79,7 +79,7 @@ public class TestGenerator {
      * @param includeNative    set to true to generate test cases also for methods inherited
      *                         from <code>java.lang.Object</code>.
      * @return a test suite for the target class, in the specified test
-     *         framework.
+     * framework.
      * @throws TestGeneratorException in the event that something went wrong in the process of test
      *                                case generation.
      */
@@ -111,7 +111,7 @@ public class TestGenerator {
      * @param includeNative    set to true to generate test cases also for methods inherited
      *                         from <code>java.lang.Object</code>.
      * @return a test suite for the target class, in the specified test
-     *         framework.
+     * framework.
      * @throws TestGeneratorException in the event that something went wrong in the process of test
      *                                case generation.
      */
@@ -175,7 +175,7 @@ public class TestGenerator {
      * @param converter converter to turn the output of KTG into code for a given
      *                  testing framework. See {@link IFrameworkConverter}.
      * @return a test suite for the target class, in the specified test
-     *         framework.
+     * framework.
      * @throws TestGeneratorException in the event that something went wrong in the process of test
      *                                case generation.
      */

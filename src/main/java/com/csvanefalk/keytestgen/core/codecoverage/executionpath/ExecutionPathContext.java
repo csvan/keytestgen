@@ -339,7 +339,7 @@ public class ExecutionPathContext {
         /**
          * @param node the node
          * @return true if the node corresponds to a program statement, false
-         *         otherwise
+         * otherwise
          */
         private boolean isProgramStatementNode(final IExecutionNode node) {
             return node instanceof AbstractExecutionStateNode;

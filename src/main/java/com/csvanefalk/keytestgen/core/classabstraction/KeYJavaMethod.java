@@ -28,6 +28,10 @@ public class KeYJavaMethod {
      */
     private final KeYJavaClass declaringClass;
 
+    public ContractWrapper getFunctionalContract() {
+        return functionalContract;
+    }
+
     /**
      * A wrapper for the an instance of {@link FunctionalOperationContract}
      * specific for this method. Through this contract, we can access the
@@ -115,7 +119,6 @@ public class KeYJavaMethod {
      * @return the programMethod
      */
     public IProgramMethod getProgramMethod() {
-
         return programMethod;
     }
 
