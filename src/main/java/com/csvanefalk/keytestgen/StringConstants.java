@@ -42,4 +42,5 @@ public final class StringConstants {
     public static final String Z = "Z";
     public static final String LENGTH = "length";
     public static final String ARRAYSTOREVALID = "arrayStoreValid";
+    public static final String EXCEPTION = "exc";
 }
