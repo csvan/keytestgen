@@ -3,7 +3,10 @@ package com.csvanefalk.keytestgen.testutils;
 import org.junit.Assert;
 
 import java.io.File;
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class FileEnvironment {
 
@@ -21,10 +24,26 @@ public class FileEnvironment {
         return new FileEnvironment(sourceFiles);
     }
 
-    public static FileEnvironment constructFileEnvironment(String directory, String... files) {
+    public static FileEnvironment constructFileEnvironment(String directory,
+                                                           final boolean includeSubdirectories,
+                                                           String... files) {
 
-        List<File> javaFiles = loadAllJavaFilesInDirectory(directory, false);
-        javaFiles.removeAll(Arrays.asList(files));
+        List<File> javaFiles;
+
+        if (files.length == 0) {
+            javaFiles = loadAllJavaFilesInDirectory(directory, includeSubdirectories);
+        } else {
+            //Filter out all non-desired files
+            javaFiles = new LinkedList<File>();
+            for (File file : loadAllJavaFilesInDirectory(directory, includeSubdirectories)) {
+                for (String acceptedFileName : files) {
+                    if (file.getName().equalsIgnoreCase(acceptedFileName)) {
+                        javaFiles.add(file);
+                        break;
+                    }
+                }
+            }
+        }
 
         Map<String, File> sourceFiles = new HashMap<String, File>();
         for (File file : javaFiles) {

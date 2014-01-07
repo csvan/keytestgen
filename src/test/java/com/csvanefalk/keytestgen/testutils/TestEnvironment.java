@@ -32,7 +32,8 @@ public class TestEnvironment {
     }
 
     public static synchronized TestEnvironment loadEnvironmentForDirectory(String directory,
-                                                                           boolean includeSubdirectories) throws KeYInterfaceException, IOException {
+                                                                           boolean includeSubdirectories,
+                                                                           String... files) throws KeYInterfaceException, IOException {
 
         if (repository.containsKey(directory)) {
             return repository.get(directory);
@@ -42,7 +43,9 @@ public class TestEnvironment {
          * Get the corresponding KeyJavaClass instances for each sourcefile in
          * the target directory.
          */
-        FileEnvironment fileEnvironment = FileEnvironment.constructFileEnvironment(directory, includeSubdirectories);
+        FileEnvironment fileEnvironment = FileEnvironment.constructFileEnvironment(directory,
+                                                                                   includeSubdirectories,
+                                                                                   files);
 
         List<KeYJavaClass> keYJavaClasses = loadKeYJavaFiles(fileEnvironment.getFiles());
 
@@ -52,16 +55,16 @@ public class TestEnvironment {
         Map<String, IExecutionStart> trees = new HashMap<String, IExecutionStart>();
         for (KeYJavaClass keYJavaClass : keYJavaClasses) {
 
-            for (String methoIdentifier : keYJavaClass.getMethods()) {
+            for (String methodIdentifier : keYJavaClass.getMethods()) {
 
-                KeYJavaMethod method = keYJavaClass.getMethod(methoIdentifier);
+                KeYJavaMethod method = keYJavaClass.getMethod(methodIdentifier);
 
                 if (!isNativeMethod(method)) {
 
                     IExecutionStart tree = keYInterface.getSymbolicExecutionTree(method);
                     Assert.assertNotNull(tree);
 
-                    String fullMethodName = method.getDeclaringClass().getName() + "." + methoIdentifier;
+                    String fullMethodName = method.getDeclaringClass().getName() + "." + methodIdentifier;
                     trees.put(fullMethodName, tree);
                 }
             }
