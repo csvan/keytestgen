@@ -26,7 +26,7 @@ public final class StringConstants {
     public static final String IMPLIES = "imp";
     public static final String INTEGER = "int";
     public static final String LESS_OR_EQUALS = "lt";
-    public static final String LESS_THAN = "less";
+    public static final String LESS_THAN = "lt";
     public static final String LONG = "long";
     public static final String MULTIPLICATION = "mul";
     public static final String NEGATE_LITERAL = "neglit";

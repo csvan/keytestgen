@@ -146,10 +146,19 @@ public class ModelGenerator implements IModelGenerator {
         return pathCondition;
     }
 
+    /**
+     * Uses KeYStone in order to retrieve a set of concrete values for any integers found in the path condition.
+     *
+     * @param pathCondition the pathcondition.
+     * @param services      services associated with the pathcondition
+     * @return a map of variable names to their concrete values
+     * @throws ModelGeneratorException
+     */
     private Map<String, Integer> getConcreteValues(final Term pathCondition,
                                                    final Services services) throws ModelGeneratorException {
 
         try {
+
             /*
              * Simplify the path condition. If the simplified path condition is
              * null, this means that it does not contain any primitive values.
@@ -158,12 +167,12 @@ public class ModelGenerator implements IModelGenerator {
              */
             Term simplifiedPathCondition = ModelGenerationTools.simplifyTerm(pathCondition);
 
-            simplifiedPathCondition = NormalizeArithmeticComparatorsTransformer.getInstance(services).transform(
-                    simplifiedPathCondition);
+            simplifiedPathCondition = NormalizeArithmeticComparatorsTransformer.getInstance(services)
+                                                                               .transform(simplifiedPathCondition);
 
             long time = Calendar.getInstance().getTimeInMillis();
 
-            Map<String, Integer> result = null;
+            Map<String, Integer> result;
             if (simplifiedPathCondition == null) {
                 result = new HashMap<String, Integer>();
             } else {

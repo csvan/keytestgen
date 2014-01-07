@@ -6,132 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Fixing string constants for strict comparators.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/AbstractBinaryExpression.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/AbstractBinaryExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/AbstractComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/AbstractComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/AbstractJavaSourceGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/AbstractJavaSourceGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Addition.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Addition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/AdditionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/AdditionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySizeDoWhile.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySizeDoWhile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhile.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays_loops/ArraySumWhile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/Benchmark.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/Benchmark.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/BranchCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/BranchCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CLIResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CLIResources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/CapsuleExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ClassCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ClassCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ConditionCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ConditionCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/ConjunctionNormalFormTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/ConjunctionNormalFormTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/ConjunctionNormalFormTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/ConjunctionNormalFormTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/CoreInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DecisionCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DescendingExecutionPathComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/DescendingExecutionPathComparator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Division.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Division.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/DivisionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/DivisionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileFalseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileFalseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/DoWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/DummyVariable.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/DummyVariable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/Equals.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/Equals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/EquationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/EquationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPath.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPath.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPathContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/executionpath/ExecutionPathContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/ExpressionUtilsTest_negate.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/ExpressionUtilsTest_negate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/ExpressionUtilsTest_simplifyExpression.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/ExpressionUtilsTest_simplifyExpression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/FileEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/FunctionalDoWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/dowhile/FunctionalDoWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/GetMethodsTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/commandparsertest/GetMethodsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/GreaterOrEquals.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/GreaterOrEquals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/IFrameworkConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/IFrameworkConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/IModelGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/IModelGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/ITestCaseGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/ITestCaseGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/custom/ITestCaseParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/custom/ITestCaseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/junit/JUnitConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/junit/JUnitConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/JavaFileValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/JavaFileValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/JavaSourceParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/JavaSourceParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/KeYTestGenTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/KeYTestGenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/LessOrEquals.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/comparator/LessOrEquals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/LogicConditionExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/LogicConditionExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilderVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilderVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/tools/ModelGenerationTools.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/tools/ModelGenerationTools.java" />
+    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Updating code style to avoid long lines.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelInstance.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelVariable.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelVariable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/Model_SMTTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/SMT/Model_SMTTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionCoverageParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/ModifiedConditionDecisionCoverageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Multiplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/Multiplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NegationNormalFormTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NegationNormalFormTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/NegationNormalFormTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/NegationNormalFormTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedDoWhileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/loops/NestedDoWhileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/NodeTestGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/NodeTestGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NormalizeArithmeticComparatorsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NormalizeArithmeticComparatorsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/ObjectClass.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/ObjectClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/Oracle.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/Oracle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/oraclegeneration/OracleGeneratorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/oraclegeneration/OracleGeneratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleMethodInvocation.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleMethodInvocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleOperator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleQuantifier.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleQuantifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleType.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/abstraction/OracleType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleTypeFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/OracleTypeFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/OrderOperandsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/OrderOperandsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/OrderOperandsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/OrderOperandsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/PathCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/PathCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/QuantifierTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/qantifiers/QuantifierTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveAxiomaticExpressionsTransformer.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveAxiomaticExpressionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveDisjunctionsTransformer.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveDisjunctionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveIfThenElseTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveIfThenElseTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveIfThenElseTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveIfThenElseTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveImplicationsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveImplicationsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveImplicationsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveImplicationsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveObserverFunctionsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveObserverFunctionsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveObserverFunctionsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveObserverFunctionsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveSDPsTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveSDPsTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveSDPsTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/RemoveSDPsTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ResolveAssignmentsVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ResolveAssignmentsVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/RestrictionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/RestrictionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyConjunctionTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyConjunctionTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyConjunctionTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyConjunctionTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyDisjunctionTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/SimplifyDisjunctionTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyDisjunctionTransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/SimplifyDisjunctionTransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/SimplifyPostconditionTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/oracle/SimplifyPostconditionTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/StatementCoverageBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/codecoverage/implementation/StatementCoverageBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/StepOverOnTwoBranches.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/unclassified/StepOverOnTwoBranches.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/symbolic/SymbolicDebuggerTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/TargetFrameworkValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/TargetFrameworkValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/TermEquivalenceChecker.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/TermEquivalenceChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestCase.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/TestEnvironment.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/testutils/TestEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/TestGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/TestGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/TestJUnitTestCaseGenerator.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/TestJUnitTestCaseGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestSuite.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/testsuiteabstraction/TestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Train.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Train.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/TransformerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/util/transformer/TransformerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/VariablesArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/arrays/VariablesArrayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Wagon.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/publictransport/trains/train/Wagon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/xml/XMLConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="keytestgen.iws" />
@@ -238,37 +117,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MethodCapsule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/MethodCapsule.java">
+      <file leaf-file-name="ModelGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="3401" selection-end="3401" vertical-scroll-proportion="0.0" vertical-offset="1440" max-vertical-offset="2490">
+            <state line="117" column="0" selection-start="4463" selection-end="4463" vertical-scroll-proportion="-4.923077" vertical-offset="1372" max-vertical-offset="2910">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SymbolicExecutionTreeBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../key/system/src/de/uka/ilkd/key/symbolic_execution/SymbolicExecutionTreeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="432" column="15" selection-start="18221" selection-end="18221" vertical-scroll-proportion="0.0" vertical-offset="6480" max-vertical-offset="14685">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeYStone.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="KeYStone.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="64" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="615">
+            <state line="27" column="11" selection-start="652" selection-end="652" vertical-scroll-proportion="0.34306568" vertical-offset="204" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Preprocessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Preprocessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="37" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.8505155" vertical-offset="540" max-vertical-offset="2160">
+            <state line="77" column="26" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="2160">
               <folding>
                 <element signature="e#1801#1807#0" expanded="true" />
               </folding>
@@ -276,34 +146,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NegationNormalFormTransformer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NegationNormalFormTransformer.java">
+      <file leaf-file-name="NormalizeArithmeticComparatorsTransformer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NormalizeArithmeticComparatorsTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="2040">
+            <state line="148" column="0" selection-start="6716" selection-end="6716" vertical-scroll-proportion="0.0" vertical-offset="1948" max-vertical-offset="2895">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractTermTransformer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java">
+      <file leaf-file-name="Name.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../key/system/src/de/uka/ilkd/key/logic/Name.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="504" column="9" selection-start="15470" selection-end="15470" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8010">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3812#3818#0" expanded="false" />
-                <element signature="e#4374#4380#0" expanded="false" />
-                <element signature="e#4922#4928#0" expanded="false" />
-                <element signature="e#8381#8387#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SymbolicExecutionUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../key/system/src/de/uka/ilkd/key/symbolic_execution/util/SymbolicExecutionUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2821" column="0" selection-start="131661" selection-end="131661" vertical-scroll-proportion="0.0" vertical-offset="42315" max-vertical-offset="48045">
+            <state line="45" column="5" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -312,25 +167,43 @@
       <file leaf-file-name="StringConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="50" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+            <state line="28" column="46" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContractWrapper.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/key.jar!/de/uka/ilkd/key/speclang/ContractWrapper.class">
+      <file leaf-file-name="TermParserTools.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
+            <state line="435" column="0" selection-start="14169" selection-end="14169" vertical-scroll-proportion="0.0" vertical-offset="6258" max-vertical-offset="10920">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntegerClass.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/IntegerClass.java">
+      <file leaf-file-name="AbstractTermTransformer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="30" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1245">
+            <state line="62" column="0" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="8010">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelCapsule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ModelCapsule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="0" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="1185">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LaunchContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/LaunchContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -377,8 +250,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NormalizeArithmeticComparatorsTransformer.java" />
       </list>
     </option>
   </component>
@@ -512,6 +388,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistory" value="&#10;POM&#10;pom" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.ExecuteTest">
     <configuration default="false" name="ModelIntegerTest.testSolveCompoundConstraintMid2" type="JUnit" factoryName="JUnit" temporary="true">
@@ -921,7 +798,7 @@
       <workItem from="1389012776970" duration="281000" />
       <workItem from="1389013064080" duration="3107000" />
       <workItem from="1389023356891" duration="409000" />
-      <workItem from="1389034745766" duration="1002000" />
+      <workItem from="1389034745766" duration="6677000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing project setup. Should build cleanly now.">
       <created>1385056912112</created>
@@ -963,11 +840,15 @@
       <created>1389035180168</created>
       <updated>1389035180168</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updating code style to avoid long lines.">
+      <created>1389061197279</created>
+      <updated>1389061197279</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21176000" />
+    <option name="totallyTimeSpent" value="26851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -989,11 +870,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23424658" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1410" y="97" width="510" height="943" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1410" y="97" width="510" height="943" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21197917" sideWeight="0.672949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29159936" sideWeight="0.672949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29159936" sideWeight="0.672949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1028,7 +909,8 @@
     <MESSAGE value="Overhauling build structure. Other fixes." />
     <MESSAGE value="Changing KeYJavaMethod to use vanilla KeY FunctionalOperationContract instances instead of wrappers." />
     <MESSAGE value="Fixing string constants for strict comparators." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing string constants for strict comparators." />
+    <MESSAGE value="Updating code style to avoid long lines." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating code style to avoid long lines." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1044,47 +926,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/keyinterface/KeYInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="39" selection-start="8208" selection-end="8208" vertical-scroll-proportion="0.0" vertical-offset="3834" max-vertical-offset="4140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="98" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="70" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3276">
-          <folding>
-            <element signature="e#6808#6837#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/frontend/cli/CLITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="57" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/keystone/expression/MultiplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="8" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="2754" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="37" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/restriction/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="40" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="666" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="18" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="3078" />
@@ -1093,9 +934,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="158" column="27" selection-start="6105" selection-end="6105" vertical-scroll-proportion="0.0" vertical-offset="2844" max-vertical-offset="3528">
-          <folding>
-            <element signature="e#6808#6837#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,9 +1115,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="150" column="15" selection-start="5678" selection-end="5678" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2925">
-          <folding>
-            <element signature="e#6808#6837#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,46 +1150,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="50" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NegationNormalFormTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="0" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="2145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="504" column="9" selection-start="15470" selection-end="15470" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8010">
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#3812#3818#0" expanded="false" />
-            <element signature="e#4374#4380#0" expanded="false" />
-            <element signature="e#4922#4928#0" expanded="false" />
-            <element signature="e#8381#8387#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="64" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="615">
+        <state line="28" column="24" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/Preprocessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="37" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.8505155" vertical-offset="540" max-vertical-offset="2160">
+        <state line="77" column="26" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="2160">
           <folding>
             <element signature="e#1801#1807#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="0" selection-start="4463" selection-end="4463" vertical-scroll-proportion="-4.923077" vertical-offset="1372" max-vertical-offset="2910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/ModelCapsule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/concurrency/capsules/LaunchContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/parsers/TermParserTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="435" column="0" selection-start="14169" selection-end="14169" vertical-scroll-proportion="0.0" vertical-offset="6258" max-vertical-offset="10920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../key/system/src/de/uka/ilkd/key/logic/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="5" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/StringConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="46" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/AbstractTermTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="8010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NormalizeArithmeticComparatorsTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="0" selection-start="6716" selection-end="6716" vertical-scroll-proportion="0.0" vertical-offset="1948" max-vertical-offset="2895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="11" selection-start="652" selection-end="652" vertical-scroll-proportion="0.34306568" vertical-offset="204" max-vertical-offset="615">
+          <folding />
         </state>
       </provider>
     </entry>

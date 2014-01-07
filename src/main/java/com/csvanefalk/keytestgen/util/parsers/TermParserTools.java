@@ -194,8 +194,11 @@ public final class TermParserTools {
      */
     public static boolean isArithmeticComparator(final Term term) {
 
-        return TermParserTools.isGreaterOrEquals(term) || TermParserTools.isGreaterThan(term) || TermParserTools.isLessOrEquals(
-                term) || TermParserTools.isLessThan(term) || TermParserTools.isIntegerType(term.sub(0));
+        return TermParserTools.isGreaterOrEquals(term) ||
+                TermParserTools.isGreaterThan(term) ||
+                TermParserTools.isLessOrEquals(term) ||
+                TermParserTools.isLessThan(term) ||
+                TermParserTools.isIntegerType(term.sub(0));
     }
 
     public static boolean isBinaryFunction(final Term term) {
@@ -351,7 +354,7 @@ public final class TermParserTools {
      */
     public static boolean isGreaterThan(final Term term) {
 
-        return term.op().name().toString().equals(StringConstants.GREATER_THAN);
+        return term.op().name().toString().equalsIgnoreCase(StringConstants.GREATER_THAN);
     }
 
     /**
