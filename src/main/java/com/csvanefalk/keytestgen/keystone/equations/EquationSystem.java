@@ -35,6 +35,7 @@ public class EquationSystem {
          */
         final List<Equation> equations = new ArrayList<Equation>();
         for (final Term term : terms) {
+            assert (term != null);
 
             /*
              * Convert the Term to an inequality.

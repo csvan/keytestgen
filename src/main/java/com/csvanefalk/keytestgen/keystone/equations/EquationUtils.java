@@ -18,21 +18,25 @@ public class EquationUtils {
     private static EquationUtils instance = null;
 
     public static IComparator constructRelation(final Term term) throws KeYStoneException {
-
         assert (term != null);
 
-        final IExpression leftChild = EquationUtils.processTerm(term.sub(0));
-        assert (leftChild != null);
+        try {
 
-        final IExpression rightChild = EquationUtils.processTerm(term.sub(1));
-        assert (rightChild != null);
+            final IExpression leftChild = EquationUtils.processTerm(term.sub(0));
+            assert (leftChild != null);
 
-        if (TermParserTools.isEquals(term)) {
-            return new Equals(leftChild, rightChild);
-        } else if (TermParserTools.isGreaterOrEquals(term)) {
-            return new GreaterOrEquals(leftChild, rightChild);
-        } else if (TermParserTools.isLessOrEquals(term)) {
-            return new LessOrEquals(leftChild, rightChild);
+            final IExpression rightChild = EquationUtils.processTerm(term.sub(1));
+            assert (rightChild != null);
+
+            if (TermParserTools.isEquals(term)) {
+                return new Equals(leftChild, rightChild);
+            } else if (TermParserTools.isGreaterOrEquals(term)) {
+                return new GreaterOrEquals(leftChild, rightChild);
+            } else if (TermParserTools.isLessOrEquals(term)) {
+                return new LessOrEquals(leftChild, rightChild);
+            }
+        } catch (Exception e) {
+            throw new KeYStoneException("Caught unhandled exception: " + e.getMessage());
         }
 
         throw new KeYStoneException("Illegal comparator: " + term);
