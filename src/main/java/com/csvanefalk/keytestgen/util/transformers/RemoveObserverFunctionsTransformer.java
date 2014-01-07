@@ -34,8 +34,7 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * @throws ModelGeneratorException
      */
     @Override
-    protected Term transformAnd(final Term term)
-            throws TermTransformerException {
+    protected Term transformAnd(final Term term) throws TermTransformerException {
 
         final Term firstChild = transformTerm(term.sub(0));
         final Term secondChild = transformTerm(term.sub(1));
@@ -66,8 +65,7 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * @throws ModelGeneratorException
      */
     @Override
-    protected Term transformEquals(final Term term)
-            throws TermTransformerException {
+    protected Term transformEquals(final Term term) throws TermTransformerException {
 
         final Term firstChild = transformTerm(term.sub(0));
         final Term secondChild = transformTerm(term.sub(1));
@@ -121,8 +119,7 @@ public class RemoveObserverFunctionsTransformer extends AbstractTermTransformer 
      * @throws ModelGeneratorException
      */
     @Override
-    protected Term transformNot(final Term term)
-            throws TermTransformerException {
+    protected Term transformNot(final Term term) throws TermTransformerException {
 
         final Term newChild = transformTerm(term.sub(0));
 

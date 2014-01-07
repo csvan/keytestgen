@@ -17,8 +17,7 @@ public class EquationUtils {
 
     private static EquationUtils instance = null;
 
-    public static IComparator constructRelation(final Term term)
-            throws KeYStoneException {
+    public static IComparator constructRelation(final Term term) throws KeYStoneException {
 
         assert (term != null);
 
@@ -58,8 +57,7 @@ public class EquationUtils {
                  * Check so the constant is not a multiplier.
                  */
                 final ITreeNode parent = expression.getParent();
-                return ((parent instanceof Addition)
-                        || (parent instanceof IComparator) || (parent == null));
+                return ((parent instanceof Addition) || (parent instanceof IComparator) || (parent == null));
             }
 
             return false;
@@ -76,8 +74,7 @@ public class EquationUtils {
         return EquationUtils.instance;
     }
 
-    private static IExpression processBinaryFunction(final Term term)
-            throws KeYStoneException {
+    private static IExpression processBinaryFunction(final Term term) throws KeYStoneException {
 
         final IExpression leftChild = EquationUtils.processTerm(term.sub(0));
         final IExpression rightChild = EquationUtils.processTerm(term.sub(1));
@@ -108,8 +105,7 @@ public class EquationUtils {
         throw new KeYStoneException("Illegal binary function: " + term);
     }
 
-    private static IExpression processFunction(final Term term)
-            throws KeYStoneException {
+    private static IExpression processFunction(final Term term) throws KeYStoneException {
 
         if (TermParserTools.isBinaryFunction(term)) {
             return EquationUtils.processBinaryFunction(term);
@@ -122,8 +118,7 @@ public class EquationUtils {
         throw new KeYStoneException("Unsupported Function: " + term.op().name());
     }
 
-    private static IExpression processTerm(final Term term)
-            throws KeYStoneException {
+    private static IExpression processTerm(final Term term) throws KeYStoneException {
 
         if (TermParserTools.isFunction(term)) {
             return EquationUtils.processFunction(term);
@@ -140,13 +135,11 @@ public class EquationUtils {
         throw new KeYStoneException("Illegal term: " + term);
     }
 
-    private static IExpression processUnaryFunction(final Term term)
-            throws KeYStoneException {
+    private static IExpression processUnaryFunction(final Term term) throws KeYStoneException {
 
         if (TermParserTools.isInteger(term)) {
             if (TermParserTools.isIntegerNegation(term.sub(0))) {
-                final int value = Integer.parseInt("-"
-                        + TermParserTools.resolveNumber(term.sub(0).sub(0)));
+                final int value = Integer.parseInt("-" + TermParserTools.resolveNumber(term.sub(0).sub(0)));
                 return new NumericConstant(new Fraction(value));
             } else {
                 final int value = Integer.parseInt(TermParserTools.resolveNumber(term.sub(0)));
@@ -186,8 +179,7 @@ public class EquationUtils {
             final IExpression leftOperand = ((LessOrEquals) comparator).getLeftOperand();
             final IExpression rightOperand = ((LessOrEquals) comparator).getRightOperand();
 
-            final Addition slackAddition = new Addition(leftOperand,
-                    dummyVariable);
+            final Addition slackAddition = new Addition(leftOperand, dummyVariable);
 
             variableIndex.put(dummyVariable.getName(), dummyVariable);
 
@@ -206,8 +198,7 @@ public class EquationUtils {
 
             variableIndex.put(dummyVariable.getName(), dummyVariable);
 
-            final Addition surplusSubtraction = new Addition(leftOperand,
-                    dummyVariable);
+            final Addition surplusSubtraction = new Addition(leftOperand, dummyVariable);
 
             return new Equals(surplusSubtraction, rightOperand);
         }
@@ -215,8 +206,7 @@ public class EquationUtils {
         return (Equals) comparator;
     }
 
-    public static Equation simplifyEquation(Equation equation)
-            throws KeYStoneException {
+    public static Equation simplifyEquation(Equation equation) throws KeYStoneException {
 
         /*
          * Simplify both sides of the equation.
@@ -231,8 +221,7 @@ public class EquationUtils {
 
             if (ExpressionUtils.isConstant(simplifiedLeftHand)) {
 
-                simplifiedRightHand = new Addition(simplifiedLeftHand,
-                        simplifiedRightHand);
+                simplifiedRightHand = new Addition(simplifiedLeftHand, simplifiedRightHand);
                 simplifiedRightHand = ExpressionUtils.simplifyExpression(simplifiedRightHand);
 
                 simplifiedLeftHand = new NumericConstant(Fraction.ZERO);
@@ -270,8 +259,7 @@ public class EquationUtils {
         return equation;
     }
 
-    public static Equation normalizeEquation(Equation equation)
-            throws KeYStoneException {
+    public static Equation normalizeEquation(Equation equation) throws KeYStoneException {
 
         equation = simplifyEquation(equation);
 
@@ -305,23 +293,20 @@ public class EquationUtils {
             return true;
         } else if (ExpressionUtils.isAddition(expression)) {
             Addition addition = (Addition) expression;
-            return ExpressionUtils.isConstant(addition.getLeftOperand())
-                    || ExpressionUtils.isConstant(addition.getRightOperand());
+            return ExpressionUtils.isConstant(addition.getLeftOperand()) || ExpressionUtils.isConstant(addition.getRightOperand());
         } else {
             return false;
         }
     }
 
-    public static void isolateConstantPart(Equation equation)
-            throws KeYStoneException {
+    public static void isolateConstantPart(Equation equation) throws KeYStoneException {
 
         /*
          * Build a trace to the variable in question.
          */
         Deque<IExpression> trace = buildTrace(equation, isConstant);
         if (trace.isEmpty() || (trace == null)) {
-            equation.setRightOperand(new Addition(equation.getRightOperand(),
-                    new NumericConstant(Fraction.ZERO)));
+            equation.setRightOperand(new Addition(equation.getRightOperand(), new NumericConstant(Fraction.ZERO)));
             trace = buildTrace(equation, isConstant);
         }
         assert trace != null;
@@ -367,8 +352,7 @@ public class EquationUtils {
                  */
                 final IExpression oldOppositeEquationSide = oppositeEquationTop;
                 ExpressionUtils.negateSingleExpression(nonVariableOperand);
-                oppositeEquationTop = new Addition(oldOppositeEquationSide,
-                        nonVariableOperand);
+                oppositeEquationTop = new Addition(oldOppositeEquationSide, nonVariableOperand);
 
                 variableEquationTop = variableOperand;
             }
@@ -386,22 +370,19 @@ public class EquationUtils {
      * @param condition
      * @return
      */
-    public static Deque<IExpression> buildTrace(final Equation node,
-                                                final ICondition condition) {
+    public static Deque<IExpression> buildTrace(final Equation node, final ICondition condition) {
 
         assert node != null;
         assert condition != null;
 
         final LinkedList<IExpression> queue = new LinkedList<IExpression>();
 
-        final Deque<IExpression> leftBranch = buildTrace(node.getLeftOperand(),
-                condition);
+        final Deque<IExpression> leftBranch = buildTrace(node.getLeftOperand(), condition);
         if (!leftBranch.isEmpty()) {
             return append(queue, leftBranch);
         }
 
-        final Deque<IExpression> rightBranch = buildTrace(
-                node.getRightOperand(), condition);
+        final Deque<IExpression> rightBranch = buildTrace(node.getRightOperand(), condition);
         if (!rightBranch.isEmpty()) {
             return append(queue, rightBranch);
         }
@@ -418,8 +399,7 @@ public class EquationUtils {
      * @param condition
      * @return
      */
-    private static Deque<IExpression> buildTrace(final IExpression node,
-                                                 final ICondition condition) {
+    private static Deque<IExpression> buildTrace(final IExpression node, final ICondition condition) {
 
         assert node != null;
         assert condition != null;
@@ -435,15 +415,13 @@ public class EquationUtils {
 
             final AbstractBinaryExpression binaryExpression = (AbstractBinaryExpression) node;
 
-            final Deque<IExpression> leftBranch = buildTrace(
-                    binaryExpression.getLeftOperand(), condition);
+            final Deque<IExpression> leftBranch = buildTrace(binaryExpression.getLeftOperand(), condition);
             if (!leftBranch.isEmpty()) {
                 queue.add(node);
                 return append(queue, leftBranch);
             }
 
-            final Deque<IExpression> rightBranch = buildTrace(
-                    binaryExpression.getRightOperand(), condition);
+            final Deque<IExpression> rightBranch = buildTrace(binaryExpression.getRightOperand(), condition);
             if (!rightBranch.isEmpty()) {
                 queue.add(node);
                 return append(queue, rightBranch);
@@ -457,8 +435,7 @@ public class EquationUtils {
 
             final AbstractUnaryExpression unaryExpression = (AbstractUnaryExpression) node;
 
-            final Deque<IExpression> branch = buildTrace(
-                    unaryExpression.getOperand(), condition);
+            final Deque<IExpression> branch = buildTrace(unaryExpression.getOperand(), condition);
             if (!branch.isEmpty()) {
                 queue.add(node);
                 return append(queue, branch);
@@ -472,8 +449,7 @@ public class EquationUtils {
         return queue;
     }
 
-    private static Deque<IExpression> append(final Deque<IExpression> head,
-                                             final Deque<IExpression> tail) {
+    private static Deque<IExpression> append(final Deque<IExpression> head, final Deque<IExpression> tail) {
 
         assert head != null;
         assert tail != null;

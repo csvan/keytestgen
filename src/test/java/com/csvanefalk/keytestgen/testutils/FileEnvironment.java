@@ -7,11 +7,9 @@ import java.util.*;
 
 public class FileEnvironment {
 
-    public static FileEnvironment constructFileEnvironment(String directory,
-                                                           boolean includeSubdirectories) {
+    public static FileEnvironment constructFileEnvironment(String directory, boolean includeSubdirectories) {
 
-        List<File> javaFiles = loadAllJavaFilesInDirectory(directory,
-                includeSubdirectories);
+        List<File> javaFiles = loadAllJavaFilesInDirectory(directory, includeSubdirectories);
 
         Map<String, File> sourceFiles = new HashMap<String, File>();
         for (File file : javaFiles) {
@@ -23,8 +21,7 @@ public class FileEnvironment {
         return new FileEnvironment(sourceFiles);
     }
 
-    public static FileEnvironment constructFileEnvironment(String directory,
-                                                           String... files) {
+    public static FileEnvironment constructFileEnvironment(String directory, String... files) {
 
         List<File> javaFiles = loadAllJavaFilesInDirectory(directory, false);
         javaFiles.removeAll(Arrays.asList(files));
@@ -48,8 +45,7 @@ public class FileEnvironment {
     /**
      * Relative OS path to the KeYTestGen folder.
      */
-    protected final static String keYTestGenPath = System.getProperty("user.dir")
-            + "/";
+    protected final static String keYTestGenPath = System.getProperty("user.dir") + "/";
 
     /**
      * Source files contained in this environment.
@@ -68,8 +64,7 @@ public class FileEnvironment {
      * @param includeSubdirectories
      * @return
      */
-    private static List<File> loadAllJavaFilesInDirectory(String directory,
-                                                          boolean includeSubdirectories) {
+    private static List<File> loadAllJavaFilesInDirectory(String directory, boolean includeSubdirectories) {
         List<File> results = new LinkedList<File>();
 
         String path = keYTestGenPath + targetModelsPath + directory;
@@ -94,10 +89,8 @@ public class FileEnvironment {
              * set, add all files from the subdirectory.
              */
             else if (file.isDirectory() && includeSubdirectories) {
-                String subpath = directory + File.separator + file.getName()
-                        + File.separator;
-                List<File> filesFromSubdirectory = loadAllJavaFilesInDirectory(
-                        subpath, includeSubdirectories);
+                String subpath = directory + File.separator + file.getName() + File.separator;
+                List<File> filesFromSubdirectory = loadAllJavaFilesInDirectory(subpath, includeSubdirectories);
                 results.addAll(filesFromSubdirectory);
             }
         }

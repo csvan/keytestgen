@@ -95,8 +95,10 @@ public class CoreInterface implements ICapsuleMonitor {
      */
     public List<TestSuite> createTestSuites(final File source,
                                             final ICodeCoverageParser codeCoverageParser,
-                                            final boolean includePublic, final boolean includeProtected,
-                                            final boolean includePrivate, final boolean includeNative,
+                                            final boolean includePublic,
+                                            final boolean includeProtected,
+                                            final boolean includePrivate,
+                                            final boolean includeNative,
                                             final List<String> methods) throws CoreException {
 
         /*
@@ -109,11 +111,13 @@ public class CoreInterface implements ICapsuleMonitor {
          * which we should generate test cases for.
          */
         List<String> selectedMethods = filterMethods(targetClass,
-                includePublic, includeProtected, includePrivate, includeNative);
+                                                     includePublic,
+                                                     includeProtected,
+                                                     includePrivate,
+                                                     includeNative);
         selectedMethods.addAll(methods);
 
-        return createTestSuites(targetClass, codeCoverageParser,
-                selectedMethods);
+        return createTestSuites(targetClass, codeCoverageParser, selectedMethods);
     }
 
     /**
@@ -127,8 +131,10 @@ public class CoreInterface implements ICapsuleMonitor {
      * @return the set of method identifiers.
      */
     private List<String> filterMethods(KeYJavaClass targetClass,
-                                       boolean includePublic, boolean includeProtected,
-                                       boolean includePrivate, boolean includeNative) {
+                                       boolean includePublic,
+                                       boolean includeProtected,
+                                       boolean includePrivate,
+                                       boolean includeNative) {
 
         List<String> filteredMethod = new LinkedList<String>();
         for (String methodIdentifier : targetClass.getMethods()) {
@@ -190,15 +196,13 @@ public class CoreInterface implements ICapsuleMonitor {
             final KeYJavaMethod targetMethod = targetClass.getMethod(method);
             if (targetMethod == null) {
 
-                throw new CoreException("No such method: " + method
-                        + " in class " + targetClass.getName());
+                throw new CoreException("No such method: " + method + " in class " + targetClass.getName());
             }
 
             /*
              * Setup and ready the capsule
              */
-            final MethodCapsule testGenerationCapsule = new MethodCapsule(
-                    codeCoverageParser, targetMethod);
+            final MethodCapsule testGenerationCapsule = new MethodCapsule(codeCoverageParser, targetMethod);
 
             controller.addChild(testGenerationCapsule);
             testGenerationCapsule.addMonitor(this);
@@ -262,8 +266,7 @@ public class CoreInterface implements ICapsuleMonitor {
      * @throws TestGeneratorException in the event that there is a failure in the KeYInterface, or
      *                                if there is a problem finding or reading the source file.
      */
-    private KeYJavaClass extractKeYJavaClass(final File source)
-            throws CoreException {
+    private KeYJavaClass extractKeYJavaClass(final File source) throws CoreException {
 
         try {
 

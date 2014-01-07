@@ -63,8 +63,7 @@ public class KeYInterface {
      * @param failureMessage message to pass in the event that the object is null
      * @throws KeYInterfaceException the generated exception if the object is null
      */
-    private static void assertNotNull(final Object object,
-                                      final String failureMessage) throws KeYInterfaceException {
+    private static void assertNotNull(final Object object, final String failureMessage) throws KeYInterfaceException {
 
         if (object == null) {
             throw new KeYInterfaceException(failureMessage);
@@ -98,14 +97,16 @@ public class KeYInterface {
      * @return the proof
      * @throws ProofInputException in the event that the proof cannot be created
      */
-    private Proof getProof(
-            final KeYEnvironment<CustomConsoleUserInterface> environment,
-            final IProgramMethod method, final String precondition)
-            throws ProofInputException {
+    private Proof getProof(final KeYEnvironment<CustomConsoleUserInterface> environment,
+                           final IProgramMethod method,
+                           final String precondition) throws ProofInputException {
 
-        final ProofOblInput proofObligationInput = new ProgramMethodPO(
-                environment.getInitConfig(), method.getFullName(), method,
-                precondition, true, true);
+        final ProofOblInput proofObligationInput = new ProgramMethodPO(environment.getInitConfig(),
+                                                                       method.getFullName(),
+                                                                       method,
+                                                                       precondition,
+                                                                       true,
+                                                                       true);
 
         final Proof proof = environment.createProof(proofObligationInput);
 
@@ -117,11 +118,12 @@ public class KeYInterface {
          * Setup a strategy and goal chooser for the proof session
          */
         //SymbolicExecutionUtil.configureProof(proof);
-        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(
-                proof,
-                ExecutedSymbolicExecutionTreeNodesStopCondition
-                        .MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN,
-                false, false, false, false);
+        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(proof,
+                                                                        ExecutedSymbolicExecutionTreeNodesStopCondition.MAXIMAL_NUMBER_OF_SET_NODES_TO_EXECUTE_PER_GOAL_IN_COMPLETE_RUN,
+                                                                        false,
+                                                                        false,
+                                                                        false,
+                                                                        false);
 
         return proof;
     }
@@ -137,17 +139,22 @@ public class KeYInterface {
      * @throws KeYInterfaceException in the event that a symbolic execution tree cannot be
      *                               generated.
      */
-    public IExecutionStart getSymbolicExecutionTree(final KeYJavaMethod method)
-            throws KeYInterfaceException {
+    public IExecutionStart getSymbolicExecutionTree(final KeYJavaMethod method) throws KeYInterfaceException {
 
         try {
 
             KeYInterface.lock.lock();
 
             //Prettyprinting can be left on for debugging. Probably not appropriate for production environments.
-            SymbolicExecutionEnvironment<CustomConsoleUserInterface> env = createSymbolicExecutionEnvironment(method, false, true, true, false, false);
+            SymbolicExecutionEnvironment<CustomConsoleUserInterface> env = createSymbolicExecutionEnvironment(method,
+                                                                                                              false,
+                                                                                                              true,
+                                                                                                              true,
+                                                                                                              false,
+                                                                                                              false);
 
-            ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new ExecutedSymbolicExecutionTreeNodesStopCondition(maximalNumberOfExecutedSetNodes);
+            ExecutedSymbolicExecutionTreeNodesStopCondition stopCondition = new ExecutedSymbolicExecutionTreeNodesStopCondition(
+                    maximalNumberOfExecutedSetNodes);
 
             env.getProof().getSettings().getStrategySettings().setCustomApplyStrategyStopCondition(stopCondition);
             int nodeCount;
@@ -171,8 +178,7 @@ public class KeYInterface {
 
         } catch (final ProofInputException e) {
 
-            throw new KeYInterfaceException("FATAL: could not create proof: "
-                    + e.getMessage());
+            throw new KeYInterfaceException("FATAL: could not create proof: " + e.getMessage());
 
         } finally {
             KeYInterface.lock.unlock();
@@ -189,8 +195,7 @@ public class KeYInterface {
      * @throws ProofInputException   in case the proof could not be initiated
      * @throws IOException           in case the File could not be found, or is not accessible
      */
-    public KeYEnvironment<CustomConsoleUserInterface> loadJavaFile(
-            final File javaFile) throws KeYInterfaceException {
+    public KeYEnvironment<CustomConsoleUserInterface> loadJavaFile(final File javaFile) throws KeYInterfaceException {
 
         try {
 
@@ -241,16 +246,28 @@ public class KeYInterface {
         KeYEnvironment<CustomConsoleUserInterface> environment = method.getEnvironment();
 
         // Start proof
-        ProofOblInput input = new ProgramMethodPO(environment.getInitConfig(), method.getProgramMethod().getFullName(), method.getProgramMethod(), null, true, true);
+        ProofOblInput input = new ProgramMethodPO(environment.getInitConfig(),
+                                                  method.getProgramMethod().getFullName(),
+                                                  method.getProgramMethod(),
+                                                  null,
+                                                  true,
+                                                  true);
         //ProofOblInput input = new FunctionalOperationContractPO(method.getInitConfig(), method.getFunctionalContract());
         Proof proof = environment.createProof(input);
         assert (proof != null);
 
         // Set strategy and goal chooser to use for auto mode
-        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(proof, maximalNumberOfExecutedSetNodes, useOperationContracts, useLoopInvarints, nonExecutionBranchHidingSideProofs, aliasChecks);
+        SymbolicExecutionEnvironment.configureProofForSymbolicExecution(proof,
+                                                                        maximalNumberOfExecutedSetNodes,
+                                                                        useOperationContracts,
+                                                                        useLoopInvarints,
+                                                                        nonExecutionBranchHidingSideProofs,
+                                                                        aliasChecks);
 
         // Create symbolic execution tree which contains only the start node at beginning
-        SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(environment.getMediator(), proof, mergeBranchConditions);
+        SymbolicExecutionTreeBuilder builder = new SymbolicExecutionTreeBuilder(environment.getMediator(),
+                                                                                proof,
+                                                                                mergeBranchConditions);
         //builder.analyse();
         //assert (builder.getStartNode() != null);
         return new SymbolicExecutionEnvironment<CustomConsoleUserInterface>(environment, builder);

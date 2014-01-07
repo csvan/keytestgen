@@ -70,20 +70,23 @@ public class KeYJavaClassFactory {
                  */
                 if (contracts.isEmpty()) {
 
-                    final KeYJavaMethod keYJavaMethod = new KeYJavaMethod(
-                            keYJavaClass, memberMethod, environment, null);
+                    final KeYJavaMethod keYJavaMethod = new KeYJavaMethod(keYJavaClass,
+                                                                          memberMethod,
+                                                                          environment,
+                                                                          null);
 
-                    keYJavaClass.addMethodMapping(memberMethod.getFullName(),
-                            keYJavaMethod);
+                    keYJavaClass.addMethodMapping(memberMethod.getFullName(), keYJavaMethod);
 
                 } else {
 
                     for (final FunctionalOperationContract contract : contracts) {
 
-                        final KeYJavaMethod keYJavaMethod = new KeYJavaMethod(keYJavaClass, memberMethod, environment, contract);
+                        final KeYJavaMethod keYJavaMethod = new KeYJavaMethod(keYJavaClass,
+                                                                              memberMethod,
+                                                                              environment,
+                                                                              contract);
 
-                        keYJavaClass.addMethodMapping(
-                                memberMethod.getFullName(), keYJavaMethod);
+                        keYJavaClass.addMethodMapping(memberMethod.getFullName(), keYJavaMethod);
                     }
                 }
             }
@@ -99,8 +102,7 @@ public class KeYJavaClassFactory {
      * @throws IOException           if the file could not be found or read
      * @throws KeYInterfaceException
      */
-    public KeYJavaClass createKeYJavaClass(final File javaFile)
-            throws IOException, KeYInterfaceException {
+    public KeYJavaClass createKeYJavaClass(final File javaFile) throws IOException, KeYInterfaceException {
 
         /*
          * Load the file into KeY and get the InitConfig instance for it.
@@ -163,7 +165,8 @@ public class KeYJavaClassFactory {
          */
         final KeYJavaType containerClass = method.getContainerType();
         final List<FunctionalOperationContract> contracts = new LinkedList<FunctionalOperationContract>();
-        for (final FunctionalOperationContract contract : specificationRepository.getOperationContracts(containerClass, method)) {
+        for (final FunctionalOperationContract contract : specificationRepository.getOperationContracts(containerClass,
+                                                                                                        method)) {
             contracts.add(contract);
         }
         return contracts;

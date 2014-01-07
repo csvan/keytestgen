@@ -134,8 +134,7 @@ public final class TermParserTools {
             return term.toString();
         }
 
-        return fullName.substring(splitterIndex + 1).replaceAll("[^A-Za-z0-9]",
-                "");
+        return fullName.substring(splitterIndex + 1).replaceAll("[^A-Za-z0-9]", "");
     }
 
     /**
@@ -195,11 +194,8 @@ public final class TermParserTools {
      */
     public static boolean isArithmeticComparator(final Term term) {
 
-        return TermParserTools.isGreaterOrEquals(term)
-                || TermParserTools.isGreaterThan(term)
-                || TermParserTools.isLessOrEquals(term)
-                || TermParserTools.isLessThan(term)
-                || TermParserTools.isIntegerType(term.sub(0));
+        return TermParserTools.isGreaterOrEquals(term) || TermParserTools.isGreaterThan(term) || TermParserTools.isLessOrEquals(
+                term) || TermParserTools.isLessThan(term) || TermParserTools.isIntegerType(term.sub(0));
     }
 
     public static boolean isBinaryFunction(final Term term) {
@@ -244,10 +240,8 @@ public final class TermParserTools {
      * @return true iff. the term represents a boolean constant, false
      * otherwise.
      */
-    public static boolean isBooleanConstant(final Term term)
-            throws TermParserException {
-        return TermParserTools.isBooleanFalse(term)
-                || TermParserTools.isBooleanTrue(term);
+    public static boolean isBooleanConstant(final Term term) throws TermParserException {
+        return TermParserTools.isBooleanFalse(term) || TermParserTools.isBooleanTrue(term);
     }
 
     /**
@@ -255,13 +249,11 @@ public final class TermParserTools {
      * @return true iff. the term represents the boolean constant FALSE, false
      * otherwise.
      */
-    public static boolean isBooleanFalse(final Term term)
-            throws TermParserException {
+    public static boolean isBooleanFalse(final Term term) throws TermParserException {
         if (TermParserTools.isBoolean(term)) {
             return term.op().name().toString().equals(StringConstants.FALSE);
         } else {
-            throw new TermTransformerException(
-                    "Attempted to apply boolean operation to non-boolean literal");
+            throw new TermTransformerException("Attempted to apply boolean operation to non-boolean literal");
         }
     }
 
@@ -270,13 +262,11 @@ public final class TermParserTools {
      * @return true iff. the term represents the boolean constant TRUE, false
      * otherwise.
      */
-    public static boolean isBooleanTrue(final Term term)
-            throws TermTransformerException {
+    public static boolean isBooleanTrue(final Term term) throws TermTransformerException {
         if (TermParserTools.isBoolean(term)) {
             return term.op().name().toString().equals(StringConstants.TRUE);
         } else {
-            throw new TermTransformerException(
-                    "Attempted to apply boolean operation to non-boolean literal");
+            throw new TermTransformerException("Attempted to apply boolean operation to non-boolean literal");
         }
     }
 
@@ -352,8 +342,7 @@ public final class TermParserTools {
      */
     public static boolean isGreaterOrEquals(final Term term) {
 
-        return term.op().name().toString().equals(
-                StringConstants.GREATER_OR_EQUALS);
+        return term.op().name().toString().equals(StringConstants.GREATER_OR_EQUALS);
     }
 
     /**
@@ -432,8 +421,7 @@ public final class TermParserTools {
      */
     public static boolean isLessOrEquals(final Term term) {
 
-        return term.op().name().toString().equals(
-                StringConstants.LESS_OR_EQUALS);
+        return term.op().name().toString().equals(StringConstants.LESS_OR_EQUALS);
     }
 
     /**
@@ -620,8 +608,7 @@ public final class TermParserTools {
 
         final Operator operator = term.op();
 
-        return operator instanceof Function
-                || operator instanceof ProgramVariable;
+        return operator instanceof Function || operator instanceof ProgramVariable;
     }
 
     /**
@@ -642,8 +629,7 @@ public final class TermParserTools {
 
         final Operator operator = term.op();
         final String operatorName = term.op().name().toString();
-        return operator instanceof Function
-                && builtinFunctions.contains(operatorName);
+        return operator instanceof Function && builtinFunctions.contains(operatorName);
     }
 
     /**
@@ -658,8 +644,7 @@ public final class TermParserTools {
      * @return the identifier String.
      * @see Model
      */
-    public static String resolveIdentifierString(final Term term,
-                                                 final String separator) {
+    public static String resolveIdentifierString(final Term term, final String separator) {
 
         final Operator operator = term.op();
 
@@ -684,8 +669,7 @@ public final class TermParserTools {
          * this case we also cannot go any further. We are not interested in the
          * symbolic heap here, so we simply return the root name.
          */
-        else if ((operator.getClass() == Function.class)
-                && !operator.toString().equals("heap")) {
+        else if ((operator.getClass() == Function.class) && !operator.toString().equals("heap")) {
 
             return "self";
         }
@@ -703,9 +687,8 @@ public final class TermParserTools {
             } else {
 
                 return TermParserTools.resolveIdentifierString(term.sub(1),
-                        separator)
-                        + separator
-                        + TermParserTools.getVariableNameForTerm(term.sub(2));
+                                                               separator) + separator + TermParserTools.getVariableNameForTerm(
+                        term.sub(2));
             }
         }
     }
@@ -725,21 +708,18 @@ public final class TermParserTools {
      * @param term a term of boolean type
      * @return a boolean value corresponding to the value of the term.
      */
-    public static boolean translateToJavaBoolean(final Term term)
-            throws TermParserException {
+    public static boolean translateToJavaBoolean(final Term term) throws TermParserException {
         if (TermParserTools.isBoolean(term)) {
             return TermParserTools.isBooleanTrue(term) ? true : false;
         } else {
-            throw new TermTransformerException(
-                    "Attempted to apply boolean operation to non-boolean literal");
+            throw new TermTransformerException("Attempted to apply boolean operation to non-boolean literal");
         }
     }
 
     public static int getIntegerValue(Term term) {
         int value = Integer.MAX_VALUE;
         if (TermParserTools.isIntegerNegation(term.sub(0))) {
-            value = Integer.parseInt("-"
-                    + TermParserTools.resolveNumber(term.sub(0).sub(0)));
+            value = Integer.parseInt("-" + TermParserTools.resolveNumber(term.sub(0).sub(0)));
         } else {
             value = Integer.parseInt(TermParserTools.resolveNumber(term.sub(0)));
         }

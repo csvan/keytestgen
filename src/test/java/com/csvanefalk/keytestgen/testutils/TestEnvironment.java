@@ -31,9 +31,8 @@ public class TestEnvironment {
         symbolicTrees = new HashMap<String, IExecutionStart>();
     }
 
-    public static synchronized TestEnvironment loadEnvironmentForDirectory(
-            String directory, boolean includeSubdirectories)
-            throws KeYInterfaceException, IOException {
+    public static synchronized TestEnvironment loadEnvironmentForDirectory(String directory,
+                                                                           boolean includeSubdirectories) throws KeYInterfaceException, IOException {
 
         if (repository.containsKey(directory)) {
             return repository.get(directory);
@@ -43,8 +42,7 @@ public class TestEnvironment {
          * Get the corresponding KeyJavaClass instances for each sourcefile in
          * the target directory.
          */
-        FileEnvironment fileEnvironment = FileEnvironment.constructFileEnvironment(
-                directory, includeSubdirectories);
+        FileEnvironment fileEnvironment = FileEnvironment.constructFileEnvironment(directory, includeSubdirectories);
 
         List<KeYJavaClass> keYJavaClasses = loadKeYJavaFiles(fileEnvironment.getFiles());
 
@@ -63,8 +61,7 @@ public class TestEnvironment {
                     IExecutionStart tree = keYInterface.getSymbolicExecutionTree(method);
                     Assert.assertNotNull(tree);
 
-                    String fullMethodName = method.getDeclaringClass().getName()
-                            + "." + methoIdentifier;
+                    String fullMethodName = method.getDeclaringClass().getName() + "." + methoIdentifier;
                     trees.put(fullMethodName, tree);
                 }
             }
@@ -102,8 +99,7 @@ public class TestEnvironment {
      * @throws KeYInterfaceException
      * @throws IOException
      */
-    protected static List<KeYJavaClass> loadKeYJavaFiles(List<File> javaFiles)
-            throws KeYInterfaceException, IOException {
+    protected static List<KeYJavaClass> loadKeYJavaFiles(List<File> javaFiles) throws KeYInterfaceException, IOException {
 
         List<KeYJavaClass> keYJavaClasses = new LinkedList<KeYJavaClass>();
         KeYJavaClassFactory factory = KeYJavaClassFactory.getInstance();

@@ -100,7 +100,8 @@ public class KeYJavaMethod {
      */
     public List<Term> getPostconditions() {
 
-        return functionalContract == null ? null : new ContractWrapper((FunctionalOperationContractImpl) functionalContract).getPostconditions();
+        return functionalContract == null ? null : new ContractWrapper((FunctionalOperationContractImpl) functionalContract)
+                .getPostconditions();
     }
 
     /**
