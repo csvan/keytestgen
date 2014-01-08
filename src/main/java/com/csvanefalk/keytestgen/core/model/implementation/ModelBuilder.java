@@ -36,7 +36,6 @@ public class ModelBuilder {
          * Distribute negations and remove conjunctions
          */
         pathCondition = NegationNormalFormTransformer.getInstance().transform(pathCondition);
-
         pathCondition = EliminateConjunctionsTransformer.getInstance().transform(pathCondition);
 
         /*

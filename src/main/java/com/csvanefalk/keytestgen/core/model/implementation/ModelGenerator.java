@@ -6,10 +6,7 @@ import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
 import com.csvanefalk.keytestgen.core.model.tools.ModelGenerationTools;
 import com.csvanefalk.keytestgen.keystone.KeYStone;
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;
-import com.csvanefalk.keytestgen.util.transformers.NormalizeArithmeticComparatorsTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveIfThenElseTransformer;
-import com.csvanefalk.keytestgen.util.transformers.RemoveImplicationsTransformer;
-import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
+import com.csvanefalk.keytestgen.util.transformers.*;
 import de.uka.ilkd.key.java.Services;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.proof.init.ProofInputException;
@@ -45,10 +42,6 @@ public class ModelGenerator implements IModelGenerator {
     }
 
     KeYStone keYStone = KeYStone.getInstance();
-
-    public static void __DEBUG_DISPOSE() {
-        instance = null;
-    }
 
     private ModelGenerator() {
 
@@ -142,6 +135,8 @@ public class ModelGenerator implements IModelGenerator {
     private Term configurePathConditionForIntegerGeneration(Term pathCondition,
                                                             Services services) throws TermTransformerException {
 
+        pathCondition = RemoveObserverFunctionsTransformer.getInstance().transform(pathCondition);
+
         pathCondition = ModelGenerationTools.simplifyTerm(pathCondition);
 
         pathCondition = NormalizeArithmeticComparatorsTransformer.getInstance(services)
@@ -197,5 +192,4 @@ public class ModelGenerator implements IModelGenerator {
             }
         }
     }
-
 }

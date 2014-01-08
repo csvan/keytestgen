@@ -232,9 +232,7 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
              */
             final String operatorName = operator.toString();
             if (!operatorName.equalsIgnoreCase("heap")) {
-
                 if (operator.toString().equalsIgnoreCase("self")) {
-
                     return default_self;
                 } else {
                     return (ProgramVariable) operator;
@@ -284,9 +282,12 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
 
     private ProgramVariable getArrayAccessVariable(final Term term) {
 
-        ProgramVariable variable = javaInfo.getAttribute("array", term.sub(1).sort());
-        System.out.println(variable);
-        return null;
+        Term arrayTerm = term.sub(1);
+
+        KeYJavaType type = javaInfo.getKeYJavaType(term.sub(1).sort());
+        ProgramElementName name = new ProgramElementName(arrayTerm.toString());
+        ProgramVariable programVariable = new LocationVariable(name, type);
+        return programVariable;
     }
 
     /**
@@ -336,13 +337,12 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
 
         final ModelVariable variable = ModelVariable.constructModelVariable(programVariable, identifier);
 
-        Object instance = null;
+        Object instance;
         if (TermParserTools.isPrimitiveType(term)) {
 
             /*
-             * The term is a static variable. Identify and connect it with
+             * The term is a static variable. Identify and connect it with its parent class.
              */
-
             instance = ModelBuilderVisitor.resolvePrimitiveType(programVariable);
 
         } else {

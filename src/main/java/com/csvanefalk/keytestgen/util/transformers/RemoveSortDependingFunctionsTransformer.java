@@ -8,18 +8,18 @@ import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.LocationVariable;
 import de.uka.ilkd.key.logic.op.SortDependingFunction;
 
-public class RemoveSDPsTransformer extends AbstractTermTransformer {
+public class RemoveSortDependingFunctionsTransformer extends AbstractTermTransformer {
 
-    private static RemoveSDPsTransformer instance = null;
+    private static RemoveSortDependingFunctionsTransformer instance = null;
 
-    public static RemoveSDPsTransformer getInstance() {
-        if (RemoveSDPsTransformer.instance == null) {
-            RemoveSDPsTransformer.instance = new RemoveSDPsTransformer();
+    public static RemoveSortDependingFunctionsTransformer getInstance() {
+        if (RemoveSortDependingFunctionsTransformer.instance == null) {
+            RemoveSortDependingFunctionsTransformer.instance = new RemoveSortDependingFunctionsTransformer();
         }
-        return RemoveSDPsTransformer.instance;
+        return RemoveSortDependingFunctionsTransformer.instance;
     }
 
-    private RemoveSDPsTransformer() {
+    private RemoveSortDependingFunctionsTransformer() {
     }
 
     /**
