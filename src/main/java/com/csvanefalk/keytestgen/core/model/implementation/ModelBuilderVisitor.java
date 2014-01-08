@@ -147,7 +147,7 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
     /**
      * Given an {@link IExecutionNode} somewhere in a symbolic execution tree
      * and below the method call node, backtracks until the method call node is
-     * found. Excludes all intermediare method calls.
+     * found. Excludes all intermediary method calls.
      *
      * @param node the node
      * @return
@@ -199,6 +199,7 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
         }
 
         final String[] split = term.op().toString().split("::\\$");
+
         return javaInfo.getAttribute(split[1], split[0]);
     }
 
@@ -257,15 +258,34 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
         }
 
         /*
-         * Process a SortDependingFunction. A Term of this sort represents a
-         * recursively defined variable (i.e. a variable at the end of a nested
-         * hiearchy, such as self.nestedObject.anotherNestedObject.variable).
+         * Process a SortDependingFunction.
+         *
+         * A Term of this sort may represent a recursively defined variable
+         * (i.e. a variable at the end of a nested hiearchy, such as
+         * self.nestedObject.anotherNestedObject.variable).
+         *
+         * It may also represent an array access operation.
          */
         if (operator.getClass() == SortDependingFunction.class) {
 
-            return getProgramVariableForField(term.sub(2));
+            // Check if the operator is an array access operation
+            if (term.subs().size() >= 3 && term.sub(2).toString().startsWith(StringConstants.ARRAY)) {
+                return getArrayAccessVariable(term);
+            }
+
+            // Otherwise, treat it as a nested variable
+            else {
+                return getProgramVariableForField(term.sub(2));
+            }
         }
 
+        return null;
+    }
+
+    private ProgramVariable getArrayAccessVariable(final Term term) {
+
+        ProgramVariable variable = javaInfo.getAttribute("array", term.sub(1).sort());
+        System.out.println(variable);
         return null;
     }
 
