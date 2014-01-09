@@ -1,6 +1,10 @@
 package com.csvanefalk.keytestgen.core.model.implementation;
 
 import com.csvanefalk.keytestgen.StringConstants;
+import com.csvanefalk.keytestgen.core.model.implementation.instance.ModelInstance;
+import com.csvanefalk.keytestgen.core.model.implementation.instance.ModelInstanceFactory;
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable;
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariableFactory;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import com.csvanefalk.keytestgen.util.visitors.KeYTestGenTermVisitor;
 import de.uka.ilkd.key.collection.ImmutableArray;
@@ -96,9 +100,9 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
         /*
          * Add the root variable and instance to the Model
          */
-        final ModelInstance selfInstance = ModelInstance.constructModelInstance(container);
+        final ModelInstance selfInstance = ModelInstanceFactory.constructModelInstance(container);
 
-        final ModelVariable self = ModelVariable.constructModelVariable(default_self, "self");
+        final ModelVariable self = ModelVariableFactory.constructModelVariable(default_self, "self");
 
         model.add(self, selfInstance);
 
@@ -125,8 +129,8 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
 
                 final IProgramVariable programVariable = new LocationVariable(name, type);
 
-                final ModelVariable modelParameter = ModelVariable.constructModelVariable(programVariable,
-                                                                                          name.toString());
+                final ModelVariable modelParameter = ModelVariableFactory.constructModelVariable(programVariable,
+                                                                                                 name.toString());
 
                 modelParameter.setParameter(true);
 
@@ -137,7 +141,7 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
                 if (TermParserTools.isPrimitiveType(modelParameter.getTypeName())) {
                     value = ModelBuilderVisitor.resolvePrimitiveType(programVariable);
                 } else {
-                    value = ModelInstance.constructModelInstance(type);
+                    value = ModelInstanceFactory.constructModelInstance(type);
                 }
                 model.add(modelParameter, value);
             }
@@ -249,8 +253,8 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
          */
         if (operator.getClass() == Function.class) {
 
+            // The operator is the "self" declaration
             if (operator.toString().equalsIgnoreCase("self")) {
-
                 return default_self;
             }
         }
@@ -283,7 +287,6 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
     private ProgramVariable getArrayAccessVariable(final Term term) {
 
         Term arrayTerm = term.sub(1);
-
         KeYJavaType type = javaInfo.getKeYJavaType(term.sub(1).sort());
         ProgramElementName name = new ProgramElementName(arrayTerm.toString());
         ProgramVariable programVariable = new LocationVariable(name, type);
@@ -299,6 +302,32 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
      * @param term the term to parse
      */
     private void parseVariableTerm(final Term term) {
+
+        /*
+         * Check if the the term is the array-length function. Associate it as a normal constant
+         * of the array it is applied to.
+         */
+        if (term.op().toString().equalsIgnoreCase(StringConstants.LENGTH) && term.op().arity() == 1) {
+
+            /*
+             * First parse the array variable itself, in order to ensure that it
+             * is properly associated with the model.
+             */
+            parseVariableTerm(term.sub(0));
+
+            /*
+             * Next, proceed with associating the length constant with the array,
+             * as we would with a normal variable.
+             */
+            ModelVariable lengthConstant = ModelVariableFactory.constructModelVariable(createLengthConstant(term));
+            lengthConstant.setValue(new Integer(0));
+            model.add(lengthConstant);
+
+            String arrayIdentifer = TermParserTools.resolveIdentifierString(term.sub(0), SEPARATOR);
+            ModelVariable arrayVariable = model.getVariable(arrayIdentifer);
+
+            model.assignField(lengthConstant, arrayVariable);
+        }
 
         /*
          * If the program variable instance resolves to null, it does not
@@ -331,23 +360,19 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
          * Check that the variable we found is not already present in the model.
          */
         final ModelVariable currentVariable = model.getVariable(identifier);
+
         if ((currentVariable != null) && currentVariable.isParameter()) {
             return;
         }
 
-        final ModelVariable variable = ModelVariable.constructModelVariable(programVariable, identifier);
+        final ModelVariable variable = ModelVariableFactory.constructModelVariable(programVariable, identifier);
 
         Object instance;
         if (TermParserTools.isPrimitiveType(term)) {
-
-            /*
-             * The term is a static variable. Identify and connect it with its parent class.
-             */
+            //The term is a static variable. Identify and connect it with its parent class.
             instance = ModelBuilderVisitor.resolvePrimitiveType(programVariable);
-
         } else {
-
-            instance = ModelInstance.constructModelInstance(programVariable.getKeYJavaType());
+            instance = ModelInstanceFactory.constructModelInstance(programVariable.getKeYJavaType());
         }
 
         /*
@@ -379,18 +404,16 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
              * variable of some class. Connect it to the parent.
              */
             if (parentVariable != null) {
-
                 final String parentIdentifier = TermParserTools.resolveIdentifierString(term.sub(1),
                                                                                         ModelBuilderVisitor.SEPARATOR);
 
-                final ModelVariable parentModelVariable = ModelVariable.constructModelVariable(parentVariable,
-                                                                                               parentIdentifier);
+                final ModelVariable parentModelVariable = ModelVariableFactory.constructModelVariable(parentVariable,
+                                                                                                      parentIdentifier);
 
                 model.assignField(variable, parentModelVariable);
 
             } else if (!programVariable.isStatic()) {
-
-                final ModelVariable self = ModelVariable.constructModelVariable(default_self, "self");
+                final ModelVariable self = ModelVariableFactory.constructModelVariable(default_self, "self");
                 model.assignField(variable, self);
             }
         }
@@ -408,11 +431,21 @@ class ModelBuilderVisitor extends KeYTestGenTermVisitor {
          */
         else {
 
-            final ModelVariable self = ModelVariable.constructModelVariable(default_self, "self");
+            final ModelVariable self = ModelVariableFactory.constructModelVariable(default_self, "self");
 
             model.assignField(variable, self);
 
         }
+    }
+
+    /*
+     * Creates a "length" constant, representing the length of a Java array.
+     */
+    private ProgramVariable createLengthConstant(Term term) {
+        KeYJavaType type = javaInfo.getKeYJavaType(term.sort());
+        ProgramElementName name = new ProgramElementName(StringConstants.LENGTH);
+        ProgramVariable lengthConstant = new LocationVariable(name, type);
+        return lengthConstant;
     }
 
     /**

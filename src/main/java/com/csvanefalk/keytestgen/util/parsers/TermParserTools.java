@@ -2,7 +2,7 @@ package com.csvanefalk.keytestgen.util.parsers;
 
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
-import com.csvanefalk.keytestgen.core.model.implementation.ModelVariable;
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable;
 import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
 import de.uka.ilkd.key.logic.Term;
 import de.uka.ilkd.key.logic.op.*;
@@ -696,6 +696,14 @@ public final class TermParserTools {
                         term.sub(2));
             }
         }
+    }
+
+    /**
+     * @param term the term to check
+     * @return true if the term represents and Array, or false otherwise
+     */
+    public static boolean isArrayType(Term term) {
+        return term.sort() instanceof ArraySort;
     }
 
     private static String resolveArrayAccessor(final Term term) {

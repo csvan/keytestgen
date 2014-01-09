@@ -1,5 +1,6 @@
-package com.csvanefalk.keytestgen.core.model.implementation;
+package com.csvanefalk.keytestgen.core.model.implementation.variable;
 
+import com.csvanefalk.keytestgen.core.model.implementation.instance.ModelInstance;
 import de.uka.ilkd.key.java.abstraction.KeYJavaType;
 import de.uka.ilkd.key.logic.op.IProgramVariable;
 import de.uka.ilkd.key.logic.op.ProgramVariable;
@@ -16,7 +17,7 @@ import de.uka.ilkd.key.logic.op.ProgramVariable;
  * type reference.
  * <ul>
  * <li>If it represents an object reference, its bound value will be a
- * {@link ModelInstance}, representing the heap object this variable is pointing
+ * {@link com.csvanefalk.keytestgen.core.model.implementation.instance.ModelInstance}, representing the heap object this variable is pointing
  * to. This value defaults null if no reference is given.</li>
  * <li>If it represents a primitive reference, then its value be one of the
  * primitive wrapper classes supported by KeY ({@link Integer}, {@link Boolean},
@@ -29,26 +30,6 @@ import de.uka.ilkd.key.logic.op.ProgramVariable;
 public class ModelVariable {
 
     /**
-     * Factory method for creating a {@link ModelVariable} instance.
-     *
-     * @param programVariable the {@link IProgramVariable} instance which will be wrapped by
-     *                        the created instance.
-     * @param identifier      a unique identifier for the variable.
-     * @return the created instance.
-     */
-    public static ModelVariable constructModelVariable(final IProgramVariable programVariable,
-                                                       final String identifier) {
-
-        return new ModelVariable(programVariable, identifier);
-    }
-
-    public static boolean isValidValueType(final Object object) {
-
-        return ((object == null) || (object instanceof ModelInstance)) || (object.getClass() == Integer.class) || (object
-                .getClass() == Byte.class) || (object.getClass() == Long.class) || (object.getClass() == Boolean.class);
-    }
-
-    /**
      * The value bound to this object. Primitive types are represented by their
      * wrapper types ( {@link Integer}, {@link Boolean} etc).
      */
@@ -59,7 +40,7 @@ public class ModelVariable {
      * point of declaration in the program, in the form
      * self_dot_someField_dot_someOtherField_dot_thisvariable. Since no two
      * variables can have the same declaration space, this is also used to
-     * uniquely distinguish this variable as a {@link IHeapObject}.
+     * uniquely distinguish this variable as a unqiue identifer.
      */
     private final String identifier;
 
@@ -70,7 +51,7 @@ public class ModelVariable {
     private boolean isParameter = false;
 
     /**
-     * The instance of {@link ModelInstance} in which this particular instance
+     * The instance of {@link com.csvanefalk.keytestgen.core.model.implementation.instance.ModelInstance} in which this particular instance
      * of {@link ModelVariable} has been initialized.
      */
     private ModelInstance parentModelInstance;
@@ -80,7 +61,7 @@ public class ModelVariable {
      */
     private final IProgramVariable variable;
 
-    private ModelVariable(final IProgramVariable programVariable, final String identifier) {
+    ModelVariable(final IProgramVariable programVariable, final String identifier) {
 
         variable = programVariable;
         this.identifier = identifier;

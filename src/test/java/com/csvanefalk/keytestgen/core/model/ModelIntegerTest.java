@@ -2,7 +2,7 @@ package com.csvanefalk.keytestgen.core.model;
 
 import com.csvanefalk.keytestgen.core.keyinterface.KeYInterfaceException;
 import com.csvanefalk.keytestgen.core.model.implementation.Model;
-import com.csvanefalk.keytestgen.core.model.implementation.ModelVariable;
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable;
 import de.uka.ilkd.key.proof.init.ProofInputException;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionNode;
 import de.uka.ilkd.key.symbolic_execution.model.IExecutionStart;

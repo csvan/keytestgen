@@ -3,6 +3,7 @@ package com.csvanefalk.keytestgen.core.model.implementation;
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.core.model.IModelGenerator;
 import com.csvanefalk.keytestgen.core.model.ModelGeneratorException;
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable;
 import com.csvanefalk.keytestgen.core.model.tools.ModelGenerationTools;
 import com.csvanefalk.keytestgen.keystone.KeYStone;
 import com.csvanefalk.keytestgen.keystone.KeYStoneException;

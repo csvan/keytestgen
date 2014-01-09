@@ -1,7 +1,7 @@
-package com.csvanefalk.keytestgen.core.model.implementation;
+package com.csvanefalk.keytestgen.core.model.implementation.instance;
 
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable;
 import de.uka.ilkd.key.java.abstraction.KeYJavaType;
-import de.uka.ilkd.key.logic.sort.ArraySort;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  * instances are necessarily unique (as they would be in Java) and contain
  * information about the state of the object. Importantly, it stores the
  * concrete values of any fields its class may have, as well as information
- * about the {@link ModelVariable} instances referring to it.
+ * about the {@link com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable} instances referring to it.
  *
  * @author christopher
  */
@@ -22,21 +22,6 @@ public class ModelInstance {
      */
     private static int ID = 0;
 
-    /**
-     * Factory method for creating a new {@link ModelInstance} instance.
-     *
-     * @param keYJavaType the {@link KeYJavaType} instance associated with the created
-     *                    instance.
-     * @return the created instance.
-     */
-    public static ModelInstance constructModelInstance(final KeYJavaType keYJavaType) {
-
-        if (keYJavaType.getSort() instanceof ArraySort) {
-            return new ModelArrayInstance(keYJavaType);
-        }
-
-        return new ModelInstance(keYJavaType);
-    }
 
     /**
      * Concrete values for a subset of the fields bound to this instance.
@@ -59,7 +44,7 @@ public class ModelInstance {
      */
     private final KeYJavaType type;
 
-    protected ModelInstance(final KeYJavaType keYJavaType) {
+    ModelInstance(final KeYJavaType keYJavaType) {
 
         type = keYJavaType;
         identifier = Integer.toString(++ModelInstance.ID);

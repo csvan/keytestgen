@@ -1,6 +1,8 @@
 package com.csvanefalk.keytestgen.core.model.implementation;
 
 import com.csvanefalk.keytestgen.StringConstants;
+import com.csvanefalk.keytestgen.core.model.implementation.instance.ModelInstanceFactory;
+import com.csvanefalk.keytestgen.core.model.implementation.variable.ModelVariable;
 import com.csvanefalk.keytestgen.util.parsers.TermParserException;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
 import com.csvanefalk.keytestgen.util.visitors.KeYTestGenTermVisitor;
@@ -13,13 +15,13 @@ import de.uka.ilkd.key.logic.op.SortDependingFunction;
  *
  * @author christopher
  */
-class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
+class ModelAssignmentResolvingVisitor extends KeYTestGenTermVisitor {
 
     /**
      * Constant for separating fields in {@link SortDependingFunction}
      * instances.
      */
-    private static final String SEPARATOR = StringConstants.FIELD_SEPARATOR.toString();
+    private static final String SEPARATOR = StringConstants.FIELD_SEPARATOR;
 
     /**
      * The {@link Model} instance associated with the Term being visited.
@@ -32,7 +34,7 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
      */
     private boolean sawNot;
 
-    public ResolveAssignmentsVisitor(final Model model) {
+    public ModelAssignmentResolvingVisitor(final Model model) {
 
         this.model = model;
     }
@@ -81,7 +83,7 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
                 if (TermParserTools.isBoolean(leftOperand)) {
 
                     leftOperandIdentifier = TermParserTools.resolveIdentifierString(leftOperand,
-                                                                                    ResolveAssignmentsVisitor.SEPARATOR);
+                                                                                    ModelAssignmentResolvingVisitor.SEPARATOR);
 
                     /*
                      * If the right-hand operator is a boolean constant (TRUE or
@@ -105,9 +107,10 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
             else if (!sawNot) {
 
                 leftOperandIdentifier = TermParserTools.resolveIdentifierString(leftOperand,
-                                                                                ResolveAssignmentsVisitor.SEPARATOR);
+                                                                                ModelAssignmentResolvingVisitor.SEPARATOR);
+
                 rightOperandIdentifier = TermParserTools.resolveIdentifierString(rightOperand,
-                                                                                 ResolveAssignmentsVisitor.SEPARATOR);
+                                                                                 ModelAssignmentResolvingVisitor.SEPARATOR);
 
                 final ModelVariable leftModelVariable = model.getVariable(leftOperandIdentifier);
                 final ModelVariable rightModelVariable = model.getVariable(rightOperandIdentifier);
@@ -121,7 +124,7 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
             else if (sawNot && TermParserTools.isNullSort(rightOperand)) {
 
                 leftOperandIdentifier = TermParserTools.resolveIdentifierString(leftOperand,
-                                                                                ResolveAssignmentsVisitor.SEPARATOR);
+                                                                                ModelAssignmentResolvingVisitor.SEPARATOR);
 
                 final ModelVariable leftModelVariable = model.getVariable(leftOperandIdentifier);
 
@@ -130,7 +133,7 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
                  * if it does not.
                  */
                 if (leftModelVariable.getValue() == null) {
-                    leftModelVariable.setValue(ModelInstance.constructModelInstance(leftModelVariable.getType()));
+                    leftModelVariable.setValue(ModelInstanceFactory.constructModelInstance(leftModelVariable.getType()));
                 }
             }
 
@@ -150,7 +153,6 @@ class ResolveAssignmentsVisitor extends KeYTestGenTermVisitor {
 
     @Override
     public void visit(final Term visited) {
-
         if (TermParserTools.isNot(visited)) {
             sawNot = true;
         } else if (TermParserTools.isEquals(visited)) {
