@@ -25,8 +25,7 @@ public class ExpressionUtils {
     public static void negate(final IExpression expression) {
 
         /*
-         * The expression is an addition - swap it to a subtraction, and negate
-         * the lhand side.
+         * The expression is an addition - swap it to a subtraction, and negate the lhand side.
          */
         if (expression instanceof Addition) {
             final Addition addition = (Addition) expression;
@@ -116,7 +115,7 @@ public class ExpressionUtils {
             final NumericConstant constant = (NumericConstant) leftOperand;
             ExpressionUtils.negateConstant(constant);
         } else {
-            throw new KeYStoneException("Illegal operation in trying to negate multiplication");
+            throw new KeYStoneException("Illegal operation in trying to negate division");
         }
     }
 
@@ -238,7 +237,7 @@ public class ExpressionUtils {
             if (leftOperand == null && rightOperand == null) {
                 return null;
             } else if (leftOperand != null && rightOperand != null) {
-                return addition;
+                return new Addition(leftOperand, rightOperand);
             } else {
                 return (leftOperand != null) ? leftOperand : rightOperand;
             }

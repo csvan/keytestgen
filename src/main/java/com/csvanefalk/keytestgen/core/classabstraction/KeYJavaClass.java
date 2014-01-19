@@ -1,6 +1,7 @@
 package com.csvanefalk.keytestgen.core.classabstraction;
 
 import de.uka.ilkd.key.java.abstraction.KeYJavaType;
+import de.uka.ilkd.key.java.reference.PackageReference;
 import de.uka.ilkd.key.proof.init.InitConfig;
 import de.uka.ilkd.key.symbolic_execution.util.KeYEnvironment;
 import de.uka.ilkd.key.ui.CustomConsoleUserInterface;
@@ -92,7 +93,8 @@ public final class KeYJavaClass {
      * @return the packageDeclaration
      */
     public String getPackageDeclaration() {
-        return type.createPackagePrefix().toString();
+        PackageReference pr = type.createPackagePrefix();
+        return pr != null ? pr.toString() : null;
     }
 
     /**
