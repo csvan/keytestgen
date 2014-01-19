@@ -170,6 +170,7 @@ public strictfp class Simplex {
 
         Fraction largest = Fraction.ZERO;
         if (table.length > rowIndex) {
+            resultIndex = 0;
             largest = table[rowIndex][0];
         }
 

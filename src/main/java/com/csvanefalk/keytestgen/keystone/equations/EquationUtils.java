@@ -250,8 +250,7 @@ public class EquationUtils {
 
                 // Move the non-constant part to the other side of the equation
                 simplifiedLeftHand = nonConstantPart;
-                ExpressionUtils.negate(constantPart);
-                simplifiedRightHand = new Addition(constantPart, simplifiedRightHand);
+                simplifiedRightHand = new Addition(ExpressionUtils.negate(constantPart), simplifiedRightHand);
                 simplifiedRightHand = ExpressionUtils.simplifyExpression(simplifiedRightHand);
             }
         }
@@ -281,8 +280,8 @@ public class EquationUtils {
     }
 
     public static Equation negateEquation(Equation equation) {
-        ExpressionUtils.negate(equation.getLeftOperand());
-        ExpressionUtils.negate(equation.getRightOperand());
+        equation.setLeftOperand(ExpressionUtils.negate(equation.getLeftOperand()));
+        equation.setRightOperand(ExpressionUtils.negate(equation.getRightOperand()));
         return equation;
     }
 

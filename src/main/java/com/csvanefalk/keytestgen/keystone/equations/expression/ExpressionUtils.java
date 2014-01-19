@@ -22,7 +22,7 @@ public class ExpressionUtils {
      * @param expression the expression
      * @return the negated expression
      */
-    public static void negate(final IExpression expression) {
+    public static IExpression negate(final IExpression expression) {
 
         /*
          * The expression is an addition - swap it to a subtraction, and negate the lhand side.
@@ -30,8 +30,8 @@ public class ExpressionUtils {
         if (expression instanceof Addition) {
             final Addition addition = (Addition) expression;
 
-            ExpressionUtils.negate(addition.getLeftOperand());
-            ExpressionUtils.negate(addition.getRightOperand());
+            return new Addition(ExpressionUtils.negate(addition.getRightOperand()),
+                                ExpressionUtils.negate(addition.getLeftOperand()));
         }
 
         /*
@@ -41,7 +41,8 @@ public class ExpressionUtils {
         else if (expression instanceof Multiplication) {
             final Multiplication multiplication = (Multiplication) expression;
 
-            ExpressionUtils.negate(multiplication.getLeftOperand());
+            return new Multiplication(ExpressionUtils.negate(multiplication.getLeftOperand()),
+                                      multiplication.getRightOperand());
         }
 
         /*
@@ -51,7 +52,7 @@ public class ExpressionUtils {
         else if (expression instanceof Division) {
             final Division division = (Division) expression;
 
-            ExpressionUtils.negate(division.getLeftOperand());
+            return new Division(ExpressionUtils.negate(division.getLeftOperand()), division.getRightOperand());
         }
 
         /*
@@ -59,7 +60,7 @@ public class ExpressionUtils {
          */
         else if (expression instanceof NumericConstant) {
             final NumericConstant constant = (NumericConstant) expression;
-            constant.setValue(constant.getValue().multiply(Fraction.MINUS_ONE));
+            return new NumericConstant(constant.getValue().multiply(Fraction.MINUS_ONE));
         }
 
         /*
@@ -68,7 +69,10 @@ public class ExpressionUtils {
         else if (expression instanceof Variable) {
             Variable variable = (Variable) expression;
             variable.negate();
+            return variable;
         }
+
+        return null;
     }
 
     /**

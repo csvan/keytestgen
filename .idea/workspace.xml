@@ -6,16 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Updating project settings.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelOldTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Simple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java" />
+    <list default="true" id="56178314-d8da-4be1-b105-b411ca0889c3" name="Default" comment="Fixed an issue causing the equation abstraction to incorrectly simplify integer values.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/junit/JUnitTestSuite.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/backend/junit/JUnitTestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/classabstraction/KeYJavaClassFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" afterPath="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -210,21 +203,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" line="168" class="com.csvanefalk.keytestgen.keystone.simplex.Simplex" package="com.csvanefalk.keytestgen.keystone.simplex">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java" line="42" class="com.csvanefalk.keytestgen.keystone.equations.EquationSystem" package="com.csvanefalk.keytestgen.keystone.equations">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -241,6 +219,21 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" line="217" class="com.csvanefalk.keytestgen.keystone.equations.EquationUtils" package="com.csvanefalk.keytestgen.keystone.equations">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" line="251" class="com.csvanefalk.keytestgen.keystone.equations.EquationUtils" package="com.csvanefalk.keytestgen.keystone.equations">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -284,19 +277,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ModelOldTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelOldTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="35" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="690">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelGenerator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ModelGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="0" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.33175355" vertical-offset="1075" max-vertical-offset="2790">
+            <state line="96" column="0" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0" vertical-offset="1079" max-vertical-offset="2790">
               <folding />
             </state>
           </provider>
@@ -305,7 +289,16 @@
       <file leaf-file-name="KeYStone.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="615">
+            <state line="33" column="0" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrameworkMethod.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="47" selection-start="117" selection-end="117" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -314,7 +307,7 @@
       <file leaf-file-name="EquationSystem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="0" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="3480">
+            <state line="59" column="0" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="3480">
               <folding>
                 <element signature="e#1873#1891#0" expanded="true" />
               </folding>
@@ -325,7 +318,7 @@
       <file leaf-file-name="Equation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="4125">
+            <state line="78" column="0" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="904" max-vertical-offset="4125">
               <folding />
             </state>
           </provider>
@@ -334,16 +327,7 @@
       <file leaf-file-name="EquationUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="279" column="0" selection-start="9866" selection-end="9866" vertical-scroll-proportion="-4.8846154" vertical-offset="3893" max-vertical-offset="6945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NumericConstant.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/NumericConstant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="630">
+            <state line="278" column="0" selection-start="9836" selection-end="9836" vertical-scroll-proportion="0.0" vertical-offset="3874" max-vertical-offset="6930">
               <folding />
             </state>
           </provider>
@@ -352,7 +336,7 @@
       <file leaf-file-name="ExpressionUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="87" selection-start="4439" selection-end="4439" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4425">
+            <state line="137" column="45" selection-start="5237" selection-end="5259" vertical-scroll-proportion="0.0" vertical-offset="1873" max-vertical-offset="4485">
               <folding />
             </state>
           </provider>
@@ -361,7 +345,16 @@
       <file leaf-file-name="Simplex.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="55" selection-start="5991" selection-end="5991" vertical-scroll-proportion="0.0" vertical-offset="2625" max-vertical-offset="4140">
+            <state line="177" column="55" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0" vertical-offset="2584" max-vertical-offset="4050">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelIntegerTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="253" column="0" selection-start="10033" selection-end="10033" vertical-scroll-proportion="0.3119266" vertical-offset="3509" max-vertical-offset="4935">
               <folding />
             </state>
           </provider>
@@ -370,7 +363,7 @@
       <file leaf-file-name="Simple.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Simple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="18" selection-start="301" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="345">
+            <state line="13" column="48" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
@@ -419,7 +412,6 @@
         <option value="$PROJECT_DIR$/../../system/src/de/uka/ilkd/key/logic/TermImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/SystemControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveSDPsTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/RemoveSortDependingFunctionsTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/util/transformers/NormalizeArrayTermsTransformer.java" />
@@ -442,8 +434,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Simple.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelOldTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java" />
       </list>
     </option>
@@ -761,7 +754,7 @@
       <recent name="com.csvanefalk.keytestgen.core.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ModelOldTest">
+  <component name="RunManager" selected="JUnit.ModelIntegerTest">
     <configuration default="false" name="ModelIntegerTest.testSolveCompoundConstraintMid2" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="keytestgen" />
@@ -844,7 +837,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1146,10 +1145,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ModelOldTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayIndexReadAccessTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest.testSolveCompoundConstraintMid2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ModelIntegerTest.testSolveCompoundConstraintMid2" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ModelOldTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayIndexReadAccessTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ExecuteTest" />
       </list>
     </recent_temporary>
@@ -1215,7 +1214,7 @@
       <workItem from="1389887959448" duration="1574000" />
       <workItem from="1389965272833" duration="1101000" />
       <workItem from="1389967732861" duration="7425000" />
-      <workItem from="1390151547038" duration="3895000" />
+      <workItem from="1390151547038" duration="6628000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing project setup. Should build cleanly now.">
       <created>1385056912112</created>
@@ -1301,15 +1300,19 @@
       <created>1389877441240</created>
       <updated>1389877441240</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed an issue causing the equation abstraction to incorrectly simplify integer values.">
+      <created>1390158039983</created>
+      <updated>1390158039983</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88714000" />
+    <option name="totallyTimeSpent" value="91447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1317,9 +1320,10 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3178082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37184596" sideWeight="0.70436186" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37123287" sideWeight="0.70436186" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36712328" sideWeight="0.2956381" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1331,13 +1335,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1875" sideWeight="0.672949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.278125" sideWeight="0.672949" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32270917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28756058" sideWeight="0.672949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3328767" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3187251" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1378,7 +1381,8 @@
     <MESSAGE value="Array accessors now rendering correctly in the ModelGenerator." />
     <MESSAGE value="Cleaning redundant dependencies." />
     <MESSAGE value="Updating project settings." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating project settings." />
+    <MESSAGE value="Fixed an issue causing the equation abstraction to incorrectly simplify integer values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed an issue causing the equation abstraction to incorrectly simplify integer values." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1562,12 +1566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/frontend/cli/CommandLineInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="38" selection-start="10682" selection-end="10682" vertical-scroll-proportion="0.0" vertical-offset="2445" max-vertical-offset="5265" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4935">
+        <state line="284" column="38" selection-start="10682" selection-end="10682" vertical-scroll-proportion="0.0" vertical-offset="2445" max-vertical-offset="5265">
           <folding />
         </state>
       </provider>
@@ -1607,37 +1606,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelArrayTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="59" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1290">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Simple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="301" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelOldTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="35" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="55" selection-start="5991" selection-end="5991" vertical-scroll-proportion="0.0" vertical-offset="2625" max-vertical-offset="4140">
           <folding />
         </state>
       </provider>
@@ -1649,30 +1620,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelOldTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="35" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/expression/ExpressionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="87" selection-start="4439" selection-end="4439" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="4425">
+        <state line="137" column="45" selection-start="5237" selection-end="5259" vertical-scroll-proportion="0.0" vertical-offset="1858" max-vertical-offset="4485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/targetmodels/own/Simple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="48" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/simplex/Simplex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="55" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0" vertical-offset="2584" max-vertical-offset="4050">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="0" selection-start="9866" selection-end="9866" vertical-scroll-proportion="-4.8846154" vertical-offset="3893" max-vertical-offset="6945">
+        <state line="278" column="0" selection-start="9836" selection-end="9836" vertical-scroll-proportion="0.0" vertical-offset="3874" max-vertical-offset="6930">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/Equation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="4125">
+        <state line="78" column="0" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="904" max-vertical-offset="4125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/equations/EquationSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="3480">
+        <state line="59" column="0" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="3480">
           <folding>
             <element signature="e#1873#1891#0" expanded="true" />
           </folding>
@@ -1681,14 +1673,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/keystone/KeYStone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="615">
+        <state line="33" column="0" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csvanefalk/keytestgen/core/model/implementation/ModelGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.33175355" vertical-offset="1075" max-vertical-offset="2790">
+        <state line="96" column="0" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0" vertical-offset="1079" max-vertical-offset="2790">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="47" selection-start="117" selection-end="117" vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/csvanefalk/keytestgen/core/model/ModelIntegerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="0" selection-start="10033" selection-end="10033" vertical-scroll-proportion="0.3119266" vertical-offset="3509" max-vertical-offset="4935">
           <folding />
         </state>
       </provider>
