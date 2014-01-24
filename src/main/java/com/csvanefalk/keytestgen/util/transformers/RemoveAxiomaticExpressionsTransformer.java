@@ -1,9 +1,7 @@
-package com.csvanefalk.keytestgen.util.transformer;
+package com.csvanefalk.keytestgen.util.transformers;
 
 import com.csvanefalk.keytestgen.StringConstants;
 import com.csvanefalk.keytestgen.util.parsers.TermParserTools;
-import com.csvanefalk.keytestgen.util.transformers.AbstractTermTransformer;
-import com.csvanefalk.keytestgen.util.transformers.TermTransformerException;
 import de.uka.ilkd.key.logic.Term;
 
 /**
@@ -24,8 +22,9 @@ import de.uka.ilkd.key.logic.Term;
  * arr.length &gt;= 0
  * </pre>
  * <p/>
- * is for all intents and purposes self-evident, since no Java array may have a
- * negative size. We can thus replace the expression as a whole with simply
+ * is for all intents and purposes self-evident, since no Java array in a running
+ * program may have a negative size. We can grant that the left side of the implication
+ * is true, and thus replace the expression as a whole with simply
  * <p/>
  * <pre>
  * arr[i] == 10
@@ -51,6 +50,10 @@ public class RemoveAxiomaticExpressionsTransformer extends AbstractTermTransform
     private RemoveAxiomaticExpressionsTransformer() {
     }
 
+    /**
+     * @param term term to check
+     * @return true if the term represents an axiomatic statement, false otherwise.
+     */
     private boolean isAxiomatic(Term term) {
 
         if (TermParserTools.isGreaterOrEquals(term)) {
@@ -60,6 +63,11 @@ public class RemoveAxiomaticExpressionsTransformer extends AbstractTermTransform
         return false;
     }
 
+    /**
+     * @param term term to check
+     * @return true if the term repreesen a non-negative array-length check (i.e.
+     * length(array) >= 0), or false otherwise.
+     */
     private boolean isNonNegativeArrayLengthCheck(Term term) {
 
         Term leftChild = term.sub(0);
@@ -74,6 +82,10 @@ public class RemoveAxiomaticExpressionsTransformer extends AbstractTermTransform
         return false;
     }
 
+    /**
+     * @param term term to check
+     * @return true if the term represents an array-length check, false otherwise.
+     */
     private boolean isArrayLengthCheck(Term term) {
         String opName = term.op().name().toString();
         return opName.equals(StringConstants.LENGTH);
