@@ -24,7 +24,7 @@ public class ModelArrayInstance extends ModelInstance {
      */
     public int length() {
         for (ModelVariable field : getFields()) {
-            if (field.getVariableName().equalsIgnoreCase(StringConstants.LENGTH)) {
+            if (field.getVariableName().endsWith(StringConstants.LENGTH)) {
                 return field.getValue();
             }
         }
