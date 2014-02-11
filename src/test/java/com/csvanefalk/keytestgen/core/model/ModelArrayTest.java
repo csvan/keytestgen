@@ -84,5 +84,4 @@ public class ModelArrayTest extends ModelTest {
 
         Model model = modelGenerator.generateModel(node);
     }
-
 }

@@ -201,41 +201,52 @@ public final class TermParserTools {
                 TermParserTools.isIntegerType(term.sub(0));
     }
 
+    /**
+     * @param term the term
+     * @return true iff. the term represents a LESS_THAN operator
+     */
+    public static boolean isLessThan(final Term term) {
+
+        return term.op().name().toString().equals(StringConstants.LESS_THAN);
+    }
+
+    /**
+     * @param term the term
+     * @return true iff. the term represents a LEQ operator
+     */
+    public static boolean isLessOrEquals(final Term term) {
+
+        return term.op().name().toString().equals(StringConstants.LESS_OR_EQUALS);
+    }
+
+    public static boolean isIntegerType(final Term term) {
+        final String name = term.sort().toString();
+        return name.equals("int");
+    }
+
+    /**
+     * @param term the term
+     * @return true iff. the term represents a GREATER_THAN operator
+     */
+    public static boolean isGreaterThan(final Term term) {
+
+        return term.op().name().toString().equalsIgnoreCase(StringConstants.GREATER_THAN);
+    }
+
+    /**
+     * @param term the term
+     * @return true iff. the term represents a GEQ operator
+     */
+    public static boolean isGreaterOrEquals(final Term term) {
+
+        return term.op().name().toString().equals(StringConstants.GREATER_OR_EQUALS);
+    }
+
     public static boolean isBinaryFunction(final Term term) {
 
         final String sortName = term.op().name().toString();
 
         return TermParserTools.binaryFunctions.contains(sortName);
-    }
-
-    /**
-     * Check if the given Term represents a binary function, such as any of the
-     * {@link Junctor} instances.
-     *
-     * @param term
-     * @return
-     */
-    public static boolean isBinaryFunction2(final Term term) {
-
-        /*
-         * Since Not also qualifies as a junctor, albeit a unary one, check this
-         * first.
-         */
-        if (TermParserTools.isNot(term)) {
-            return false;
-        }
-
-        final de.uka.ilkd.key.logic.op.Operator operator = term.op();
-
-        return (operator instanceof Junctor) || (operator instanceof Equality);
-    }
-
-    /**
-     * @param term the term
-     * @return true iff. the term is of boolean type, false otherwise.
-     */
-    public static boolean isBoolean(final Term term) {
-        return term.sort().name().toString().equals(StringConstants.BOOLEAN);
     }
 
     /**
@@ -245,6 +256,19 @@ public final class TermParserTools {
      */
     public static boolean isBooleanConstant(final Term term) throws TermParserException {
         return TermParserTools.isBooleanFalse(term) || TermParserTools.isBooleanTrue(term);
+    }
+
+    /**
+     * @param term the term
+     * @return true iff. the term represents the boolean constant TRUE, false
+     * otherwise.
+     */
+    public static boolean isBooleanTrue(final Term term) throws TermTransformerException {
+        if (TermParserTools.isBoolean(term)) {
+            return term.op().name().toString().equals(StringConstants.TRUE);
+        } else {
+            throw new TermTransformerException("Attempted to apply boolean operation to non-boolean literal");
+        }
     }
 
     /**
@@ -262,15 +286,10 @@ public final class TermParserTools {
 
     /**
      * @param term the term
-     * @return true iff. the term represents the boolean constant TRUE, false
-     * otherwise.
+     * @return true iff. the term is of boolean type, false otherwise.
      */
-    public static boolean isBooleanTrue(final Term term) throws TermTransformerException {
-        if (TermParserTools.isBoolean(term)) {
-            return term.op().name().toString().equals(StringConstants.TRUE);
-        } else {
-            throw new TermTransformerException("Attempted to apply boolean operation to non-boolean literal");
-        }
+    public static boolean isBoolean(final Term term) {
+        return term.sort().name().toString().equals(StringConstants.BOOLEAN);
     }
 
     /**
@@ -341,24 +360,6 @@ public final class TermParserTools {
 
     /**
      * @param term the term
-     * @return true iff. the term represents a GEQ operator
-     */
-    public static boolean isGreaterOrEquals(final Term term) {
-
-        return term.op().name().toString().equals(StringConstants.GREATER_OR_EQUALS);
-    }
-
-    /**
-     * @param term the term
-     * @return true iff. the term represents a GREATER_THAN operator
-     */
-    public static boolean isGreaterThan(final Term term) {
-
-        return term.op().name().toString().equalsIgnoreCase(StringConstants.GREATER_THAN);
-    }
-
-    /**
-     * @param term the term
      * @return true iff. the term represents an {@link IfExThenElse} statement.
      */
     public static boolean isIfExThenElse(final Term term) {
@@ -404,11 +405,6 @@ public final class TermParserTools {
         return name.equals("neglit");
     }
 
-    public static boolean isIntegerType(final Term term) {
-        final String name = term.sort().toString();
-        return name.equals("int");
-    }
-
     /**
      * @param term the term
      * @return true iff. the term represents a {@link Junctor}
@@ -416,24 +412,6 @@ public final class TermParserTools {
     public static boolean isJunctor(final Term term) {
 
         return term.op() instanceof Junctor;
-    }
-
-    /**
-     * @param term the term
-     * @return true iff. the term represents a LEQ operator
-     */
-    public static boolean isLessOrEquals(final Term term) {
-
-        return term.op().name().toString().equals(StringConstants.LESS_OR_EQUALS);
-    }
-
-    /**
-     * @param term the term
-     * @return true iff. the term represents a LESS_THAN operator
-     */
-    public static boolean isLessThan(final Term term) {
-
-        return term.op().name().toString().equals(StringConstants.LESS_THAN);
     }
 
     public static boolean isLiteral(final Term term) {
@@ -463,15 +441,6 @@ public final class TermParserTools {
      */
     public static boolean isMultiplication(final Term term) {
         return term.op().toString().equals(StringConstants.MULTIPLICATION);
-    }
-
-    /**
-     * @param term the term
-     * @return true iff. the term represents a NOT junctor
-     */
-    public static boolean isNot(final Term term) {
-
-        return term.op().name().toString().equals(StringConstants.NOT);
     }
 
     /**
@@ -507,6 +476,37 @@ public final class TermParserTools {
 
             return false;
         }
+    }
+
+    /**
+     * Check if the given Term represents a binary function, such as any of the
+     * {@link Junctor} instances.
+     *
+     * @param term
+     * @return
+     */
+    public static boolean isBinaryFunction2(final Term term) {
+
+        /*
+         * Since Not also qualifies as a junctor, albeit a unary one, check this
+         * first.
+         */
+        if (TermParserTools.isNot(term)) {
+            return false;
+        }
+
+        final de.uka.ilkd.key.logic.op.Operator operator = term.op();
+
+        return (operator instanceof Junctor) || (operator instanceof Equality);
+    }
+
+    /**
+     * @param term the term
+     * @return true iff. the term represents a NOT junctor
+     */
+    public static boolean isNot(final Term term) {
+
+        return term.op().name().toString().equals(StringConstants.NOT);
     }
 
     /**
@@ -740,7 +740,7 @@ public final class TermParserTools {
         if (TermParserTools.isBoolean(term)) {
             return TermParserTools.isBooleanTrue(term) ? true : false;
         } else {
-            throw new TermTransformerException("Attempted to apply boolean operation to non-boolean literal");
+            return false;
         }
     }
 
